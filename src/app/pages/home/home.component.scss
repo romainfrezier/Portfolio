@@ -1,0 +1,61 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  text-align: center;
+  position: relative;
+  height: 100%;
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+    border-radius: 20px;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: absolute;
+    bottom: -50px;
+
+    .link-circle {
+      width: 50px;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+
+        img {
+          height: 30px;
+          width: 30px;
+        }
+      }
+    }
+  }
+}

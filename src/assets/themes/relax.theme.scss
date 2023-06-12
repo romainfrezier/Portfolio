@@ -1,0 +1,43 @@
+@import "themes.colors";
+
+.relax-theme {
+  background-image: linear-gradient(to right bottom, map-get($relax-theme, 'top'), map-get($relax-theme, 'bottom'));
+  color: map-get($relax-theme, 'text');
+
+  .circle {
+    background-image: linear-gradient(to right, map-get($relax-theme, 'contrast'), transparentize(map-get($relax-theme, 'contrast'), 0.5));
+  }
+
+  .link-circle {
+    background-image: linear-gradient(to bottom, map-get($relax-theme, 'contrast'), transparentize(map-get($relax-theme, 'contrast'), 0.5));
+    box-shadow: rgba(0, 0, 0, 0.25) 0 0 20px 1px;
+  }
+
+  .header-item {
+    color: map-get($relax-theme, 'clear');
+  }
+
+  .active {
+    background-color: map-get($relax-theme, 'contrast');
+  }
+
+  .menu {
+    background-color: map-get($relax-theme, 'contrast');
+    color: map-get($relax-theme, 'clear');
+  }
+
+  .menu-open {
+    background-image: linear-gradient(to right bottom, map-get($relax-theme, 'contrast'), map-get($relax-theme, 'bottom'));
+    color: map-get($relax-theme, 'clear');
+
+    .active {
+      background-color: map-get($relax-theme, 'clear');
+      color: map-get($relax-theme, 'contrast');
+    }
+  }
+
+  .tile {
+    background-color: map-get($relax-theme, 'tile');
+    box-shadow: rgba(0, 0, 0, 0.25) 0 0 20px 1px;
+  }
+}

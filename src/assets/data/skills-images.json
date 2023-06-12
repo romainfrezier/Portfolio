@@ -1,0 +1,204 @@
+{
+  "programming_language": [
+    {
+      "id": 1,
+      "name": "Python",
+      "src": "/images/skills/python-logo.png",
+      "link": "https://www.python.org/"
+    },
+    {
+      "id": 2,
+      "name": "Swift",
+      "src": "/images/skills/swift-logo.png",
+      "link": "https://swift.org/"
+    },
+    {
+      "id": 3,
+      "name": "Java",
+      "src": "/images/skills/java-logo.png",
+      "link": "https://www.java.com/"
+    },
+    {
+      "id": 4,
+      "name": "C",
+      "src": "/images/skills/c-logo.png",
+      "link": "https://en.wikipedia.org/wiki/C_(programming_language)"
+    }
+  ],
+  "web": [
+    {
+      "id": 1,
+      "name": "HTML",
+      "src": "/images/skills/html-logo-light.png",
+      "link": "https://en.wikipedia.org/wiki/HTML"
+    },
+    {
+      "id": 2,
+      "name": "CSS",
+      "src": "/images/skills/css-logo-light.png",
+      "link": "https://en.wikipedia.org/wiki/CSS"
+    },
+    {
+      "id": 3,
+      "name": "Angular",
+      "src": "/images/skills/angular-logo.png",
+      "link": "https://angular.io/"
+    },
+    {
+      "id": 4,
+      "name": "Typescript",
+      "src": "/images/skills/typescript-logo.png",
+      "link": "https://www.typescriptlang.org/"
+    },
+    {
+      "id": 5,
+      "name": "React",
+      "src": "/images/skills/react-logo.png",
+      "link": "https://reactjs.org/"
+    },
+    {
+      "id": 6,
+      "name": "JS",
+      "src": "/images/skills/javascript-logo.png",
+      "link": "https://www.javascript.com/"
+    },
+    {
+      "id": 7,
+      "name": "Node",
+      "src": "/images/skills/nodejs-logo.png",
+      "link": "https://nodejs.org/"
+    },
+    {
+      "id": 8,
+      "name": "Express",
+      "src": "/images/skills/express-logo.png",
+      "link": "https://expressjs.com/"
+    },
+    {
+      "id": 9,
+      "name": "VueJS",
+      "src": "/images/skills/vue-logo.png",
+      "link": "https://vuejs.org/"
+    },
+    {
+      "id": 10,
+      "name": "Quarkus",
+      "src": "/images/skills/quarkus-logo.png",
+      "link": "https://quarkus.io/"
+    }
+  ],
+  "db": [
+    {
+      "id": 1,
+      "name": "MongoDB",
+      "src": "/images/skills/mongo-db-logo-light.png",
+      "link": "https://www.mongodb.com/"
+    },
+    {
+      "id": 2,
+      "name": "MySQL",
+      "src": "/images/skills/mysql-logo.png",
+      "link": "https://www.mysql.com/"
+    },
+    {
+      "id": 3,
+      "name": "PostgreSQL",
+      "src": "/images/skills/postgresql-logo.png",
+      "link": "https://www.postgresql.org/"
+    }
+  ],
+  "soft": [
+    {
+      "id": 1,
+      "name": "MacOS",
+      "src": "/images/skills/macos-logo.png",
+      "link": "https://www.apple.com/macos/"
+    },
+    {
+      "id": 2,
+      "name": "GitHub",
+      "src": "/images/skills/github-logo-light.png",
+      "link": "https://www.github.com/"
+    },
+    {
+      "id": 3,
+      "name": "StartUML",
+      "src": "/images/skills/staruml-logo.png",
+      "link": "http://staruml.io/"
+    },
+    {
+      "id": 4,
+      "name": "Trello",
+      "src": "/images/skills/trello-logo.png",
+      "link": "https://trello.com/"
+    },
+    {
+      "id": 5,
+      "name": "IntelliJ",
+      "src": "/images/skills/intellij-logo.png",
+      "link": "https://www.jetbrains.com/idea/"
+    },
+    {
+      "id": 6,
+      "name": "Clion",
+      "src": "/images/skills/clion-logo.png",
+      "link": "https://www.jetbrains.com/clion/"
+    },
+    {
+      "id": 7,
+      "name": "WebStorm",
+      "src": "/images/skills/webstorm-logo.png",
+      "link": "https://www.jetbrains.com/webstorm/"
+    },
+    {
+      "id": 8,
+      "name": "PyCharm",
+      "src": "/images/skills/pycharm-logo.png",
+      "link": "https://www.jetbrains.com/pycharm/"
+    },
+    {
+      "id": 9,
+      "name": "DataGrip",
+      "src": "/images/skills/datagrip-logo.png",
+      "link": "https://www.jetbrains.com/datagrip/"
+    },
+    {
+      "id": 10,
+      "name": "VSCode",
+      "src": "/images/skills/vscode-logo.png",
+      "link": "https://code.visualstudio.com/"
+    },
+    {
+      "id": 11,
+      "name": "Gimp",
+      "src": "/images/skills/gimp-logo.png",
+      "link": "https://www.gimp.org/"
+    },
+    {
+      "id": 12,
+      "name": "Xcode",
+      "src": "/images/skills/xcode-logo.png",
+      "link": "https://developer.apple.com/xcode/"
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "name": "AWS",
+      "src": "/images/skills/aws-logo.png",
+      "link": "https://aws.amazon.com/"
+    },
+    {
+      "id": 2,
+      "name": "Firebase",
+      "src": "/images/skills/firebase-logo.png",
+      "link": "https://firebase.google.com/"
+    },
+    {
+      "id": 3,
+      "name": "Docker",
+      "src": "/images/skills/docker-logo.png",
+      "link": "https://www.docker.com/"
+    }
+  ]
+}

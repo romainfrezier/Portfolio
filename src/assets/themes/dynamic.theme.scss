@@ -1,0 +1,43 @@
+@import "themes.colors";
+
+.dynamic-theme {
+  background-image: linear-gradient(to right bottom, map-get($dynamic-theme, 'top'), map-get($dynamic-theme, 'bottom'));
+  color: map-get($dynamic-theme, 'text');
+
+  .circle {
+    background-image: linear-gradient(to right, map-get($dynamic-theme, 'contrast'), transparentize(map-get($dynamic-theme, 'contrast'), 0.5));
+  }
+
+  .link-circle {
+    background-image: linear-gradient(to bottom, map-get($dynamic-theme, 'contrast'), transparentize(map-get($dynamic-theme, 'contrast'), 0.5));
+    box-shadow: rgba(0, 0, 0, 0.25) 0 0 20px 1px;
+  }
+
+  .header-item {
+    color: map-get($dynamic-theme, 'clear');
+  }
+
+  .active {
+    background-color: map-get($dynamic-theme, 'contrast');
+  }
+
+  .menu {
+    background-color: map-get($dynamic-theme, 'contrast');
+    color: map-get($dynamic-theme, 'clear');
+  }
+
+  .menu-open {
+    background-image: linear-gradient(to right bottom, map-get($dynamic-theme, 'contrast'), map-get($dynamic-theme, 'bottom'));
+    color: map-get($dynamic-theme, 'clear');
+
+    .active {
+      background-color: map-get($dynamic-theme, 'clear');
+      color: map-get($dynamic-theme, 'contrast');
+    }
+  }
+
+  .tile {
+    background-color: map-get($dynamic-theme, 'tile');
+    box-shadow: rgba(0, 0, 0, 0.25) 0 0 20px 1px;
+  }
+}

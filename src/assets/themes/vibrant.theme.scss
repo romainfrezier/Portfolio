@@ -1,0 +1,43 @@
+@import "themes.colors";
+
+.vibrant-theme {
+  background-image: linear-gradient(to right bottom, map-get($vibrant-theme, 'top'), map-get($vibrant-theme, 'bottom'));
+  color: map-get($vibrant-theme, 'text');
+
+  .circle {
+    background-image: linear-gradient(to right, map-get($vibrant-theme, 'contrast'), transparentize(map-get($vibrant-theme, 'contrast'), 0.5));
+  }
+
+  .link-circle {
+    background-image: linear-gradient(to bottom, map-get($vibrant-theme, 'contrast'), transparentize(map-get($vibrant-theme, 'contrast'), 0.5));
+    box-shadow: rgba(0, 0, 0, 0.25) 0 0 20px 1px;
+  }
+
+  .header-item {
+    color: map-get($vibrant-theme, 'clear');
+  }
+
+  .active {
+    background-color: map-get($vibrant-theme, 'contrast');
+  }
+
+  .menu {
+    background-color: map-get($vibrant-theme, 'contrast');
+    color: map-get($vibrant-theme, 'clear');
+  }
+
+  .menu-open {
+    background-image: linear-gradient(to right bottom, map-get($vibrant-theme, 'contrast'), map-get($vibrant-theme, 'bottom'));
+    color: map-get($vibrant-theme, 'clear');
+
+    .active {
+      background-color: map-get($vibrant-theme, 'clear');
+      color: map-get($vibrant-theme, 'contrast');
+    }
+  }
+
+  .tile {
+    background-color: map-get($vibrant-theme, 'tile');
+    box-shadow: rgba(0, 0, 0, 0.25) 0 0 20px 1px;
+  }
+}

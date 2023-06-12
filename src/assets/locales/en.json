@@ -1,0 +1,176 @@
+{
+  "imagebaseurl": "https://romainfrezier.github.io/",
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "resume": "Resume",
+    "achievements": "Achievements",
+    "projects": "Projects",
+    "skills": "Skills",
+    "languages": "Languages",
+    "choose-language": "Choose your language"
+  },
+  "theme": {
+    "vibrant": "Vibrant",
+    "dark": "Dark"
+  },
+  "home": {
+    "name": "Hello, I am Romain Frezier.",
+    "role": "I am a 4th year engineering student in Computer Science and Management at Polytech Montpellier, France.",
+    "roleDescription": "I'm currently doing a 3-month internship in Stockholm, Sweden.",
+    "contact": {
+      "serious": "Don't hesitate to contact me for any internship or job proposal, or for any other information.",
+      "fun": "You can also contact me if you don't find the secret feature :)"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "aboutme1": "Lover of sports, including mountain sports such as hiking, ski touring or others. I really enjoy taking long outings and pushing my physical and/ or mental limits on each of these outings, as well as photographing mountain landscapes.",
+    "aboutme2": "I am currently a volunteer in the student sports association at Polytech Montpellier, and I hold the position of hiking manager."
+  },
+  "resume": {
+    "title": "You can download my resume here",
+    "file": "/files/CV_en.pdf",
+    "preview": "/images/CV_en.png"
+  },
+  "achievements": {
+    "title": "Here is my achievements",
+    "items": [
+      {
+        "name": "TOEIC",
+        "badge": "/images/TOEIC_logo.png",
+        "description": "The Test of English for International Communication (TOEIC) is an international standardized test of English language proficiency for non-native speakers. It is intentionally designed to measure the everyday English skills of people working in an international environment. I scored 920/990.",
+        "link": "https://drive.google.com/file/d/1WFTx1-R5TX96Hp8xbHeVRlvM5yuFfv4h/view?usp=sharing",
+        "linkName": "TOEIC"
+      },
+      {
+        "name": "Enterprise Design Thinking Co-Creator",
+        "badge": "/images/enterprise-design-thinking-co-creator.png",
+        "description": "As a co-creator, I am an active contributor to Enterprise Design Thinking projects. I help bring concrete user outcomes to life by developing collaborative skills and finding opportunities to step up and lead.",
+        "link": "https://www.credly.com/badges/120b4908-bca4-4b86-8721-589ea44b404e/public_url",
+        "linkName": "Enterprise Design Thinking Co-Creator"
+      },
+      {
+        "name": "Enterprise Design Thinking Practitioner",
+        "badge": "/images/enterprise-design-thinking-practitioner.png",
+        "description": "I have acquired knowledge about the application of Enterprise Design Thinking and its value. As a practitioner, I find opportunities to experiment with it in my daily work.",
+        "link": "https://www.credly.com/go/mUVNhRyG",
+        "linkName": "Enterprise Design Thinking Practitioner"
+      },
+      {
+        "name": "Nuit de l'Info 2022",
+        "badge": "/images/nuit_info_2022.png",
+        "description": "La Nuit de l'Info is a national competition that brings together students, teachers and companies to work together on the development of a web application.",
+        "link": "https://www.nuitdelinfo.com",
+        "linkName": "Nuit de l'Info"
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "Some of my Projects",
+    "date": "Date",
+    "language": "Language(s)",
+    "group": "Group of",
+    "person": "person",
+    "people": "people",
+    "github-link": "Github link",
+    "report-link": "Report link",
+    "see-more": "See more projects",
+    "see-less": "See less projects",
+    "items": [
+      {
+        "name": "AWI Project",
+        "date": "January 2023 - March 2023",
+        "languages": "Swift UI, Firebase, Express, MongoDB",
+        "number": "2",
+        "description": "The Mobile project is a project that we had to do during our 4th year of engineering school. The goal of this project is to create an REST API that will be used by a mobile app on iOS.",
+        "demolink": "https://www.youtube.com/embed/tgokcN5KR88?rel=0&autoplay=0&mute=1",
+        "githublink": "https://github.com/romainfrezier/Mobile-iOS",
+        "documenturl": ""
+      },
+      {
+        "name": "AWI Project",
+        "date": "January 2023 - March 2023",
+        "languages": "Angular, Firebase, Express, MongoDB, Node.js, TypeScript",
+        "number": "2",
+        "description": "The AWI (Web Application and Interoperability) project is a project that we had to do during our 4th year of engineering school. The goal of this project is to create an REST API that will be used by a web.",
+        "demolink": "https://www.youtube.com/embed/rDaWjrxN57k?rel=0&autoplay=0&mute=1",
+        "githublink": "https://github.com/romainfrezier/AWI-project-frontend",
+        "documenturl": ""
+      },
+      {
+        "name": "Data Science Project",
+        "date": "December 2022 - January 2023",
+        "languages": "Python, PySpark, Pandas, AWS S3, AWS Athena, SQL, Maths",
+        "number": "3",
+        "description": "Creation of an infographic to answer a question posed by Open Data University: Is the distribution of recharging infrastructures for electric vehicles appropriate in France?",
+        "demolink": "",
+        "githublink": "",
+        "documenturl": "https://drive.google.com/file/d/1FsowZ9hOc4d8Vkp8qFZa5Rmgjn2R2QC5/view?usp=sharing"
+      },
+      {
+        "name": "Software Engineering Project",
+        "date": "November 2022 - January 2023",
+        "languages": "Java, JavaFX",
+        "number": "4",
+        "description": "Software Engineering project, design, modeling and development in Java. The project concerns the realization of an application in Java connecting people wishing to practice a sport activity with people wishing to accompany them. We tried to respect the SOLID design principles, as well as the basic design principles of Java. Moreover, we used many design patterns seen in the course.",
+        "demolink": "https://www.youtube.com/embed/EdsB2jswzqg?rel=0&autoplay=0&mute=1",
+        "githublink": "https://github.com/romainfrezier/FitJ",
+        "documenturl": ""
+      }
+    ]
+  },
+  "skills": {
+    "title": "My Skills",
+    "languages": "Programming Languages",
+    "web": "Web Programming and technologies",
+    "databases": "Databases",
+    "tools": "Softwares and tools",
+    "services": "Services"
+  },
+  "contact-me": "You can contact me for any internship or job proposal, or for any other information.",
+  "archive-projects": {
+    "items": [
+      {
+        "name": "C Project",
+        "date": "April - May 2022",
+        "languages": "C",
+        "number": "2",
+        "description": "Realization of a messaging service on a local network in C language in pairs. The project took place in the form of a sprint, in which certain functionalities were imposed, and a deliverable had to be submitted at the end of each sprint. The last sprint left us the choice on the features we wanted to implement.",
+        "demolink": "https://www.youtube.com/embed/7FBHeUnt2rs?rel=0&autoplay=0&mute=1",
+        "githublink": "https://github.com/romainfrezier/Projet-FAR-Client",
+        "documenturl": ""
+      },
+      {
+        "name": "WEB Project",
+        "date": "March 2022",
+        "languages": "PostgreSQL, express.js, JWT, Vue.js, Heroku",
+        "number": "1",
+        "description": "Realization of a complete web application in 20 days on a free theme, in fullstack. The choice of the subject turned to an application making it possible to save a person's sports activities, to consult their statistics, to follow the wear and tear of their equipment as well as to find out about the competitions available.",
+        "demolink": "https://www.youtube.com/embed/yXrBpIDomdI?rel=0&autoplay=0&mute=1",
+        "githublink": "https://github.com/romainfrezier/projet-web-client",
+        "documenturl": ""
+      },
+      {
+        "name": "IoT Project",
+        "date": "December 2021 - January 2022",
+        "languages": "Python",
+        "number": "2",
+        "description": "Free subject for each pair. Realization of a sports assistant allowing to coach a sportsman during the exercise, as well as a website to save and consult the data relating to the training. The sports assistant uses several sensors such as an ultrasonic sensor, buttons, but also an LCD screen.",
+        "demolink": "https://www.youtube.com/embed/GbysiVXqvC4?rel=0&autoplay=0&mute=1",
+        "githublink": "https://github.com/romainfrezier/SportAssistant",
+        "documenturl": ""
+      },
+      {
+        "name": "Algorithmic Project",
+        "date": "November 2021 - January 2022",
+        "languages": "Swift",
+        "number": "2",
+        "description": "Make the functional specifications and the main program of a game (Quarto) by pair, recover the functional specifications and the main program of another game (Mabula) from another pair and do the development.",
+        "demolink": "",
+        "githublink": "https://github.com/romainfrezier/ProjetAlgoIG3",
+        "documenturl": ""
+      }
+    ]
+  }
+}

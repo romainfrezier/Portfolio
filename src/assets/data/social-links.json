@@ -1,0 +1,19 @@
+{
+  "links": [
+    {
+      "name": "linkedin",
+      "url": "https://www.linkedin.com/in/romainfrezier/",
+      "icon": "assets/images/linkedin-social.png"
+    },
+    {
+      "name": "github",
+      "url": "https://github.com/romainfrezier",
+      "icon": "assets/images/github-social.png"
+    },
+    {
+      "name": "messenger",
+      "url": "https://m.me/frezierromain",
+      "icon": "assets/images/messenger-social.png"
+    }
+  ]
+}
