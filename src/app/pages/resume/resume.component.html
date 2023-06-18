@@ -1,1 +1,17 @@
-<p>resume works!</p>
+<div class="resume-container">
+  <div class="left-section">
+    <a download="CV_Romain_Frezier.pdf" href="{{ 'resume.file' | translate}}">
+      <img src="{{ 'resume.preview' | translate }}" alt="resume_preview">
+    </a>
+  </div>
+  <div class="right-section">
+    <div class="description">
+      <h1>{{ 'resume.title' | translate }}</h1>
+      <p>{{ 'resume.subtitle' | translate }}</p>
+    </div>
+    <div class="button-container" (click)="download_resume()">
+      <img src="assets/images/download.png" alt="download icon" />
+      <p>{{ 'resume.download' | translate }}</p>
+    </div>
+  </div>
+</div>

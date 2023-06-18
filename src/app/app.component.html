@@ -1,7 +1,7 @@
 <div [className]="themeClass">
   <div class="content">
     <div class="glass" data-tilt>
-      <app-header (sectionChanged)="setActivePage($event)"></app-header>
+      <app-header (sectionChanged)="setActivePage($event)" [activeSectionIndex]="activePage"></app-header>
       <div class="main">
         <app-home *ngIf="activePage === 0"></app-home>
         <app-about *ngIf="activePage === 1"></app-about>
@@ -16,4 +16,5 @@
     <div class="circle circle3" (click)="switchTheme('dynamic-theme')"></div>
     <div class="circle circle4" (click)="switchTheme('relax-theme')"></div>
   </div>
+  <div class="secret">{{ ('theme.' + themeClass) | translate }}</div>
 </div>

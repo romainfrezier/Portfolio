@@ -4,6 +4,10 @@
   background-image: linear-gradient(to right bottom, map-get($dynamic-theme, 'top'), map-get($dynamic-theme, 'bottom'));
   color: map-get($dynamic-theme, 'text');
 
+  .secret {
+    color: map-get($dynamic-theme, 'clear');
+  }
+
   .circle {
     background-image: linear-gradient(to right, map-get($dynamic-theme, 'contrast'), transparentize(map-get($dynamic-theme, 'contrast'), 0.5));
   }
@@ -39,5 +43,29 @@
   .tile {
     background-color: map-get($dynamic-theme, 'tile');
     box-shadow: rgba(0, 0, 0, 0.25) 0 0 20px 1px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: map-get($dynamic-theme, 'contrast');
+
+    &:hover {
+      background-color: darken(map-get($dynamic-theme, 'contrast'), 20%);
+    }
+  }
+
+  .button-container {
+    background-image: linear-gradient(to right bottom, map-get($dynamic-theme, 'contrast'), map-get($dynamic-theme, 'bottom'));
+
+    p {
+      color: map-get($dynamic-theme, 'clear');
+    }
+  }
+
+  .loader {
+    background-color: map-get($dynamic-theme, 'contrast');
+  }
+
+  a {
+    color: map-get($dynamic-theme, 'text');
   }
 }

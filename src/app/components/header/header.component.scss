@@ -12,6 +12,7 @@
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
+    user-select: none;
   }
 
   .menu-burger {
@@ -36,11 +37,12 @@
   }
 
   .header-emoji {
-    font-size: 4rem;
+    font-size: 5rem;
     position: absolute;
     top: -100%;
     left: -27%;
     rotate: -10deg;
+    user-select: none;
   }
 
   @media (max-width: 1401px) {

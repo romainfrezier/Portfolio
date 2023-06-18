@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ThemesService} from "./services/themes.service";
 import {TranslateService} from "@ngx-translate/core";
 import VanillaTilt from "vanilla-tilt";
+import {AppConstants} from "./app.constants";
 
 @Component({
   selector: 'app-root',
@@ -14,21 +15,23 @@ export class AppComponent implements OnInit {
   public activePage: number;
 
   ngOnInit(): void {
-    const glass : HTMLElement = document.querySelector(".glass")!;
+    const glass: HTMLElement = document.querySelector(".glass")!;
     VanillaTilt.init(glass, {
       max: 1,
-      speed: 70,
-      glare: true,
-      "max-glare": 0.3,
-      transition: true,
+      speed: 50,
     });
 
   }
 
   constructor(private themesService: ThemesService, private translate: TranslateService) {
+    const lastPage: string | null = localStorage.getItem(AppConstants.LOCALSTORAGE.LAST_PAGE)
+    if (lastPage) {
+      this.activePage = +lastPage;
+    } else {
+      this.activePage = 0;
+    }
     this.themeClass = '';
     this.showThemeMenu = false;
-    this.activePage = 0;
     this.translate.setDefaultLang('fr');
     this.themesService.currentTheme.subscribe(theme => this.themeClass = theme);
   }

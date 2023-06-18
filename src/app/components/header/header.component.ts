@@ -1,25 +1,34 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {TranslateService} from "@ngx-translate/core";
+import {AppConstants} from "../../app.constants";
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
 
   @Output() sectionChanged = new EventEmitter<number>();
 
-  public activeSectionIndex: number;
+  @Input() public activeSectionIndex!: number;
+
   public showLanguageMenu: boolean;
   public emoji: string;
   public isBurgerMenuOpen: boolean;
 
   constructor(private translate: TranslateService) {
-    this.activeSectionIndex = 0;
+    const language: string | null = localStorage.getItem(AppConstants.LOCALSTORAGE.LANGUAGE);
+    if (language) {
+      this.switchLanguage(language)
+    }
     this.emoji = '👋';
     this.showLanguageMenu = false;
     this.isBurgerMenuOpen = false;
+  }
+
+  ngOnInit(): void {
+    this.setActiveSection(this.activeSectionIndex);
   }
 
   public setActiveSection(index: number): void {
@@ -49,6 +58,7 @@ export class HeaderComponent {
     }
     this.isBurgerMenuOpen = false;
     this.showLanguageMenu = false;
+    localStorage.setItem(AppConstants.LOCALSTORAGE.LAST_PAGE, index.toString())
   }
 
   public getHeaderItemClasses(index: number): string {
@@ -56,12 +66,12 @@ export class HeaderComponent {
   }
 
   public toggleLanguageMenu(): void {
-    console.log(this.showLanguageMenu);
     this.showLanguageMenu = !this.showLanguageMenu;
   }
 
   public switchLanguage(lang: string): void {
     this.translate.use(lang);
+    localStorage.setItem(AppConstants.LOCALSTORAGE.LANGUAGE, lang)
   }
 
   public toggleMenu() {

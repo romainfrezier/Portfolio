@@ -14,7 +14,6 @@ export class HomeComponent {
   constructor(private http: HttpClient) {
     this.http.get<{ links: Link[] }>('./assets/data/social-links.json').subscribe(data => {
       this.socialLinks = data.links;
-      console.log(this.socialLinks);
     });
   }
 

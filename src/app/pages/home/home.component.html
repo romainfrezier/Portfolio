@@ -1,12 +1,14 @@
 <div class="home-container">
-  <h1>{{ 'home.name' | translate }}</h1>
-  <div class="tile">
-    <p>{{ 'home.role' | translate }}</p>
-    <p>{{ 'home.roleDescription' | translate }}</p>
-  </div>
-  <div class="contact">
-    <p>{{ 'home.contact.serious' | translate }}</p>
-    <p>{{ 'home.contact.fun' | translate }}</p>
+  <div class="home-content">
+    <h1>{{ 'home.name' | translate }}</h1>
+    <div class="tile">
+      <p>{{ 'home.role' | translate }}</p>
+      <p>{{ 'home.roleDescription' | translate }}</p>
+    </div>
+    <div class="contact">
+      <p>{{ 'home.contact.serious' | translate }}</p>
+      <p>{{ 'home.contact.fun' | translate }}</p>
+    </div>
   </div>
   <div class="links">
     <div class="link-circle" *ngFor="let link of socialLinks">
