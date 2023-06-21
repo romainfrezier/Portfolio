@@ -3,7 +3,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - main
+      - gh-pages
       
 permissions:
   contents: write
@@ -15,11 +15,6 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
-        with:
-          fetch-depth: 0 
-        
-      - name: Change branch 🔄
-        run: git checkout -B gh-pages
 
       - name: Install dependencies 🛜
         run: npm install
