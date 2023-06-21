@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Mobile Project",
+    "date": "January 2023 - March 2023",
+    "languages": "Swift UI, Firebase, Express, MongoDB",
+    "number": "2",
+    "description": "The Mobile project is a project that we had to do during our 4th year of engineering school. The goal of this project is to create an REST API that will be used by a mobile app on iOS.",
+    "demolink": "https://www.youtube.com/embed/tgokcN5KR88?rel=0&autoplay=0&mute=1",
+    "githublink": "https://github.com/romainfrezier/Mobile-iOS",
+    "documenturl": ""
+  },
+  {
+    "name": "AWI Project",
+    "date": "January 2023 - March 2023",
+    "languages": "Angular, Firebase, Express, MongoDB, Node.js, TypeScript",
+    "number": "2",
+    "description": "The AWI (Web Application and Interoperability) project is a project that we had to do during our 4th year of engineering school. The goal of this project is to create an REST API that will be used by a web.",
+    "demolink": "https://www.youtube.com/embed/rDaWjrxN57k?rel=0&autoplay=0&mute=1",
+    "githublink": "https://github.com/romainfrezier/AWI-project-frontend",
+    "documenturl": ""
+  },
+  {
+    "name": "Data Science Project",
+    "date": "December 2022 - January 2023",
+    "languages": "Python, PySpark, Pandas, AWS S3, AWS Athena, SQL, Maths",
+    "number": "3",
+    "description": "Creation of an infographic to answer a question posed by Open Data University: Is the distribution of recharging infrastructures for electric vehicles appropriate in France?",
+    "demolink": "",
+    "githublink": "",
+    "documenturl": "https://drive.google.com/file/d/1FsowZ9hOc4d8Vkp8qFZa5Rmgjn2R2QC5/view?usp=sharing"
+  },
+  {
+    "name": "Software Engineering Project",
+    "date": "November 2022 - January 2023",
+    "languages": "Java, JavaFX",
+    "number": "4",
+    "description": "Software Engineering project, design, modeling and development in Java. The project concerns the realization of an application in Java connecting people wishing to practice a sport activity with people wishing to accompany them. We tried to respect the SOLID design principles, as well as the basic design principles of Java. Moreover, we used many design patterns seen in the course.",
+    "demolink": "https://www.youtube.com/embed/EdsB2jswzqg?rel=0&autoplay=0&mute=1",
+    "githublink": "https://github.com/romainfrezier/FitJ",
+    "documenturl": ""
+  }
+]

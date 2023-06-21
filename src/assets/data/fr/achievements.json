@@ -1,0 +1,37 @@
+[
+  {
+    "name": "TOEIC",
+    "badge": "/assets/images/TOEIC_logo.png",
+    "description": "Les tests Test of English for International Communication (TOEIC) sont des certifications standardisées permettant d'évaluer le niveau d'anglais des locuteurs non anglophones à l'écrit et à l'oral. Ces tests, créés et gérés par un organisme sis aux États-Unis (l'ETS), visent en particulier à évaluer les connaissances linguistiques dans un contexte professionnel. J'ai obtenu le score de 920/990.",
+    "link": "https://drive.google.com/file/d/1WFTx1-R5TX96Hp8xbHeVRlvM5yuFfv4h/view?usp=sharing",
+    "linkName": "TOEIC"
+  },
+  {
+    "name": "Enterprise Design Thinking Co-Creator",
+    "badge": "/assets/images/enterprise-design-thinking-co-creator.png",
+    "description": "En tant que co-créateur, je suis un contributeur actif aux projets d'Enterprise Design Thinking. J'aide à donner vie à des résultats concrets pour l'utilisateur en développant ses compétences en matière de collaboration et en trouvant des occasions de m'imposer et de diriger.",
+    "link": "https://www.credly.com/badges/120b4908-bca4-4b86-8721-589ea44b404e/public_url",
+    "linkName": "Enterprise Design Thinking Co-Creator"
+  },
+  {
+    "name": "Enterprise Design Thinking Practitioner",
+    "badge": "/assets/images/enterprise-design-thinking-practitioner.png",
+    "description": "J'ai acquis des connaissances sur l'application de l'Enterprise Design Thinking et sur sa valeur. En tant que pratiquant, je trouve des occasions de l'expérimenter dans mon travail quotidien.",
+    "link": "https://www.credly.com/go/mUVNhRyG",
+    "linkName": "Enterprise Design Thinking Practitioner"
+  },
+  {
+    "name": "Nuit de l'Info 2022",
+    "badge": "/assets/images/nuit_info_2022.png",
+    "description": "La Nuit de l’Info est une compétition nationale qui réunit étudiants, enseignants et entreprises pour travailler ensemble sur le développement d’une application web.",
+    "link": "https://www.nuitdelinfo.com",
+    "linkName": "Nuit de l'Info"
+  },
+  {
+    "name": "Apple Teacher",
+    "badge": "/assets/images/apple-teacher.png",
+    "description": "Apple Teacher est un programme de formation professionnelle gratuit conçu pour soutenir et récompenser les éducateurs qui utilisent les produits Apple pour l'enseignement et l'apprentissage. En tant qu'Apple Teacher, j'ai appris à utiliser les produits Apple pour l'enseignement et l'apprentissage.",
+    "link": "/assets/files/apple-teacher-badge.pdf",
+    "linkName": "Badge Apple Teacher"
+  }
+]

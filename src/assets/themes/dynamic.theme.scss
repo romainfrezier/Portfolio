@@ -62,7 +62,7 @@
   }
 
   .loader {
-    background-color: map-get($dynamic-theme, 'contrast');
+    border-color: map-get($dynamic-theme, 'contrast');
   }
 
   a {

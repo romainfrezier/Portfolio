@@ -16,6 +16,9 @@ import {SkillsComponent} from './pages/skills/skills.component';
 import {MatIconModule} from "@angular/material/icon";
 import {ThemesService} from "./services/themes.service";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {SafePipe} from './pipes/safe.pipe';
+import {LoaderComponent} from './components/loader/loader.component';
+import {DataService} from "./services/data.service";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/locales/', '.json');
@@ -31,6 +34,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     AchievementsComponent,
     ProjectsComponent,
     SkillsComponent,
+    SafePipe,
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +52,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     })
   ],
   providers: [
-    ThemesService
+    ThemesService,
+    DataService
   ],
   bootstrap: [AppComponent]
 })

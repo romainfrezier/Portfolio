@@ -62,7 +62,7 @@
   }
 
   .loader {
-    background-color: map-get($relax-theme, 'contrast');
+    border-color: map-get($relax-theme, 'contrast');
   }
 
   a {

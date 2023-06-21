@@ -1,0 +1,42 @@
+[
+  {
+    "name": "C Project",
+    "date": "April - May 2022",
+    "languages": "C",
+    "number": "2",
+    "description": "Realization of a messaging service on a local network in C language in pairs. The project took place in the form of a sprint, in which certain functionalities were imposed, and a deliverable had to be submitted at the end of each sprint. The last sprint left us the choice on the features we wanted to implement.",
+    "demolink": "https://www.youtube.com/embed/7FBHeUnt2rs?rel=0&autoplay=0&mute=1",
+    "githublink": "https://github.com/romainfrezier/Projet-FAR-Client",
+    "documenturl": ""
+  },
+  {
+    "name": "WEB Project",
+    "date": "March 2022",
+    "languages": "PostgreSQL, express.js, JWT, Vue.js, Heroku",
+    "number": "1",
+    "description": "Realization of a complete web application in 20 days on a free theme, in fullstack. The choice of the subject turned to an application making it possible to save a person's sports activities, to consult their statistics, to follow the wear and tear of their equipment as well as to find out about the competitions available.",
+    "demolink": "https://www.youtube.com/embed/yXrBpIDomdI?rel=0&autoplay=0&mute=1",
+    "githublink": "https://github.com/romainfrezier/projet-web-client",
+    "documenturl": ""
+  },
+  {
+    "name": "IoT Project",
+    "date": "December 2021 - January 2022",
+    "languages": "Python",
+    "number": "2",
+    "description": "Free subject for each pair. Realization of a sports assistant allowing to coach a sportsman during the exercise, as well as a website to save and consult the data relating to the training. The sports assistant uses several sensors such as an ultrasonic sensor, buttons, but also an LCD screen.",
+    "demolink": "https://www.youtube.com/embed/GbysiVXqvC4?rel=0&autoplay=0&mute=1",
+    "githublink": "https://github.com/romainfrezier/SportAssistant",
+    "documenturl": ""
+  },
+  {
+    "name": "Algorithmic Project",
+    "date": "November 2021 - January 2022",
+    "languages": "Swift",
+    "number": "2",
+    "description": "Make the functional specifications and the main program of a game (Quarto) by pair, recover the functional specifications and the main program of another game (Mabula) from another pair and do the development.",
+    "demolink": "",
+    "githublink": "https://github.com/romainfrezier/ProjetAlgoIG3",
+    "documenturl": ""
+  }
+]
