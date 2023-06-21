@@ -11,6 +11,10 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
+        
+      - name: Change branch 🔄
+        run: |
+          git checkout -B gh-pages
 
       - name: Install dependencies 🛜
         run: npm install
@@ -18,7 +22,8 @@ jobs:
       - name: Build ⚒️
         run: npm run build
 
-      - name: Déploy 🛫
+      - name: Deploy 🛫
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
+          branch: gh-pages
           folder: dist
