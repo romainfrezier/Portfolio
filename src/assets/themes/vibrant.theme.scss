@@ -71,7 +71,13 @@
   }
 
   .skills-images {
-    background-color: map-get($vibrant-theme, 'tile');
+    background-color: map-get($vibrant-theme, 'contrast');
+
+    .skill {
+      a {
+        color: map-get($vibrant-theme, 'clear');
+      }
+    }
   }
 
   .home-mountains {
