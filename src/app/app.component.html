@@ -1,6 +1,6 @@
 <div [className]="themeClass">
   <div class="content">
-    <div class="glass" data-tilt>
+    <div class="glass" data-tilt data-tilt-reverse="true">
       <app-header (sectionChanged)="setActivePage($event)" [activeSectionIndex]="activePage"></app-header>
       <div class="main">
         <app-home *ngIf="activePage === 0"></app-home>

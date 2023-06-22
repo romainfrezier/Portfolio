@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Achievement} from "../models/achievement.model";
@@ -21,5 +21,9 @@ export class DataService {
 
   public getArchivedProjects(lang: string): Observable<Project[]> {
     return this.http.get<Project[]>(`./assets/data/${lang}/archived-projects.json`)
+  }
+
+  public getSkills(): Observable<any> {
+    return this.http.get(`./assets/data/skills-images.json`)
   }
 }

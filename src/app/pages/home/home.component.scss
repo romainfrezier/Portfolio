@@ -16,13 +16,18 @@
     text-align: center;
     height: 100%;
     padding: 0 5%;
-    background-image: url("../../../assets/images/home-background.png");
-    background-repeat: no-repeat;
-    background-position-x: 50%;
-    background-position-y: 30%;
 
     h1 {
       font-size: 2rem;
+    }
+
+    .img-container {
+      width: 80%;
+
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
     }
 
     .content {
@@ -62,14 +67,6 @@
         overflow-y: scroll;
         justify-content: flex-start;
       }
-
-      background-size: 60%;
-      background-position-y: 25%;
-    }
-
-    @media (max-width: 1200px) {
-      background-size: 60%;
-      background-position-y: 25%;
     }
   }
 

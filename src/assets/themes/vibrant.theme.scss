@@ -69,4 +69,12 @@
   a {
     color: map-get($vibrant-theme, 'text');
   }
+
+  .skills-images {
+    background-color: map-get($vibrant-theme, 'tile');
+  }
+
+  .home-mountains {
+    filter: invert(22%) sepia(19%) saturate(4836%) hue-rotate(159deg) brightness(100%) contrast(98%);
+  }
 }

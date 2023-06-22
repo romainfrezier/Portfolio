@@ -1,24 +1,21 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {CommonModule} from "@angular/common";
-
-import {AppComponent} from './app.component';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
-import {HeaderComponent} from './components/header/header.component';
-import {HomeComponent} from './pages/home/home.component';
-import {AboutComponent} from './pages/about/about.component';
-import {ResumeComponent} from './pages/resume/resume.component';
-import {AchievementsComponent} from './pages/achievements/achievements.component';
-import {ProjectsComponent} from './pages/projects/projects.component';
-import {SkillsComponent} from './pages/skills/skills.component';
-import {MatIconModule} from "@angular/material/icon";
-import {ThemesService} from "./services/themes.service";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {SafePipe} from './pipes/safe.pipe';
-import {LoaderComponent} from './components/loader/loader.component';
+
+import {AppComponent} from './app.component';
+import {ThemesService} from "./services/themes.service";
 import {DataService} from "./services/data.service";
+import {AboutModule} from "./pages/about/about.module";
+import {SkillsModule} from "./pages/skills/skills.module";
+import {SharedModule} from "./shared/shared.module";
+import {AchievementsModule} from "./pages/achievements/achievements.module";
+import {HomeModule} from "./pages/home/home.module";
+import {ProjectsModule} from "./pages/projects/projects.module";
+import {ResumeModule} from "./pages/resume/resume.module";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/locales/', '.json');
@@ -27,22 +24,19 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    HomeComponent,
-    AboutComponent,
-    ResumeComponent,
-    AchievementsComponent,
-    ProjectsComponent,
-    SkillsComponent,
-    SafePipe,
-    LoaderComponent,
   ],
   imports: [
     BrowserModule,
     CommonModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MatIconModule,
+    SharedModule,
+    HomeModule,
+    AboutModule,
+    AchievementsModule,
+    ProjectsModule,
+    SkillsModule,
+    ResumeModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

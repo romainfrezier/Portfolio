@@ -1,8 +1,8 @@
 <div class="resume-container">
   <div class="left-section">
-    <a download="CV_Romain_Frezier.pdf" href="{{ 'resume.file' | translate}}">
-      <img src="{{ 'resume.preview' | translate }}" alt="resume_preview">
-    </a>
+    <div class="img-container">
+      <img src="{{ 'resume.preview' | translate }}" alt="resume_preview" (click)="download_resume()">
+    </div>
   </div>
   <div class="right-section">
     <div class="description">
