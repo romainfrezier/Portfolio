@@ -59,5 +59,8 @@
     "tools": "Softwares and tools",
     "services": "Services"
   },
-  "contact-me": "You can contact me for any internship or job proposal, or for any other information."
+  "contact-me": "You can contact me for any internship or job proposal, or for any other information.",
+  "error": {
+    "404": "Oops, the page you are looking for does not exist."
+  }
 }

@@ -16,10 +16,13 @@ body {
   font-size: 1rem;
 }
 
-.vibrant-theme, .dark-theme, .dynamic-theme, .relax-theme {
+.vibrant-theme, .dark-theme, .dynamic-theme, .relax-theme, app-home, app-about, app-resume, app-achievements, app-projects, app-skills {
   height: 100%;
-  min-height: 500px;
   width: 100%;
+}
+
+.vibrant-theme, .dark-theme, .dynamic-theme, .relax-theme {
+  min-height: 500px;
 }
 
 ::-webkit-scrollbar {

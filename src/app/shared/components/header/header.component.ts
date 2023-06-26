@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component} from '@angular/core';
 import {TranslateService} from "@ngx-translate/core";
 import {AppConstants} from "@app/app.constants";
 
@@ -7,18 +7,25 @@ import {AppConstants} from "@app/app.constants";
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
-
-  @Output() sectionChanged: EventEmitter<number>;
-
-  @Input() public activeSectionIndex!: number;
-
+export class HeaderComponent {
   public showLanguageMenu: boolean;
   public emoji: string;
   public isBurgerMenuOpen: boolean;
 
+  public readonly home: string;
+  public readonly about: string;
+  public readonly resume: string;
+  public readonly achievements: string;
+  public readonly projects: string;
+  public readonly skills: string;
+
   constructor(private translate: TranslateService) {
-    this.sectionChanged = new EventEmitter<number>();
+    this.home = AppConstants.ROUTES.HOME;
+    this.about = AppConstants.ROUTES.ABOUT;
+    this.resume = AppConstants.ROUTES.RESUME;
+    this.achievements = AppConstants.ROUTES.ACHIEVEMENTS;
+    this.projects = AppConstants.ROUTES.PROJECTS;
+    this.skills = AppConstants.ROUTES.SKILLS;
     const language: string | null = localStorage.getItem(AppConstants.LOCALSTORAGE.LANGUAGE);
     if (language) {
       this.switchLanguage(language)
@@ -28,13 +35,7 @@ export class HeaderComponent implements OnInit {
     this.isBurgerMenuOpen = false;
   }
 
-  ngOnInit(): void {
-    this.setActiveSection(this.activeSectionIndex);
-  }
-
   public setActiveSection(index: number): void {
-    this.activeSectionIndex = index;
-    this.sectionChanged.emit(index);
     switch (index) {
       case 0:
         this.emoji = '👋';
@@ -60,10 +61,6 @@ export class HeaderComponent implements OnInit {
     this.isBurgerMenuOpen = false;
     this.showLanguageMenu = false;
     localStorage.setItem(AppConstants.LOCALSTORAGE.LAST_PAGE, index.toString())
-  }
-
-  public getHeaderItemClasses(index: number): string {
-    return `header-item ${this.activeSectionIndex === index ? 'active' : ''}`;
   }
 
   public toggleLanguageMenu(): void {

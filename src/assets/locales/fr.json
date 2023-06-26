@@ -59,5 +59,8 @@
     "tools": "Logiciels et outils",
     "services": "Services"
   },
-  "contact-me": "N'hésitez pas à me contacter pour une proposition d'emploi ou de stage, ou pour toute autre question."
+  "contact-me": "N'hésitez pas à me contacter pour une proposition d'emploi ou de stage, ou pour toute autre question.",
+  "error": {
+    "404": "Oups, la page que vous cherchez n'existe pas !"
+  }
 }

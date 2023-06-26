@@ -4,12 +4,12 @@
     <mat-icon>{{ isBurgerMenuOpen ? "close" : "menu" }}</mat-icon>
   </div>
   <div class="menu-items {{ isBurgerMenuOpen ? 'menu-open' : 'menu-close' }}">
-    <div [className]="getHeaderItemClasses(0)" (click)="setActiveSection(0)">{{ 'header.home' | translate }}</div>
-    <div [className]="getHeaderItemClasses(1)" (click)="setActiveSection(1)">{{ 'header.about' | translate }}</div>
-    <div [className]="getHeaderItemClasses(2)" (click)="setActiveSection(2)">{{ 'header.resume' | translate }}</div>
-    <div [className]="getHeaderItemClasses(3)" (click)="setActiveSection(3)">{{ 'header.achievements' | translate }}</div>
-    <div [className]="getHeaderItemClasses(4)" (click)="setActiveSection(4)">{{ 'header.projects' | translate }}</div>
-    <div [className]="getHeaderItemClasses(5)" (click)="setActiveSection(5)">{{ 'header.skills' | translate }}</div>
+    <a class="header-item" routerLink="{{ home }}" routerLinkActive="active">{{ 'header.home' | translate }}</a>
+    <a class="header-item" routerLink="{{ about }}" routerLinkActive="active">{{ 'header.about' | translate }}</a>
+    <a class="header-item" routerLink="{{ resume }}" routerLinkActive="active">{{ 'header.resume' | translate }}</a>
+    <a class="header-item" routerLink="{{ achievements }}" routerLinkActive="active">{{ 'header.achievements' | translate }}</a>
+    <a class="header-item" routerLink="{{ projects }}" routerLinkActive="active">{{ 'header.projects' | translate }}</a>
+    <a class="header-item" routerLink="{{ skills }}" routerLinkActive="active">{{ 'header.skills' | translate }}</a>
     <div class="header-item" (click)="toggleLanguageMenu()">
       {{ 'header.languages' | translate }}
       <div *ngIf="showLanguageMenu" class="language-menu menu">

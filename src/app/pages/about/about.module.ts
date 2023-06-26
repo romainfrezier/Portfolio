@@ -3,7 +3,13 @@ import {CommonModule} from '@angular/common';
 import {AboutComponent} from "./about.component";
 import {SharedModule} from "@shared/shared.module";
 import {TranslateModule} from "@ngx-translate/core";
+import {RouterModule, Routes} from "@angular/router";
+import {AppConstants} from "@app/app.constants";
 
+const routes: Routes = [
+  {path: '', component: AboutComponent},
+  {path: '**', redirectTo: AppConstants.ROUTES.ERROR_404}
+];
 
 @NgModule({
   declarations: [
@@ -12,7 +18,8 @@ import {TranslateModule} from "@ngx-translate/core";
   imports: [
     CommonModule,
     TranslateModule,
-    SharedModule
+    SharedModule,
+    RouterModule.forChild(routes),
   ],
   exports: [
     AboutComponent
