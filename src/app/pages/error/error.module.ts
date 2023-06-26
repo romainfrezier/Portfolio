@@ -1,27 +1,23 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {AchievementsComponent} from "./achievements.component";
-import {TranslateModule} from "@ngx-translate/core";
-import {RouterModule, Routes} from "@angular/router";
+import {ErrorComponent} from './error.component';
 import {AppConstants} from "@app/app.constants";
+import {RouterModule, Routes} from "@angular/router";
+import {TranslateModule} from "@ngx-translate/core";
 
 const routes: Routes = [
-  {path: '', component: AchievementsComponent},
+  {path: AppConstants.ROUTES._404, component: ErrorComponent},
   {path: '**', redirectTo: AppConstants.ROUTES.ERROR_404}
 ];
 
 @NgModule({
   declarations: [
-    AchievementsComponent
+    ErrorComponent
   ],
   imports: [
     CommonModule,
     TranslateModule,
     RouterModule.forChild(routes),
-  ],
-  exports: [
-    AchievementsComponent
   ]
 })
-export class AchievementsModule {
-}
+export class ErrorModule { }
