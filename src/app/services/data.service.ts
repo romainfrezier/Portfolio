@@ -24,6 +24,6 @@ export class DataService {
   }
 
   public getSkills(): Observable<any> {
-    return this.http.get(`./assets/data/skills-images.json`)
+    return this.http.get(`./assets/data/skills.json`)
   }
 }
