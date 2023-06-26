@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {LangChangeEvent, TranslateService} from "@ngx-translate/core";
-import {Project} from "../../models/project.model";
-import {AppConstants} from "../../app.constants";
-import {DataService} from "../../services/data.service";
+import {Project} from "@models/project.model";
+import {AppConstants} from "@app/app.constants";
+import {DataService} from "@services/data.service";
 
 @Component({
   selector: 'app-projects',

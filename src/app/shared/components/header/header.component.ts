@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {TranslateService} from "@ngx-translate/core";
-import {AppConstants} from "../../../app.constants";
+import {AppConstants} from "@app/app.constants";
 
 @Component({
   selector: 'app-header',

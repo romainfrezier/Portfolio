@@ -22,7 +22,45 @@
       "es2020",
       "dom"
     ],
-    "useDefineForClassFields": false
+    "useDefineForClassFields": false,
+    "paths": {
+      "@app/*": [
+        "src/app/*"
+      ],
+      "@shared/*": [
+        "src/app/shared/*"
+      ],
+      "@services/*": [
+        "src/app/services/*"
+      ],
+      "@models/*": [
+        "src/app/models/*"
+      ],
+      "@pages/*": [
+        "src/app/pages/*"
+      ],
+      "@pipes/*": [
+        "src/app/pipes/*"
+      ],
+      "@data/*": [
+        "src/assets/data/*"
+      ],
+      "@files/*": [
+        "src/assets/files/*"
+      ],
+      "@images/*": [
+        "src/assets/images/*"
+      ],
+      "@locales/*": [
+        "src/assets/locales/*"
+      ],
+      "@themes/*": [
+        "src/assets/themes/*"
+      ],
+      "@env/*": [
+        "src/environments/*"
+      ],
+    },
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

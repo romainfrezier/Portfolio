@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ThemesService} from "./services/themes.service";
+import {ThemesService} from "@services/themes.service";
 import {TranslateService} from "@ngx-translate/core";
 import VanillaTilt from "vanilla-tilt";
 import {AppConstants} from "./app.constants";

@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {Link} from "../../models/link.model";
+import {Component} from '@angular/core';
+import {Link} from "@models/link.model";
 import {HttpClient} from "@angular/common/http";
 
 @Component({

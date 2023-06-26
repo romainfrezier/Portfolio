@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {Achievement} from "../../models/achievement.model";
+import {Achievement} from "@models/achievement.model";
 import {LangChangeEvent, TranslateService} from "@ngx-translate/core";
-import {AppConstants} from "../../app.constants";
-import {DataService} from "../../services/data.service";
+import {AppConstants} from "@app/app.constants";
+import {DataService} from "@services/data.service";
 
 @Component({
   selector: 'app-achievements',

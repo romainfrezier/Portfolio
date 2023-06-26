@@ -7,15 +7,15 @@ import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {AppComponent} from './app.component';
-import {ThemesService} from "./services/themes.service";
-import {DataService} from "./services/data.service";
-import {AboutModule} from "./pages/about/about.module";
-import {SkillsModule} from "./pages/skills/skills.module";
-import {SharedModule} from "./shared/shared.module";
-import {AchievementsModule} from "./pages/achievements/achievements.module";
-import {HomeModule} from "./pages/home/home.module";
-import {ProjectsModule} from "./pages/projects/projects.module";
-import {ResumeModule} from "./pages/resume/resume.module";
+import {ThemesService} from "@services/themes.service";
+import {DataService} from "@services/data.service";
+import {SharedModule} from "@shared/shared.module";
+import {HomeModule} from "@pages/home/home.module";
+import {AboutModule} from "@pages/about/about.module";
+import {ResumeModule} from "@pages/resume/resume.module";
+import {AchievementsModule} from "@pages/achievements/achievements.module";
+import {ProjectsModule} from "@pages/projects/projects.module";
+import {SkillsModule} from "@pages/skills/skills.module";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/locales/', '.json');

@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {AppConstants} from "../../app.constants";
+import {AppConstants} from "@app/app.constants";
 
 @Component({
   selector: 'app-resume',
