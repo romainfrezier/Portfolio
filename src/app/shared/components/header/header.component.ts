@@ -74,6 +74,8 @@ export class HeaderComponent {
   }
 
   public switchLanguage(lang: string): void {
+    const htmlTag: HTMLElement = document.querySelector('html')!;
+    htmlTag.setAttribute('lang', lang);
     this.translate.use(lang);
     localStorage.setItem(AppConstants.LOCALSTORAGE.LANGUAGE, lang)
     if (this.isBurgerMenuOpen) {
