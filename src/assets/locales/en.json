@@ -4,7 +4,7 @@
     "about": "About",
     "resume": "Resume",
     "achievements": "Certifications",
-    "projects": "Projects",
+    "work": "Work",
     "skills": "Skills",
     "languages": "🇬🇧/ 🇫🇷",
     "choose-language": "Choose your language"
@@ -17,7 +17,7 @@
   },
   "home": {
     "name": "Hello, I am Romain Frezier.",
-    "role": "I am a 4th year engineering student in Computer Science and Management at Polytech Montpellier, France.",
+    "role": "I am 22 years old and I'm a 4th year engineering student in Computer Science and Management at Polytech Montpellier, France.",
     "roleDescription": "I'm currently doing a 3-month internship in Stockholm, Sweden.",
     "contact": {
       "serious": "Don't hesitate to contact me for any internship or job proposal, or for any other information.",
@@ -39,17 +39,40 @@
   "achievements": {
     "title": "Here is my certifications and achievements"
   },
-  "portfolio": {
-    "title": "Some of my Projects",
+  "work": {
+    "title": "Please choose a category",
+    "school_projects": "School projects",
+    "personal_projects": "Personal projects",
+    "work_experience": "Work experience"
+  },
+  "school_projects": {
+    "title": "Some of my projects",
     "date": "Date",
-    "language": "Language(s)",
+    "language": "Language",
+    "languages": "Languages",
     "group": "Group of",
     "person": "person",
     "people": "people",
     "github-link": "Github link",
     "report-link": "Report link",
     "see-more": "See more projects",
-    "see-less": "See less projects"
+    "see-less": "See less projects",
+    "confidential": "The code for this project is still confidential and has yet to be licensed."
+  },
+  "personal_projects": {
+    "title": "Some of my personal projects",
+    "language": "Language",
+    "languages": "Languages",
+    "github-link": "GitHub link",
+    "url": "Demo link",
+    "no-link": "This project is not finished yet."
+  },
+  "work_experiences": {
+    "title": "My work experiences",
+    "date": "Date",
+    "skills": "Skills",
+    "skill": "Skill",
+    "company_url": "Company website"
   },
   "skills": {
     "title": "My Skills",

@@ -1,0 +1,27 @@
+<div class="school-projects-container">
+  <h1>{{ 'school_projects.title' | translate }}</h1>
+  <div class="content">
+    <div class="project-item" *ngFor="let project of projects, let i = index">
+      <div class="video-container" *ngIf="project.demoLink !== ''">
+        <iframe *ngIf="!isLoading[i]" [src]="project.demoLink | safe" allowfullscreen></iframe>
+        <app-loader *ngIf="isLoading[i]"></app-loader>
+      </div>
+      <div class="project-info">
+        <h2>{{ project.name | translate }}</h2>
+        <p>{{ 'school_projects.date' | translate }} : {{ project.date }}</p>
+        <p>{{ (project.languages.split(',').length === 1 ? 'school_projects.language' : 'school_projects.languages') | translate }} : {{ project.languages }}</p>
+        <p>{{ 'school_projects.group' | translate }} : {{ project.number }} {{ (project.number === 1 ? 'school_projects.person' : 'school_projects.people') | translate }}</p>
+        <p>{{ project.description | translate }}</p>
+        <a *ngIf="project.githubLink !== ''" href="{{ project.githubLink }}" target="_blank">{{ 'school_projects.github-link' | translate }}</a>
+        <a *ngIf="project.documentUrl !== ''" href="{{ project.documentUrl }}" target="_blank">{{ 'school_projects.report-link' | translate }}</a>
+        <p *ngIf="project.documentUrl == '' && project.githubLink == ''">{{ 'school_projects.confidential' | translate }}</p>
+      </div>
+    </div>
+    <div *ngIf="!showArchivedProjects" class="button-container" (click)="seeMoreProjects()">
+      <p>{{ 'school_projects.see-more' | translate }}</p>
+    </div>
+    <div *ngIf="showArchivedProjects" class="button-container" (click)="seeLessProjects()">
+      <p>{{ 'school_projects.see-less' | translate }}</p>
+    </div>
+  </div>
+</div>

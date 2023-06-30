@@ -5,9 +5,9 @@
     "languages": "C",
     "number": "2",
     "description": "Réalisation d'une messagerie sur un réseau local en langage C en binôme. Le projet s'est déroulé sous forme de sprint (méthode agile), dans lequel certaines fonctionnalités étaient imposées, et un livrable était à rendre à la fin de chaque sprint. Le dernier sprint nous a laissé le choix sur les fonctionnalités que nous souhaitions implémenter.",
-    "demolink": "https://www.youtube.com/embed/7FBHeUnt2rs?rel=0&autoplay=0&mute=1",
-    "githublink": "https://github.com/romainfrezier/Projet-FAR-Client",
-    "documenturl": ""
+    "demoLink": "https://www.youtube.com/embed/7FBHeUnt2rs?rel=0&autoplay=0&mute=1",
+    "githubLink": "https://github.com/romainfrezier/Projet-FAR-Client",
+    "documentUrl": ""
   },
   {
     "name": "Projet Web",
@@ -15,9 +15,9 @@
     "languages": "PostgreSQL, express.js, JWT, Vue.js, Heroku",
     "number": "1",
     "description": "Réalisation d'une application web complète sur un thème libre en 20 jours. Le choix du sujet s'est tourné vers une application permettant de sauvegarder les activités sportives d'une personne, de consulter ses statistiques, de suivre l'usure de son matériel ainsi que de se renseigner sur les compétitions disponibles.",
-    "demolink": "https://www.youtube.com/embed/yXrBpIDomdI?rel=0&autoplay=0&mute=1",
-    "githublink": "https://github.com/romainfrezier/projet-web-client",
-    "documenturl": ""
+    "demoLink": "https://www.youtube.com/embed/yXrBpIDomdI?rel=0&autoplay=0&mute=1",
+    "githubLink": "https://github.com/romainfrezier/projet-web-client",
+    "documentUrl": ""
   },
   {
     "name": "Projet ASAIoT",
@@ -25,9 +25,9 @@
     "languages": "Python",
     "number": "2",
     "description": " ASAIoT signifie 'Application des Systèmes et de l’Architecture à l’IoT'. Sujet libre pour chaque binôme. Réalisation d'un assistant sportif permettant d'aider un sportif pendant l'exercice en lui donnant des consignes, ainsi qu'un site web pour sauvegarder et consulter les données relatives à l'entrainement. L'assistant sportif utilise plusieurs capteurs comme un capteur à ultrasons, des boutons, mais aussi un écran LCD.",
-    "demolink": "https://www.youtube.com/embed/GbysiVXqvC4?rel=0&autoplay=0&mute=1",
-    "githublink": "https://github.com/romainfrezier/SportAssistant",
-    "documenturl": ""
+    "demoLink": "https://www.youtube.com/embed/GbysiVXqvC4?rel=0&autoplay=0&mute=1",
+    "githubLink": "https://github.com/romainfrezier/SportAssistant",
+    "documentUrl": ""
   },
   {
     "name": "Projet Algorithmique",
@@ -35,8 +35,8 @@
     "languages": "Swift",
     "number": "2",
     "description": "Faire les spécifications fonctionnelles et le programme principal d'un jeu (Quarto) par binôme, récupérer les spécifications fonctionnelles et le programme principal d'un autre jeu (Mabula) de la part d'un autre binôme et en faire le développement.",
-    "demolink": "",
-    "githublink": "https://github.com/romainfrezier/ProjetAlgoIG3",
-    "documenturl": ""
+    "demoLink": "",
+    "githubLink": "https://github.com/romainfrezier/ProjetAlgoIG3",
+    "documentUrl": ""
   }
 ]

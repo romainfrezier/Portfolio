@@ -1,0 +1,15 @@
+<div class="personal-projects-container">
+  <h1>{{ 'personal_projects.title' | translate }}</h1>
+  <div class="content">
+    <div class="project-item" *ngFor="let project of projects, let i = index">
+      <div class="project-info">
+        <h2>{{ project.name | translate }}</h2>
+        <p>{{ (project.languages.split(',').length === 1 ? 'personal_projects.language' : 'personal_projects.languages') | translate }} : {{ project.languages }}</p>
+        <p>{{ project.description | translate }}</p>
+        <a *ngIf="project.githubLink !== ''" href="{{ project.githubLink }}" target="_blank">{{ 'school_projects.github-link' | translate }}</a>
+        <a *ngIf="project.url !== ''" href="{{ project.url }}" target="_blank">{{ 'personal_projects.url' | translate }}</a>
+        <p *ngIf="project.url == '' && project.githubLink == ''">{{ 'personal_projects.no-link' | translate }}</p>
+      </div>
+    </div>
+  </div>
+</div>

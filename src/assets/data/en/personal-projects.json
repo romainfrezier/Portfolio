@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Portfolio",
+    "languages": "Angular, Firebase, TypeScript",
+    "description": "Personal portfolio website. The aim was to create a website in a professional and rigorous manner. The creation of this site allowed me to discover, among other things, internationalization.",
+    "url": "https://romainfrezier.com",
+    "githubLink": ""
+  },
+  {
+    "name": "Internship  Request Manager",
+    "languages": "Angular, Firebase, TypeScript, Express, NodeJS, MongoDB",
+    "description": "Internship request manager for the company, allowing students to save their internship requests.",
+    "url": "",
+    "githubLink": ""
+  }
+]
