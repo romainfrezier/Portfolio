@@ -40,48 +40,54 @@
     },
     {
       "id": 3,
+      "name": "SCSS",
+      "src": "/assets/images/skills/scss-logo.png",
+      "link": "https://sass-lang.com/"
+    },
+    {
+      "id": 4,
       "name": "Angular",
       "src": "/assets/images/skills/angular-logo.png",
       "link": "https://angular.io/"
     },
     {
-      "id": 4,
+      "id": 5,
       "name": "Typescript",
       "src": "/assets/images/skills/typescript-logo.png",
       "link": "https://www.typescriptlang.org/"
     },
     {
-      "id": 5,
+      "id": 6,
       "name": "React",
       "src": "/assets/images/skills/react-logo.png",
       "link": "https://reactjs.org/"
     },
     {
-      "id": 6,
+      "id": 7,
       "name": "JS",
       "src": "/assets/images/skills/javascript-logo.png",
       "link": "https://www.javascript.com/"
     },
     {
-      "id": 7,
+      "id": 8,
       "name": "Node",
       "src": "/assets/images/skills/nodejs-logo.png",
       "link": "https://nodejs.org/"
     },
     {
-      "id": 8,
+      "id": 9,
       "name": "Express",
       "src": "/assets/images/skills/express-logo.png",
       "link": "https://expressjs.com/"
     },
     {
-      "id": 9,
+      "id": 10,
       "name": "VueJS",
       "src": "/assets/images/skills/vue-logo.png",
       "link": "https://vuejs.org/"
     },
     {
-      "id": 10,
+      "id": 11,
       "name": "Quarkus",
       "src": "/assets/images/skills/quarkus-logo.png",
       "link": "https://quarkus.io/"
@@ -158,9 +164,9 @@
     },
     {
       "id": 9,
-      "name": "DataGrip",
-      "src": "/assets/images/skills/datagrip-logo.png",
-      "link": "https://www.jetbrains.com/datagrip/"
+      "name": "Figma",
+      "src": "/assets/images/skills/figma-logo.png",
+      "link": "https://www.figma.com/"
     },
     {
       "id": 10,

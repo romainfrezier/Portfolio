@@ -1,17 +1,17 @@
 import {Component, OnInit} from '@angular/core';
 import {LangChangeEvent, TranslateService} from "@ngx-translate/core";
-import {Project} from "@models/project.model";
+import {SchoolProject} from "@models/school-project.model";
 import {AppConstants} from "@app/app.constants";
 import {DataService} from "@services/data.service";
 
 @Component({
-  selector: 'app-projects',
-  templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss']
+  selector: 'app-work',
+  templateUrl: './school-projects.component.html',
+  styleUrls: ['./school-projects.component.scss']
 })
-export class ProjectsComponent implements OnInit {
+export class SchoolProjectsComponent implements OnInit {
 
-  public projects!: Project[];
+  public projects!: SchoolProject[];
   public isLoading: boolean[];
   public showArchivedProjects: boolean;
 
@@ -32,7 +32,7 @@ export class ProjectsComponent implements OnInit {
   }
 
   private fetchProjects(lang: string): void {
-    this.dataService.getProjects(lang).subscribe((data: Project[]): void => {
+    this.dataService.getSchoolProjects(lang).subscribe((data: SchoolProject[]): void => {
       this.projects = data;
       for (let project of this.projects) {
         this.isLoading.push(true);
@@ -51,7 +51,7 @@ export class ProjectsComponent implements OnInit {
 
   public seeMoreProjects() {
     const lang: string = localStorage.getItem(AppConstants.LOCALSTORAGE.LANGUAGE) || this.translate.defaultLang;
-    this.dataService.getArchivedProjects(lang).subscribe((data: Project[]): void => {
+    this.dataService.getArchivedProjects(lang).subscribe((data: SchoolProject[]): void => {
       this.projects = this.projects.concat(data);
       for (let i = 0; i < data.length; i++) {
         this.isLoading.push(true);
@@ -63,7 +63,7 @@ export class ProjectsComponent implements OnInit {
 
   public seeLessProjects() {
     const lang = localStorage.getItem(AppConstants.LOCALSTORAGE.LANGUAGE) || this.translate.defaultLang;
-    this.dataService.getArchivedProjects(lang).subscribe((data: Project[]): void => {
+    this.dataService.getArchivedProjects(lang).subscribe((data: SchoolProject[]): void => {
       this.projects = this.projects.slice(0, this.projects.length - data.length);
       this.showArchivedProjects = false;
     });

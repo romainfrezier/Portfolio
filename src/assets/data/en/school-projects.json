@@ -1,13 +1,23 @@
 [
   {
+    "name": "Industrial Project",
+    "date": "April 2023 - May 2023",
+    "languages": "Angular, Quarkus, MongoDB, Java, TypeScript, AWS, Firebase",
+    "number": "2",
+    "description": "The industrial project is a project we had to carry out during our 4th year of engineering school. The aim of this project was to create an application at the request of a customer. Our client, the École Nationale Supérieure de Chimie de Montpellier, asked us to create a board game for their students. The board game is a fun way for students to review their chemistry courses.",
+    "demoLink": "https://www.youtube.com/embed/9vE6duudhwA?rel=0&autoplay=0&mute=1",
+    "githubLink": "",
+    "documentUrl": ""
+  },
+  {
     "name": "Mobile Project",
     "date": "January 2023 - March 2023",
     "languages": "Swift UI, Firebase, Express, MongoDB",
     "number": "2",
     "description": "The Mobile project is a project that we had to do during our 4th year of engineering school. The goal of this project is to create an REST API that will be used by a mobile app on iOS.",
-    "demolink": "https://www.youtube.com/embed/tgokcN5KR88?rel=0&autoplay=0&mute=1",
-    "githublink": "https://github.com/romainfrezier/Mobile-iOS",
-    "documenturl": ""
+    "demoLink": "https://www.youtube.com/embed/tgokcN5KR88?rel=0&autoplay=0&mute=1",
+    "githubLink": "https://github.com/romainfrezier/Mobile-iOS",
+    "documentUrl": ""
   },
   {
     "name": "AWI Project",
@@ -15,9 +25,9 @@
     "languages": "Angular, Firebase, Express, MongoDB, Node.js, TypeScript",
     "number": "2",
     "description": "The AWI (Web Application and Interoperability) project is a project that we had to do during our 4th year of engineering school. The goal of this project is to create an REST API that will be used by a web.",
-    "demolink": "https://www.youtube.com/embed/rDaWjrxN57k?rel=0&autoplay=0&mute=1",
-    "githublink": "https://github.com/romainfrezier/AWI-project-frontend",
-    "documenturl": ""
+    "demoLink": "https://www.youtube.com/embed/rDaWjrxN57k?rel=0&autoplay=0&mute=1",
+    "githubLink": "https://github.com/romainfrezier/AWI-project-frontend",
+    "documentUrl": ""
   },
   {
     "name": "Data Science Project",
@@ -25,9 +35,9 @@
     "languages": "Python, PySpark, Pandas, AWS S3, AWS Athena, SQL, Maths",
     "number": "3",
     "description": "Creation of an infographic to answer a question posed by Open Data University: Is the distribution of recharging infrastructures for electric vehicles appropriate in France?",
-    "demolink": "",
-    "githublink": "",
-    "documenturl": "assets/files/Rapport_Frezier_Italiano_Sartori.pdf"
+    "demoLink": "",
+    "githubLink": "",
+    "documentUrl": "assets/files/Rapport_Frezier_Italiano_Sartori.pdf"
   },
   {
     "name": "Software Engineering Project",
@@ -35,8 +45,8 @@
     "languages": "Java, JavaFX",
     "number": "4",
     "description": "Software Engineering project, design, modeling and development in Java. The project concerns the realization of an application in Java connecting people wishing to practice a sport activity with people wishing to accompany them. We tried to respect the SOLID design principles, as well as the basic design principles of Java. Moreover, we used many design patterns seen in the course.",
-    "demolink": "https://www.youtube.com/embed/EdsB2jswzqg?rel=0&autoplay=0&mute=1",
-    "githublink": "https://github.com/romainfrezier/FitJ",
-    "documenturl": ""
+    "demoLink": "https://www.youtube.com/embed/EdsB2jswzqg?rel=0&autoplay=0&mute=1",
+    "githubLink": "https://github.com/romainfrezier/FitJ",
+    "documentUrl": ""
   }
 ]

@@ -1,20 +1,20 @@
 <div class="header-container">
   <span class="header-emoji">{{ emoji }}</span>
-  <div class="menu-burger" (click)="toggleMenu()">
+  <div class="menu-burger" (click)="toggleBurgerMenu()">
     <mat-icon>{{ isBurgerMenuOpen ? "close" : "menu" }}</mat-icon>
   </div>
   <div class="menu-items {{ isBurgerMenuOpen ? 'menu-open' : 'menu-close' }}">
-    <a class="header-item" routerLink="{{ home }}" routerLinkActive="active">{{ 'header.home' | translate }}</a>
-    <a class="header-item" routerLink="{{ about }}" routerLinkActive="active">{{ 'header.about' | translate }}</a>
-    <a class="header-item" routerLink="{{ resume }}" routerLinkActive="active">{{ 'header.resume' | translate }}</a>
-    <a class="header-item" routerLink="{{ achievements }}" routerLinkActive="active">{{ 'header.achievements' | translate }}</a>
-    <a class="header-item" routerLink="{{ projects }}" routerLinkActive="active">{{ 'header.projects' | translate }}</a>
-    <a class="header-item" routerLink="{{ skills }}" routerLinkActive="active">{{ 'header.skills' | translate }}</a>
+    <a class="header-item" routerLink="{{ home }}" routerLinkActive="active" (click)="hideBurgerMenu()">{{ 'header.home' | translate }}</a>
+    <a class="header-item" routerLink="{{ about }}" routerLinkActive="active" (click)="hideBurgerMenu()">{{ 'header.about' | translate }}</a>
+    <a class="header-item" routerLink="{{ resume }}" routerLinkActive="active" (click)="hideBurgerMenu()">{{ 'header.resume' | translate }}</a>
+    <a class="header-item" routerLink="{{ achievements }}" routerLinkActive="active" (click)="hideBurgerMenu()">{{ 'header.achievements' | translate }}</a>
+    <a class="header-item" routerLink="{{ work }}" routerLinkActive="active" (click)="hideBurgerMenu()">{{ 'header.work' | translate }}</a>
+    <a class="header-item" routerLink="{{ skills }}" routerLinkActive="active" (click)="hideBurgerMenu()">{{ 'header.skills' | translate }}</a>
     <div class="header-item" (click)="toggleLanguageMenu()">
       {{ 'header.languages' | translate }}
-      <div *ngIf="showLanguageMenu" class="language-menu menu">
-        <span (click)="switchLanguage('fr'); toggleLanguageMenu()">Français 🇫🇷</span>
-        <span (click)="switchLanguage('en'); toggleLanguageMenu()">English 🇬🇧</span>
+      <div *ngIf="isLanguageMenuShown" class="language-menu menu">
+        <span (click)="switchLanguage('fr'); hideLanguageMenu()">Français 🇫🇷</span>
+        <span (click)="switchLanguage('en'); hideLanguageMenu()">English 🇬🇧</span>
       </div>
     </div>
   </div>

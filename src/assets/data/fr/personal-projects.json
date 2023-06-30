@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Portfolio",
+    "languages": "Angular, Firebase, TypeScript",
+    "description": "Portfolio personnel. Le but était de réaliser un site web de manière professionnelle avec beaucoup de rigueur. La création de ce site m'a permis de découvrir, entre autres, l'internationalisation.",
+    "url": "https://romainfrezier.com",
+    "githubLink": ""
+  },
+  {
+    "name": "Gestionnaire de demande de stages",
+    "languages": "Angular, Firebase, TypeScript, Express, NodeJS, MongoDB",
+    "description": "Gestionnaire de demande de stages pour l'entreprise permettant de sauvegarder les demandes de stages réalisées par les étudiants.",
+    "url": "",
+    "githubLink": ""
+  }
+]

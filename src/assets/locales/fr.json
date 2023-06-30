@@ -4,7 +4,7 @@
     "about": "À propos",
     "resume": "CV",
     "achievements": "Certifications",
-    "projects": "Projets",
+    "work": "Travaux",
     "skills": "Compétences",
     "languages": "🇫🇷/ 🇬🇧",
     "choose-language": "Choisissez votre langue"
@@ -17,7 +17,7 @@
   },
   "home": {
     "name": "Bonjour, je suis Romain Frezier.",
-    "role": "Je suis étudiant ingénieur en 4ème année d'Informatique et Gestion à Polytech Montpellier, France.",
+    "role": "J'ai 22 ans et je suis étudiant ingénieur en 4ème année d'Informatique et Gestion à Polytech Montpellier, France.",
     "roleDescription": "Je suis actuellement en stage pour une durée de 3 mois à Stockholm, Suède.",
     "contact": {
       "serious": "N'hésitez pas à me contacter pour une proposition d'emploi ou de stage, ou pour toute autre question.",
@@ -39,17 +39,40 @@
   "achievements": {
     "title": "Voici mes certifications et réalisations"
   },
-  "portfolio": {
+  "work": {
+    "title": "Choisissez une catégorie",
+    "school_projects": "Projets scolaires",
+    "personal_projects": "Projets personnels",
+    "work_experience": "Expérience professionnelle"
+  },
+  "school_projects": {
     "title": "Quelques-uns de mes projets",
     "date": "Date",
-    "language": "Langage(s)",
+    "language": "Langage",
+    "languages": "Langages",
     "group": "Groupe de",
     "person": "personne",
     "people": "personnes",
     "github-link": "Lien GitHub",
     "report-link": "Lien rapport",
     "see-more": "Voir plus de projets",
-    "see-less": "Voir moins de projets"
+    "see-less": "Voir moins de projets",
+    "confidential": "Le code de ce projet est encore confidentiel et doit être mis sous licence."
+  },
+  "personal_projects": {
+    "title": "Quelques-uns de mes projets personnels",
+    "language": "Langage",
+    "languages": "Langages",
+    "github-link": "Lien GitHub",
+    "url": "Lien démo",
+    "no-link": "Ce projet n'est pas encore en terminé."
+  },
+  "work_experiences": {
+    "title": "Mes expériences professionnelles",
+    "date": "Date",
+    "skills": "Compétences",
+    "skill": "Compétence",
+    "company_url": "Site de l'entreprise"
   },
   "skills": {
     "title": "Mes Competences",

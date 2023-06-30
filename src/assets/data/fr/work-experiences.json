@@ -1,0 +1,22 @@
+[
+  {
+    "company": "Reactional Music",
+    "companyUrl": "https://reactionalmusic.com/",
+    "companyLogo": "assets/images/work-experiences/reactional-music.png",
+    "place": "Stockholm, Suède",
+    "date": "Juin 2023 - Août 2023",
+    "position": "Fullstack Developer Intern",
+    "skills": "React, TypeScript, GitLab, Firebase, Figma, Notion, Agilité, Communication",
+    "description": "En tant que stagiaire chez Reactional Music, j'ai travaillé sur une application destinée aux compositeurs de musique, et j'ai développé certaines fonctionnalités comme la page de configuration, la connexion à un compte reactional ou la gestion des thèmes. Cette application permet aux compositeurs de créer et de partager leurs thèmes musicaux pour les jeux vidéo."
+  },
+  {
+    "company": "JTech SA",
+    "companyUrl": "https://www.j-tech.ch/",
+    "companyLogo": "assets/images/work-experiences/jtech.png",
+    "place": "Genève, Suisse",
+    "date": "Juillet 2017, 2018, 2019, 2020, 2021, 2022",
+    "position": "Monteur en ventilation",
+    "skills": "Travail d'équipe, Adaptabilité, Communication",
+    "description": "J'ai travaillé comme monteur en ventilation pendant mes vacances d'été. J'ai appris à travailler en équipe et à m'adapter à différentes situations."
+  }
+]

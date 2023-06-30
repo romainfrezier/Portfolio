@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {TranslateService} from "@ngx-translate/core";
 import {AppConstants} from "@app/app.constants";
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +9,7 @@ import {AppConstants} from "@app/app.constants";
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  public showLanguageMenu: boolean;
+  public isLanguageMenuShown: boolean;
   public emoji: string;
   public isBurgerMenuOpen: boolean;
 
@@ -16,66 +17,75 @@ export class HeaderComponent {
   public readonly about: string;
   public readonly resume: string;
   public readonly achievements: string;
-  public readonly projects: string;
+  public readonly work: string;
   public readonly skills: string;
 
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService, private location: Location) {
     this.home = AppConstants.ROUTES.HOME;
     this.about = AppConstants.ROUTES.ABOUT;
     this.resume = AppConstants.ROUTES.RESUME;
     this.achievements = AppConstants.ROUTES.ACHIEVEMENTS;
-    this.projects = AppConstants.ROUTES.PROJECTS;
+    this.work = AppConstants.ROUTES.WORK;
     this.skills = AppConstants.ROUTES.SKILLS;
     const language: string | null = localStorage.getItem(AppConstants.LOCALSTORAGE.LANGUAGE);
     if (language) {
       this.switchLanguage(language)
     }
     this.emoji = '👋';
-    this.showLanguageMenu = false;
+    this.isLanguageMenuShown = false;
     this.isBurgerMenuOpen = false;
+    this.location.onUrlChange((url: string) => {
+      const pathSections: string[] = url.split('/');
+      const path: string = pathSections[pathSections.length - 1];
+      this.setEmoji(path);
+    });
   }
 
-  public setActiveSection(index: number): void {
-    switch (index) {
-      case 0:
-        this.emoji = '👋';
-        break;
-      case 1:
-        this.emoji = '😁';
-        break;
-      case 2:
-        this.emoji = '📄';
-        break;
-      case 3:
-        this.emoji = '🏆';
-        break;
-      case 4:
-        this.emoji = '🧑‍💻';
-        break;
-      case 5:
-        this.emoji = '⚙️';
-        break;
-      default:
-        this.emoji = '👋';
+  public setEmoji(path: string): void {
+    if (path == this.home) {
+      this.emoji = '👋';
+    } else if (path == this.about) {
+      this.emoji = '😁';
+    } else if (path == this.resume) {
+      this.emoji = '📄';
+    } else if (path == this.achievements) {
+      this.emoji = '🏆';
+    } else if (path == this.work) {
+      this.emoji = '🧑‍💻';
+    } else if (path == this.skills) {
+      this.emoji = '⚙️';
+    } else if (path == AppConstants.ROUTES.SCHOOL_PROJECTS) {
+      this.emoji = '🎓';
+    } else if (path == AppConstants.ROUTES.PERSONAL_PROJECTS) {
+      this.emoji = '🧑‍💻';
+    } else if (path == AppConstants.ROUTES.EXPERIENCES) {
+      this.emoji = '💼';
+    } else {
+      this.emoji = '❓';
     }
-    this.isBurgerMenuOpen = false;
-    this.showLanguageMenu = false;
-    localStorage.setItem(AppConstants.LOCALSTORAGE.LAST_PAGE, index.toString())
+  }
+
+  public hideLanguageMenu(): void {
+    this.isLanguageMenuShown = false;
   }
 
   public toggleLanguageMenu(): void {
-    this.showLanguageMenu = !this.showLanguageMenu;
+    this.isLanguageMenuShown = !this.isLanguageMenuShown;
   }
 
   public switchLanguage(lang: string): void {
     this.translate.use(lang);
     localStorage.setItem(AppConstants.LOCALSTORAGE.LANGUAGE, lang)
     if (this.isBurgerMenuOpen) {
-      this.toggleMenu();
+      this.hideBurgerMenu();
     }
   }
 
-  public toggleMenu() {
+  public hideBurgerMenu() {
+    this.isBurgerMenuOpen = false;
+  }
+
+  public toggleBurgerMenu() {
     this.isBurgerMenuOpen = !this.isBurgerMenuOpen;
   }
 }

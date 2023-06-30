@@ -16,7 +16,7 @@ body {
   font-size: 1rem;
 }
 
-.vibrant-theme, .dark-theme, .dynamic-theme, .relax-theme, app-home, app-about, app-resume, app-achievements, app-projects, app-skills {
+.vibrant-theme, .dark-theme, .dynamic-theme, .relax-theme, app-home, app-about, app-resume, app-achievements, app-skills, app-work, app-school-projects, app-personal-projects, app-experience {
   height: 100%;
   width: 100%;
 }
@@ -31,4 +31,46 @@ body {
 
 ::-webkit-scrollbar-track, ::-webkit-scrollbar-thumb {
   border-radius: 10px;
+}
+
+@media (max-width: 650px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p, a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 850px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  p, a {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 850px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  p, a {
+    font-size: 1rem;
+  }
 }

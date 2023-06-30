@@ -14,7 +14,7 @@ export class ThemesService {
     if (savedTheme) {
       this.theme = new BehaviorSubject<string>(savedTheme)
     } else {
-      this.theme = new BehaviorSubject('vibrant-theme');
+      this.theme = new BehaviorSubject('dark-theme');
     }
     this.currentTheme = this.theme.asObservable()
   }
