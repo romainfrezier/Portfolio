@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {AppConstants} from "@app/app.constants";
+import {TranslateService} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-resume',
@@ -8,9 +8,11 @@ import {AppConstants} from "@app/app.constants";
 })
 export class ResumeComponent {
 
+  constructor(private translate: TranslateService) {}
+
   public download_resume() {
     const document_name: string = "CV_Romain_Frezier.pdf"
-    const document_url: string = "assets/files/CV_" + localStorage.getItem(AppConstants.LOCALSTORAGE.LANGUAGE) + ".pdf";
+    const document_url: string = "assets/files/CV_" + this.translate.currentLang + ".pdf";
     const link: HTMLAnchorElement = document.createElement('a');
     link.download = document_name;
     link.href = document_url;

@@ -30,6 +30,9 @@ export class HeaderComponent {
     const language: string | null = localStorage.getItem(AppConstants.LOCALSTORAGE.LANGUAGE);
     if (language) {
       this.switchLanguage(language)
+    } else {
+      this.translate.currentLang = this.translate.defaultLang;
+      localStorage.setItem(AppConstants.LOCALSTORAGE.LANGUAGE, this.translate.currentLang);
     }
     this.emoji = '👋';
     this.isLanguageMenuShown = false;
