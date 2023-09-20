@@ -10,11 +10,11 @@
     <a class="header-item" routerLink="{{ achievements }}" routerLinkActive="active" (click)="hideBurgerMenu()">{{ 'header.achievements' | translate }}</a>
     <a class="header-item" routerLink="{{ work }}" routerLinkActive="active" (click)="hideBurgerMenu()">{{ 'header.work' | translate }}</a>
     <a class="header-item" routerLink="{{ skills }}" routerLinkActive="active" (click)="hideBurgerMenu()">{{ 'header.skills' | translate }}</a>
-    <div class="header-item" (click)="toggleLanguageMenu()">
+    <div class="header-item" (click)="toggleLanguageMenu($event)">
       {{ 'header.languages' | translate }}
       <div *ngIf="isLanguageMenuShown" class="language-menu menu">
-        <span (click)="switchLanguage('fr'); hideLanguageMenu()">Français 🇫🇷</span>
-        <span (click)="switchLanguage('en'); hideLanguageMenu()">English 🇬🇧</span>
+        <span (click)="switchLanguage('fr'); hideLanguageMenu($event)">Français 🇫🇷</span>
+        <span (click)="switchLanguage('en'); hideLanguageMenu($event)">English 🇬🇧</span>
       </div>
     </div>
   </div>

@@ -68,11 +68,13 @@ export class HeaderComponent {
     }
   }
 
-  public hideLanguageMenu(): void {
+  public hideLanguageMenu(event: MouseEvent): void {
+    event.stopPropagation();
     this.isLanguageMenuShown = false;
   }
 
-  public toggleLanguageMenu(): void {
+  public toggleLanguageMenu(event: MouseEvent): void {
+    event.stopPropagation();
     this.isLanguageMenuShown = !this.isLanguageMenuShown;
   }
 
