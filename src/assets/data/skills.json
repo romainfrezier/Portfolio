@@ -28,69 +28,45 @@
   "web": [
     {
       "id": 1,
-      "name": "HTML",
-      "src": "/assets/images/skills/html-logo-light.png",
-      "link": "https://en.wikipedia.org/wiki/HTML"
-    },
-    {
-      "id": 2,
-      "name": "CSS",
-      "src": "/assets/images/skills/css-logo-light.png",
-      "link": "https://en.wikipedia.org/wiki/CSS"
-    },
-    {
-      "id": 3,
-      "name": "SCSS",
-      "src": "/assets/images/skills/scss-logo.png",
-      "link": "https://sass-lang.com/"
-    },
-    {
-      "id": 4,
       "name": "Angular",
       "src": "/assets/images/skills/angular-logo.png",
       "link": "https://angular.io/"
     },
     {
-      "id": 5,
-      "name": "Typescript",
-      "src": "/assets/images/skills/typescript-logo.png",
-      "link": "https://www.typescriptlang.org/"
-    },
-    {
-      "id": 6,
+      "id": 2,
       "name": "React",
       "src": "/assets/images/skills/react-logo.png",
       "link": "https://reactjs.org/"
     },
     {
-      "id": 7,
-      "name": "JS",
-      "src": "/assets/images/skills/javascript-logo.png",
-      "link": "https://www.javascript.com/"
+      "id": 3,
+      "name": "Typescript",
+      "src": "/assets/images/skills/typescript-logo.png",
+      "link": "https://www.typescriptlang.org/"
     },
     {
-      "id": 8,
-      "name": "Node",
-      "src": "/assets/images/skills/nodejs-logo.png",
-      "link": "https://nodejs.org/"
+      "id": 4,
+      "name": "SCSS",
+      "src": "/assets/images/skills/scss-logo.png",
+      "link": "https://sass-lang.com/"
     },
     {
-      "id": 9,
+      "id": 5,
       "name": "Express",
       "src": "/assets/images/skills/express-logo.png",
       "link": "https://expressjs.com/"
     },
     {
-      "id": 10,
-      "name": "VueJS",
-      "src": "/assets/images/skills/vue-logo.png",
-      "link": "https://vuejs.org/"
-    },
-    {
-      "id": 11,
+      "id": 6,
       "name": "Quarkus",
       "src": "/assets/images/skills/quarkus-logo.png",
       "link": "https://quarkus.io/"
+    },
+    {
+      "id": 7,
+      "name": "Spring Boot",
+      "src": "/assets/images/skills/spring-boot-logo.png",
+      "link": "https://spring.io/projects/spring-boot"
     }
   ],
   "db": [
@@ -146,45 +122,21 @@
     },
     {
       "id": 6,
-      "name": "Clion",
-      "src": "/assets/images/skills/clion-logo.png",
-      "link": "https://www.jetbrains.com/clion/"
-    },
-    {
-      "id": 7,
       "name": "WebStorm",
       "src": "/assets/images/skills/webstorm-logo.png",
       "link": "https://www.jetbrains.com/webstorm/"
     },
     {
-      "id": 8,
-      "name": "PyCharm",
-      "src": "/assets/images/skills/pycharm-logo.png",
-      "link": "https://www.jetbrains.com/pycharm/"
-    },
-    {
-      "id": 9,
+      "id": 7,
       "name": "Figma",
       "src": "/assets/images/skills/figma-logo.png",
       "link": "https://www.figma.com/"
     },
     {
-      "id": 10,
-      "name": "VSCode",
-      "src": "/assets/images/skills/vscode-logo.png",
-      "link": "https://code.visualstudio.com/"
-    },
-    {
-      "id": 11,
+      "id": 8,
       "name": "Gimp",
       "src": "/assets/images/skills/gimp-logo.png",
       "link": "https://www.gimp.org/"
-    },
-    {
-      "id": 12,
-      "name": "Xcode",
-      "src": "/assets/images/skills/xcode-logo.png",
-      "link": "https://developer.apple.com/xcode/"
     }
   ],
   "services": [
