@@ -1,12 +1,22 @@
 [
   {
+    "name": "IWA Project",
+    "date": "September 2023 - November 2023",
+    "languages": "React Native, Java, Kotlin, Docker, Spring Boot, Spring WebFlux, Keycloak, Kafka, MongoDB, PostgreSQL",
+    "number": "2",
+    "description": "This project is a school project for the 5th year of engineering school at Polytech Montpellier. The aim of the project was to introduce the concept of microservices and to implement a project based on this principle. The project aims to develop a complete application for seasonal job recruiters, candidates and administrators.",
+    "demoLink": "https://www.youtube.com/embed/XNGojZddmu4?rel=0&autoplay=0&mute=1",
+    "githubLink": "https://github.com/romainfrezier/Seasonsforce",
+    "documentUrl": ""
+  },
+  {
     "name": "Industrial Project",
     "date": "April 2023 - May 2023",
     "languages": "Angular, Quarkus, MongoDB, Java, TypeScript, AWS, Firebase",
     "number": "2",
     "description": "The industrial project is a project we had to carry out during our 4th year of engineering school. The aim of this project was to create an application at the request of a customer. Our client, the École Nationale Supérieure de Chimie de Montpellier, asked us to create a board game for their students. The board game is a fun way for students to review their chemistry courses.",
     "demoLink": "https://www.youtube.com/embed/9vE6duudhwA?rel=0&autoplay=0&mute=1",
-    "githubLink": "",
+    "githubLink": "https://github.com/romainfrezier/ChemistryDeathRace",
     "documentUrl": ""
   },
   {
@@ -20,16 +30,6 @@
     "documentUrl": ""
   },
   {
-    "name": "AWI Project",
-    "date": "January 2023 - March 2023",
-    "languages": "Angular, Firebase, Express, MongoDB, Node.js, TypeScript",
-    "number": "2",
-    "description": "The AWI (Web Application and Interoperability) project is a project that we had to do during our 4th year of engineering school. The goal of this project is to create an REST API that will be used by a web.",
-    "demoLink": "https://www.youtube.com/embed/rDaWjrxN57k?rel=0&autoplay=0&mute=1",
-    "githubLink": "https://github.com/romainfrezier/AWI-project-frontend",
-    "documentUrl": ""
-  },
-  {
     "name": "Data Science Project",
     "date": "December 2022 - January 2023",
     "languages": "Python, PySpark, Pandas, AWS S3, AWS Athena, SQL, Maths",
@@ -38,15 +38,5 @@
     "demoLink": "",
     "githubLink": "",
     "documentUrl": "assets/files/Rapport_Frezier_Italiano_Sartori.pdf"
-  },
-  {
-    "name": "Software Engineering Project",
-    "date": "November 2022 - January 2023",
-    "languages": "Java, JavaFX",
-    "number": "4",
-    "description": "Software Engineering project, design, modeling and development in Java. The project concerns the realization of an application in Java connecting people wishing to practice a sport activity with people wishing to accompany them. We tried to respect the SOLID design principles, as well as the basic design principles of Java. Moreover, we used many design patterns seen in the course.",
-    "demoLink": "https://www.youtube.com/embed/EdsB2jswzqg?rel=0&autoplay=0&mute=1",
-    "githubLink": "https://github.com/romainfrezier/FitJ",
-    "documentUrl": ""
   }
 ]

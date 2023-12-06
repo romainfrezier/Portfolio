@@ -1,5 +1,25 @@
 [
   {
+    "name": "AWI Project",
+    "date": "January 2023 - March 2023",
+    "languages": "Angular, Firebase, Express, MongoDB, Node.js, TypeScript",
+    "number": "2",
+    "description": "The AWI (Web Application and Interoperability) project is a project that we had to do during our 4th year of engineering school. The goal of this project is to create an REST API that will be used by a web.",
+    "demoLink": "https://www.youtube.com/embed/rDaWjrxN57k?rel=0&autoplay=0&mute=1",
+    "githubLink": "https://github.com/romainfrezier/AWI-project-frontend",
+    "documentUrl": ""
+  },
+  {
+    "name": "Software Engineering Project",
+    "date": "November 2022 - January 2023",
+    "languages": "Java, JavaFX",
+    "number": "4",
+    "description": "Software Engineering project, design, modeling and development in Java. The project concerns the realization of an application in Java connecting people wishing to practice a sport activity with people wishing to accompany them. We tried to respect the SOLID design principles, as well as the basic design principles of Java. Moreover, we used many design patterns seen in the course.",
+    "demoLink": "https://www.youtube.com/embed/EdsB2jswzqg?rel=0&autoplay=0&mute=1",
+    "githubLink": "https://github.com/romainfrezier/FitJ",
+    "documentUrl": ""
+  },
+  {
     "name": "C Project",
     "date": "April - May 2022",
     "languages": "C",

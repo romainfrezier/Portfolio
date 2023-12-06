@@ -1,5 +1,9 @@
 @import "themes.colors";
 
+.html-vibrant-theme {
+  background-image: linear-gradient(to right bottom, map-get($vibrant-theme, 'top'), map-get($vibrant-theme, 'bottom'));
+}
+
 .vibrant-theme {
   background-image: linear-gradient(to right bottom, map-get($vibrant-theme, 'top'), map-get($vibrant-theme, 'bottom'));
   color: map-get($vibrant-theme, 'text');

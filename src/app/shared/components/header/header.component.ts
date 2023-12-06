@@ -59,8 +59,6 @@ export class HeaderComponent {
       this.emoji = '⚙️';
     } else if (path == AppConstants.ROUTES.SCHOOL_PROJECTS) {
       this.emoji = '🎓';
-    } else if (path == AppConstants.ROUTES.PERSONAL_PROJECTS) {
-      this.emoji = '🧑‍💻';
     } else if (path == AppConstants.ROUTES.EXPERIENCES) {
       this.emoji = '💼';
     } else {

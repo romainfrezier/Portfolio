@@ -20,6 +20,12 @@
     },
     {
       "id": 4,
+      "name": "Kotlin",
+      "src": "/assets/images/skills/kotlin-logo.png",
+      "link": "https://kotlinlang.org/"
+    },
+    {
+      "id": 5,
       "name": "C",
       "src": "/assets/images/skills/c-logo.png",
       "link": "https://en.wikipedia.org/wiki/C_(programming_language)"
@@ -78,15 +84,15 @@
     },
     {
       "id": 2,
-      "name": "MySQL",
-      "src": "/assets/images/skills/mysql-logo.png",
-      "link": "https://www.mysql.com/"
-    },
-    {
-      "id": 3,
       "name": "PostgreSQL",
       "src": "/assets/images/skills/postgresql-logo.png",
       "link": "https://www.postgresql.org/"
+    },
+    {
+      "id": 3,
+      "name": "MySQL",
+      "src": "/assets/images/skills/mysql-logo.png",
+      "link": "https://www.mysql.com/"
     }
   ],
   "soft": [
@@ -104,9 +110,9 @@
     },
     {
       "id": 3,
-      "name": "StartUML",
-      "src": "/assets/images/skills/staruml-logo.png",
-      "link": "http://staruml.io/"
+      "name": "Postman",
+      "src": "/assets/images/skills/postman-logo.png",
+      "link": "https://www.postman.com/"
     },
     {
       "id": 4,
@@ -157,6 +163,18 @@
       "name": "Docker",
       "src": "/assets/images/skills/docker-logo.png",
       "link": "https://www.docker.com/"
+    },
+    {
+      "id": 4,
+      "name": "Keycloak",
+      "src": "/assets/images/skills/keycloak-logo.png",
+      "link": "https://www.keycloak.org/"
+    },
+    {
+      "id": 5,
+      "name": "Apache Kafka",
+      "src": "/assets/images/skills/kafka-logo.png",
+      "link": "https://kafka.apache.org/"
     }
   ]
 }

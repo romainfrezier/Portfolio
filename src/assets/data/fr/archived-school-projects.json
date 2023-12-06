@@ -1,5 +1,25 @@
 [
   {
+    "name": "Projet AWI",
+    "date": "Janvier 2023 - Mars 2023",
+    "languages": "Angular, Firebase, Express, MongoDB, Node.js, TypeScript",
+    "number": "2",
+    "description": "Le projet AWI (Application Web et Interopérabilité) est un projet que nous avons eu à réaliser durant notre 4ème année d'école d'ingénieur. Le but de ce projet est de créer une API REST qui sera utilisée par une application web.",
+    "demoLink": "https://www.youtube.com/embed/rDaWjrxN57k?rel=0&autoplay=0&mute=1",
+    "githubLink": "https://github.com/romainfrezier/AWI-project-frontend",
+    "documentUrl": ""
+  },
+  {
+    "name": "Projet de Software Engineering",
+    "date": "Novembre 2022 - Janvier 2023",
+    "languages": "Java, JavaFX",
+    "number": "4",
+    "description": "Projet de Software Engineering, projet de conception, modélisation et développement en Java. Le projet porte sur la réalisation d'une application en Java mettant en relation des personnes souhaitant pratiquer une activité sportive avec des personnes souhaitant les accompagner. Nous avons essayer de respecter les principes de conception SOLID, ainsi que les principes de conception de base de Java. De plus, nous avons utilisé de nombreux design patterns vus en cours.",
+    "demoLink": "https://www.youtube.com/embed/EdsB2jswzqg?rel=0&autoplay=0&mute=1",
+    "githubLink": "https://github.com/romainfrezier/FitJ",
+    "documentUrl": ""
+  },
+  {
     "name": "Projet C",
     "date": "Avril - Mai 2022",
     "languages": "C",
@@ -10,16 +30,6 @@
     "documentUrl": ""
   },
   {
-    "name": "Projet Web",
-    "date": "Mars 2022",
-    "languages": "PostgreSQL, express.js, JWT, Vue.js, Heroku",
-    "number": "1",
-    "description": "Réalisation d'une application web complète sur un thème libre en 20 jours. Le choix du sujet s'est tourné vers une application permettant de sauvegarder les activités sportives d'une personne, de consulter ses statistiques, de suivre l'usure de son matériel ainsi que de se renseigner sur les compétitions disponibles.",
-    "demoLink": "https://www.youtube.com/embed/yXrBpIDomdI?rel=0&autoplay=0&mute=1",
-    "githubLink": "https://github.com/romainfrezier/projet-web-client",
-    "documentUrl": ""
-  },
-  {
     "name": "Projet ASAIoT",
     "date": "Décembre 2021 - Janvier 2022",
     "languages": "Python",
@@ -27,16 +37,6 @@
     "description": " ASAIoT signifie 'Application des Systèmes et de l’Architecture à l’IoT'. Sujet libre pour chaque binôme. Réalisation d'un assistant sportif permettant d'aider un sportif pendant l'exercice en lui donnant des consignes, ainsi qu'un site web pour sauvegarder et consulter les données relatives à l'entrainement. L'assistant sportif utilise plusieurs capteurs comme un capteur à ultrasons, des boutons, mais aussi un écran LCD.",
     "demoLink": "https://www.youtube.com/embed/GbysiVXqvC4?rel=0&autoplay=0&mute=1",
     "githubLink": "https://github.com/romainfrezier/SportAssistant",
-    "documentUrl": ""
-  },
-  {
-    "name": "Projet Algorithmique",
-    "date": "Novembre 2021 - Janvier 2022",
-    "languages": "Swift",
-    "number": "2",
-    "description": "Faire les spécifications fonctionnelles et le programme principal d'un jeu (Quarto) par binôme, récupérer les spécifications fonctionnelles et le programme principal d'un autre jeu (Mabula) de la part d'un autre binôme et en faire le développement.",
-    "demoLink": "",
-    "githubLink": "https://github.com/romainfrezier/ProjetAlgoIG3",
     "documentUrl": ""
   }
 ]

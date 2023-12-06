@@ -17,10 +17,17 @@ export class ThemesService {
       this.theme = new BehaviorSubject('dark-theme');
     }
     this.currentTheme = this.theme.asObservable()
+    this.setHTMLTagTheme(this.theme.getValue())
   }
 
   changeTheme(theme: string) {
     this.theme.next(theme);
     localStorage.setItem(AppConstants.LOCALSTORAGE.THEME, theme)
+    this.setHTMLTagTheme(theme)
+  }
+
+  setHTMLTagTheme(theme: string) {
+    const bodyTag: HTMLBodyElement = document.getElementsByTagName('body')[0];
+    bodyTag.className = 'html-' + theme;
   }
 }

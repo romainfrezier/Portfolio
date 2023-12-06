@@ -17,11 +17,22 @@
     height: 10%;
   }
 
-  a {
+  .work-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5%;
+    width: 100%;
+    height: 80%;
+  }
+
+  .work-links a {
     text-decoration: none;
     width: 80%;
     max-width: 600px;
     height: 30%;
+    min-height: 130px;
     display: flex;
     flex-direction: column;
     align-items: center;

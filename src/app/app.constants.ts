@@ -14,7 +14,6 @@ export class AppConstants {
     public static ERROR = "error"
 
     public static SCHOOL_PROJECTS = "school-projects"
-    public static PERSONAL_PROJECTS = "personal-projects"
     public static EXPERIENCES = "experiences"
     public static _404 = "404"
 

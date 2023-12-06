@@ -1,5 +1,9 @@
 @import "themes.colors";
 
+.html-dark-theme {
+  background-image: linear-gradient(to right bottom, map-get($dark-theme, 'top'), map-get($dark-theme, 'bottom'));
+}
+
 .dark-theme {
   background-image: linear-gradient(to right bottom, map-get($dark-theme, 'top'), map-get($dark-theme, 'bottom'));
   color: map-get($dark-theme, 'text');

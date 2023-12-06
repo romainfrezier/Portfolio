@@ -6,13 +6,11 @@ import {SharedModule} from "@shared/shared.module";
 import {RouterModule, Routes} from "@angular/router";
 import {AppConstants} from "@app/app.constants";
 import {WorkComponent} from './work.component';
-import {PersonalProjectsComponent} from '@pages/work/components/personal-projects/personal-projects.component';
 import {WorkExperiencesComponent} from './components/experience/work-experiences.component';
 
 const routes: Routes = [
   {path: '', component: WorkComponent},
   {path: AppConstants.ROUTES.SCHOOL_PROJECTS, component: SchoolProjectsComponent},
-  {path: AppConstants.ROUTES.PERSONAL_PROJECTS, component: PersonalProjectsComponent},
   {path: AppConstants.ROUTES.EXPERIENCES, component: WorkExperiencesComponent},
   {path: '**', redirectTo: AppConstants.ROUTES.ERROR_404}
 ];
@@ -21,7 +19,6 @@ const routes: Routes = [
   declarations: [
     SchoolProjectsComponent,
     WorkComponent,
-    PersonalProjectsComponent,
     WorkExperiencesComponent
   ],
   imports: [

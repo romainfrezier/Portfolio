@@ -1,5 +1,9 @@
 @import "themes.colors";
 
+.html-relax-theme {
+  background-image: linear-gradient(to right bottom, map-get($relax-theme, 'top'), map-get($relax-theme, 'bottom'));
+}
+
 .relax-theme {
   background-image: linear-gradient(to right bottom, map-get($relax-theme, 'top'), map-get($relax-theme, 'bottom'));
   color: map-get($relax-theme, 'text');

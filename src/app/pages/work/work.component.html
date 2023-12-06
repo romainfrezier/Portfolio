@@ -1,21 +1,17 @@
 <div class="work-container">
   <h1>{{ 'work.title' | translate }}</h1>
-  <a routerLink="{{ schoolProjects }}">
-    <div class="tile">
-      <span class="tile-emoji">🎓</span>
-      <p>{{ 'work.school_projects' | translate }}</p>
-    </div>
-  </a>
-  <a routerLink="{{ personalProjects }}">
-    <div class="tile">
-      <span class="tile-emoji">🧑‍💻</span>
-      <p>{{ 'work.personal_projects' | translate }}</p>
-    </div>
-  </a>
-  <a routerLink="{{ workExperience }}">
-    <div class="tile">
-      <span class="tile-emoji">💼</span>
-      <p>{{ 'work.work_experience' | translate }}</p>
-    </div>
-  </a>
+  <div class="work-links">
+    <a routerLink="{{ schoolProjects }}">
+      <div class="tile">
+        <span class="tile-emoji">🎓</span>
+        <p>{{ 'work.school_projects' | translate }}</p>
+      </div>
+    </a>
+    <a routerLink="{{ workExperience }}">
+      <div class="tile">
+        <span class="tile-emoji">💼</span>
+        <p>{{ 'work.work_experience' | translate }}</p>
+      </div>
+    </a>
+  </div>
 </div>

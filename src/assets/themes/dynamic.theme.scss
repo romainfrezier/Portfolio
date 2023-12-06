@@ -1,5 +1,9 @@
 @import "themes.colors";
 
+.html-dynamic-theme {
+  background-image: linear-gradient(to right bottom, map-get($dynamic-theme, 'top'), map-get($dynamic-theme, 'bottom'));
+}
+
 .dynamic-theme {
   background-image: linear-gradient(to right bottom, map-get($dynamic-theme, 'top'), map-get($dynamic-theme, 'bottom'));
   color: map-get($dynamic-theme, 'text');
