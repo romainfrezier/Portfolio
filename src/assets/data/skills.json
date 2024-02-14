@@ -73,6 +73,12 @@
       "name": "Spring Boot",
       "src": "/assets/images/skills/spring-boot-logo.png",
       "link": "https://spring.io/projects/spring-boot"
+    },
+    {
+      "id": 8,
+      "name": "Laravel",
+      "src": "/assets/images/skills/laravel-logo.png",
+      "link": "https://laravel.com/"
     }
   ],
   "db": [

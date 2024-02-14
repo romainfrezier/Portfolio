@@ -1,5 +1,12 @@
 [
   {
+    "name": "AWS Academy Cloud Foundations",
+    "badge": "/assets/images/aws-academy.png",
+    "description": "Le programme AWS Academy Cloud Foundations est conçu pour aider les étudiants à développer une compréhension approfondie des services cloud AWS, des concepts clés et des meilleures pratiques. J'ai obtenu la certification AWS Academy Cloud Foundations.",
+    "link": "https://www.credly.com/badges/93ab2c88-6249-4baa-8ad3-5ea3b3fbc705",
+    "linkName": "AWS Academy Cloud Foundations"
+  },
+  {
     "name": "TOEIC",
     "badge": "/assets/images/TOEIC_logo.png",
     "description": "Les tests Test of English for International Communication (TOEIC) sont des certifications standardisées permettant d'évaluer le niveau d'anglais des locuteurs non anglophones à l'écrit et à l'oral. Ces tests, créés et gérés par un organisme sis aux États-Unis (l'ETS), visent en particulier à évaluer les connaissances linguistiques dans un contexte professionnel. J'ai obtenu le score de 920/990.",

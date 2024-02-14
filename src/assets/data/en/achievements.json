@@ -1,5 +1,12 @@
 [
   {
+    "name": "AWS Academy Cloud Foundations",
+    "badge": "/assets/images/aws-academy.png",
+    "description": "The AWS Academy Cloud Foundations is intended for students who seek an overall understanding of cloud computing concepts, independent of specific technical roles. It provides a detailed overview of cloud concepts, AWS core services, security, architecture, pricing, and support.",
+    "link": "https://www.credly.com/badges/93ab2c88-6249-4baa-8ad3-5ea3b3fbc705",
+    "linkName": "AWS Academy Cloud Foundations"
+  },
+  {
     "name": "TOEIC",
     "badge": "/assets/images/TOEIC_logo.png",
     "description": "The Test of English for International Communication (TOEIC) is an international standardized test of English language proficiency for non-native speakers. It is intentionally designed to measure the everyday English skills of people working in an international environment. I scored 920/990.",
