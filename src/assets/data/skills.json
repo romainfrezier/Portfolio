@@ -96,9 +96,9 @@
     },
     {
       "id": 3,
-      "name": "MySQL",
-      "src": "/assets/images/skills/mysql-logo.png",
-      "link": "https://www.mysql.com/"
+      "name": "MariaDB",
+      "src": "/assets/images/skills/mariadb-logo.png",
+      "link": "https://www.mariadb.org/"
     }
   ],
   "soft": [

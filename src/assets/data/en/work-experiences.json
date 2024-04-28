@@ -1,5 +1,15 @@
 [
   {
+    "company": "Infomaniak",
+    "companyUrl": "https://infomaniak.com/",
+    "companyLogo": "assets/images/work-experiences/infomaniak.png",
+    "place": "Geneva, Switzerland",
+    "date": "March 2024 - August 2024",
+    "position": "Fullstack Developer Intern",
+    "skills": "Angular, Laravel, MariaDB, Git, Docker, Jira, SCRUM, Communication",
+    "description": "During my internship at Infomaniak, I took part in the development of a ticketing management application. My work focused on a number of functionalities, such as duplicating events on different ticketing systems. This application offers a complete ticketing service for companies, associations and other organizations organizing events."
+  },
+  {
     "company": "Reactional Music",
     "companyUrl": "https://reactionalmusic.com/",
     "companyLogo": "assets/images/work-experiences/reactional-music.png",

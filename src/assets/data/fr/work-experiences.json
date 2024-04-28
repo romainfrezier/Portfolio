@@ -1,5 +1,15 @@
 [
   {
+    "company": "Infomaniak",
+    "companyUrl": "https://infomaniak.com/",
+    "companyLogo": "assets/images/work-experiences/infomaniak.png",
+    "place": "Genève, Suisse",
+    "date": "Mars 2024 - Août 2024",
+    "position": "Stagiaire Développer Fullstack",
+    "skills": "Angular, Laravel, MariaDB, Git, Docker, Jira, SCRUM, Communication",
+    "description": "Pendant mon stage chez Infomaniak, j'ai participé au développement d'une application de gestion de billetterie. Mon travail s'est concentré sur des plusieurs fonctionnalités telles que la duplication d'événements sur différentes billetteries. Cette application propose un service complet de billetterie pour les entreprises, les associations et diverses organisations qui organisent des événements."
+  },
+  {
     "company": "Reactional Music",
     "companyUrl": "https://reactionalmusic.com/",
     "companyLogo": "assets/images/work-experiences/reactional-music.png",
