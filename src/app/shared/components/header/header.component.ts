@@ -2,6 +2,8 @@ import {Component} from '@angular/core';
 import {TranslateService} from "@ngx-translate/core";
 import {AppConstants} from "@app/app.constants";
 import {Location} from '@angular/common';
+import {ThemesService} from "@services/themes.service";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-header',
@@ -10,6 +12,7 @@ import {Location} from '@angular/common';
 })
 export class HeaderComponent {
   public isLanguageMenuShown: boolean;
+  public isThemeMenuShown: boolean;
   public emoji: string;
   public isBurgerMenuOpen: boolean;
 
@@ -20,7 +23,9 @@ export class HeaderComponent {
   public readonly work: string;
   public readonly skills: string;
 
-  constructor(private translate: TranslateService, private location: Location) {
+  protected readonly AppConstants = AppConstants;
+
+  constructor(private translate: TranslateService, private location: Location, private themesService: ThemesService) {
     this.home = AppConstants.ROUTES.HOME;
     this.about = AppConstants.ROUTES.ABOUT;
     this.resume = AppConstants.ROUTES.RESUME;
@@ -36,34 +41,8 @@ export class HeaderComponent {
     }
     this.emoji = '👋';
     this.isLanguageMenuShown = false;
+    this.isThemeMenuShown = false;
     this.isBurgerMenuOpen = false;
-    this.location.onUrlChange((url: string) => {
-      const pathSections: string[] = url.split('/');
-      const path: string = pathSections[pathSections.length - 1];
-      this.setEmoji(path);
-    });
-  }
-
-  public setEmoji(path: string): void {
-    if (path == this.home) {
-      this.emoji = '👋';
-    } else if (path == this.about) {
-      this.emoji = '😁';
-    } else if (path == this.resume) {
-      this.emoji = '📄';
-    } else if (path == this.achievements) {
-      this.emoji = '🏆';
-    } else if (path == this.work) {
-      this.emoji = '🧑‍💻';
-    } else if (path == this.skills) {
-      this.emoji = '⚙️';
-    } else if (path == AppConstants.ROUTES.SCHOOL_PROJECTS) {
-      this.emoji = '🎓';
-    } else if (path == AppConstants.ROUTES.EXPERIENCES) {
-      this.emoji = '💼';
-    } else {
-      this.emoji = '❓';
-    }
   }
 
   public hideLanguageMenu(event: MouseEvent): void {
@@ -71,9 +50,35 @@ export class HeaderComponent {
     this.isLanguageMenuShown = false;
   }
 
+  public hideThemeMenu(event: MouseEvent): void {
+    event.stopPropagation();
+    this.isThemeMenuShown = false;
+  }
+
   public toggleLanguageMenu(event: MouseEvent): void {
     event.stopPropagation();
     this.isLanguageMenuShown = !this.isLanguageMenuShown;
+    if (this.isThemeMenuShown && this.isLanguageMenuShown) {
+      this.isThemeMenuShown = false;
+    }
+    if (this.isLanguageMenuShown) {
+      document.addEventListener('click', () => {
+        this.isLanguageMenuShown = false;
+      }, {once: true});
+    }
+  }
+
+  public toggleThemeMenu(event: MouseEvent): void {
+    event.stopPropagation();
+    this.isThemeMenuShown = !this.isThemeMenuShown;
+    if (this.isLanguageMenuShown && this.isThemeMenuShown) {
+      this.isLanguageMenuShown = false;
+    }
+    if (this.isThemeMenuShown) {
+      document.addEventListener('click', () => {
+        this.isThemeMenuShown = false;
+      }, {once: true});
+    }
   }
 
   public switchLanguage(lang: string): void {
@@ -86,11 +91,35 @@ export class HeaderComponent {
     }
   }
 
+  public switchTheme(theme: string): void {
+    this.themesService.changeTheme(theme);
+    localStorage.setItem(AppConstants.LOCALSTORAGE.THEME, theme)
+    if (this.isBurgerMenuOpen) {
+      this.hideBurgerMenu();
+    }
+  }
+
   public hideBurgerMenu() {
     this.isBurgerMenuOpen = false;
   }
 
   public toggleBurgerMenu() {
     this.isBurgerMenuOpen = !this.isBurgerMenuOpen;
+    if (this.isBurgerMenuOpen) {
+      document.addEventListener('click', (event: MouseEvent) => {
+        const target = event.target as HTMLElement;
+        if (!target.closest('.menu-burger')) {
+          this.isBurgerMenuOpen = false;
+        }
+      });
+    }
+  }
+
+  public getCurrentTheme(): Observable<string> {
+    return this.themesService.currentTheme;
+  }
+
+  public getCurrentLanguage(): string {
+    return this.translate.currentLang;
   }
 }

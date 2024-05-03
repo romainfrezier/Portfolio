@@ -5,11 +5,16 @@
   justify-content: flex-start;
   height: 100%;
   width: 100%;
+  box-sizing: border-box;
 
   h1 {
     text-align: center;
-    margin: 20px 0;
     height: 10%;
+    margin: 50px;
+
+    @media (max-width: 1000px) {
+      margin: 30px;
+    }
   }
 
   .content {
@@ -38,10 +43,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 20px;
+        box-sizing: border-box;
 
         img {
           width: 70%;
           height: 70%;
+          max-height: min(300px,100%);
           object-fit: contain;
         }
       }

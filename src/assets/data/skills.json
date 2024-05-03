@@ -45,12 +45,6 @@
       "link": "https://reactjs.org/"
     },
     {
-      "id": 3,
-      "name": "Typescript",
-      "src": "/assets/images/skills/typescript-logo.png",
-      "link": "https://www.typescriptlang.org/"
-    },
-    {
       "id": 4,
       "name": "SCSS",
       "src": "/assets/images/skills/scss-logo.png",
@@ -128,24 +122,30 @@
     },
     {
       "id": 5,
+      "name": "Jira",
+      "src": "/assets/images/skills/jira-logo.png",
+      "link": "https://www.atlassian.com/software/jira"
+    },
+    {
+      "id": 6,
       "name": "IntelliJ",
       "src": "/assets/images/skills/intellij-logo.png",
       "link": "https://www.jetbrains.com/idea/"
     },
     {
-      "id": 6,
+      "id": 7,
       "name": "WebStorm",
       "src": "/assets/images/skills/webstorm-logo.png",
       "link": "https://www.jetbrains.com/webstorm/"
     },
     {
-      "id": 7,
+      "id": 8,
       "name": "Figma",
       "src": "/assets/images/skills/figma-logo.png",
       "link": "https://www.figma.com/"
     },
     {
-      "id": 8,
+      "id": 9,
       "name": "Gimp",
       "src": "/assets/images/skills/gimp-logo.png",
       "link": "https://www.gimp.org/"

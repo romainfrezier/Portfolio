@@ -11,8 +11,12 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: 20px 0;
+    margin: 50px;
     height: 10%;
+
+    @media (max-width: 1000px) {
+      margin: 30px;
+    }
   }
 
   .content {

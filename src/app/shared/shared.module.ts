@@ -6,13 +6,15 @@ import {MatIconModule} from "@angular/material/icon";
 import {TranslateModule} from "@ngx-translate/core";
 import {SafePipe} from "@pipes/safe.pipe";
 import {RouterModule} from "@angular/router";
+import {FooterComponent} from './components/footer/footer.component';
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
     LoaderComponent,
-    SafePipe
+    SafePipe,
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -23,6 +25,7 @@ import {RouterModule} from "@angular/router";
   exports: [
     HeaderComponent,
     LoaderComponent,
+    FooterComponent,
     SafePipe
   ]
 })

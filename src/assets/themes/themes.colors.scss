@@ -1,10 +1,10 @@
-$vibrant-theme: (
-  top: #E57C23,
-  bottom: #e8aa42,
-  text: #025464,
-  contrast: #025464,
-  clear: #F8F1F1,
-  tile: #FFFFFF
+$black-theme: (
+  top: #121212,
+  bottom: #000000,
+  text: #E0E0E0,
+  contrast: #333333,
+  clear: #E0E0E0,
+  tile: #333333
 );
 
 $dark-theme: (
@@ -17,19 +17,19 @@ $dark-theme: (
 );
 
 $dynamic-theme: (
-  top: #3F497F,
-  bottom: #539165,
-  text: #3F497F,
-  contrast: #F7C04A,
-  clear: #F8F5E4,
-  tile: #F7C04A
+  top: #3498DB,
+  bottom: #2980B9,
+  text: #FFFFFF,
+  contrast: #F1C40F,
+  clear: #FFFFFF,
+  tile: #F1C40F
 );
 
-$relax-theme: (
-  top: #2A2F4F,
-  bottom: #917FB3,
-  text: #2A2F4F,
-  contrast: #E5BEEC,
-  clear: #FDE2F3,
-  tile: #E5BEEC
+$light-theme: (
+  top: #dadada,
+  bottom: #FFFFFF,
+  text: #333333,
+  contrast: #CCCCCC,
+  clear: #333333,
+  tile: #E0E0E0
 );

@@ -11,8 +11,12 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: 20px 0;
+    margin: 50px;
     height: 10%;
+
+    @media (max-width: 1000px) {
+      margin: 30px;
+    }
   }
 
   .content {
@@ -44,8 +48,9 @@
         padding: 10px;
 
         img {
-          max-width: 90%;
+          max-width: min(500px, 100%);
           min-height: 100px;
+          max-height: min(300px, 100%);
           object-fit: contain;
         }
       }

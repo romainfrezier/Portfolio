@@ -1,25 +1,25 @@
 <div class="skills-container">
   <h1>{{ 'skills.title' | translate }}</h1>
   <div class="content">
-    <div class="category-container">
+    <section class="category-container">
       <app-skills-section [skills]="programmingLanguages" [name]="'languages'" *ngIf="programmingLanguages != []" />
       <app-loader *ngIf="programmingLanguages == []" />
-    </div>
-    <div class="category-container">
+    </section>
+    <section class="category-container">
       <app-skills-section [skills]="webTechnologies" [name]="'web'" *ngIf="webTechnologies != []" />
       <app-loader *ngIf="webTechnologies == []" />
-    </div>
-    <div class="category-container">
+    </section>
+    <section class="category-container">
       <app-skills-section [skills]="databases" [name]="'databases'" *ngIf="databases != []" />
       <app-loader *ngIf="databases == []" />
-    </div>
-    <div class="category-container">
+    </section>
+    <section class="category-container">
       <app-skills-section [skills]="softwares" [name]="'tools'" *ngIf="softwares != []" />
       <app-loader *ngIf="softwares == []" />
-    </div>
-    <div class="category-container">
+    </section>
+    <section class="category-container">
       <app-skills-section [skills]="services" [name]="'services'" *ngIf="services != []" />
       <app-loader *ngIf="services == []" />
-    </div>
+    </section>
   </div>
 </div>

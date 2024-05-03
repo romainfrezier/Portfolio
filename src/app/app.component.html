@@ -1,15 +1,9 @@
 <div [className]="themeClass">
   <div class="content">
-    <div class="glass" data-tilt data-tilt-reverse="true">
-      <app-header></app-header>
-      <div class="main">
-        <router-outlet></router-outlet>
-      </div>
+    <app-header></app-header>
+    <div class="main">
+      <router-outlet></router-outlet>
     </div>
-    <div class="circle circle1" (click)="switchTheme('dark-theme')"></div>
-    <div class="circle circle2" (click)="switchTheme('vibrant-theme')"></div>
-    <div class="circle circle3" (click)="switchTheme('dynamic-theme')"></div>
-    <div class="circle circle4" (click)="switchTheme('relax-theme')"></div>
+    <app-footer></app-footer>
   </div>
-  <div class="secret">{{ ('theme.' + themeClass) | translate }}</div>
 </div>

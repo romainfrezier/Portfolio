@@ -1,0 +1,95 @@
+@import "themes.colors";
+
+.html-black-theme {
+  background-image: linear-gradient(to right bottom, map-get($black-theme, 'top'), map-get($black-theme, 'bottom'));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.black-theme {
+  background-image: linear-gradient(to right bottom, map-get($black-theme, 'top'), map-get($black-theme, 'bottom'));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: map-get($black-theme, 'text');
+
+  .secret {
+    color: map-get($black-theme, 'clear');
+  }
+
+  .circle {
+    background-image: linear-gradient(to right, map-get($black-theme, 'contrast'), transparentize(map-get($black-theme, 'contrast'), 0.5));
+  }
+
+  .link-circle {
+    background-image: linear-gradient(to bottom, map-get($black-theme, 'contrast'), transparentize(map-get($black-theme, 'contrast'), 0.5));
+    box-shadow: rgba(0, 0, 0, 0.25) 0 0 20px 1px;
+  }
+
+  .header-item {
+    color: map-get($black-theme, 'clear');
+  }
+
+  .active {
+    background-color: map-get($black-theme, 'contrast');
+  }
+
+  .menu {
+    background-color: map-get($black-theme, 'contrast');
+    color: map-get($black-theme, 'clear');
+
+    .active {
+      background-color: map-get($black-theme, 'clear');
+      color: map-get($black-theme, 'contrast');
+    }
+  }
+
+  .menu-open {
+    background-image: linear-gradient(to right bottom, map-get($black-theme, 'contrast'), map-get($black-theme, 'bottom'));
+    color: map-get($black-theme, 'clear');
+
+    .active {
+      background-color: map-get($black-theme, 'clear');
+      color: map-get($black-theme, 'contrast');
+    }
+  }
+
+  .tile {
+    background-color: map-get($black-theme, 'tile');
+    box-shadow: rgba(0, 0, 0, 0.25) 0 0 20px 1px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: map-get($black-theme, 'contrast');
+    transition: ease-in-out 0.2s;
+
+    &:hover {
+      background-color: darken(map-get($black-theme, 'contrast'), 10%);
+    }
+  }
+
+  .button-container {
+    p {
+      color: map-get($black-theme, 'clear');
+    }
+  }
+
+  .loader {
+    border-color: map-get($black-theme, 'contrast');
+  }
+
+  a {
+    color: map-get($black-theme, 'text');
+  }
+
+  .skills-images {
+    .skill {
+      a {
+        color: map-get($black-theme, 'clear');
+      }
+    }
+  }
+
+  .home-mountains {
+    filter: invert(93%) sepia(76%) saturate(1%) hue-rotate(321deg) brightness(93%) contrast(91%);
+  }
+}

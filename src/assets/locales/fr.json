@@ -7,20 +7,21 @@
     "work": "Travaux",
     "skills": "Compétences",
     "languages": "🇫🇷/ 🇬🇧",
-    "choose-language": "Choisissez votre langue"
-  },
-  "theme": {
-    "vibrant-theme": "Vibrant",
-    "dark-theme": "Sombre",
-    "relax-theme": "Relaxant",
-    "dynamic-theme": "Dynamique"
+    "choose-language": "Choisissez votre langue",
+    "themes": {
+      "title": "Thèmes",
+      "dark": "Sombre",
+      "black": "Noir",
+      "light": "Clair",
+      "dynamic": "Dynamique"
+    }
   },
   "home": {
     "name": "Bonjour, je suis Romain Frezier.",
     "role": "J'ai 22 ans et je suis étudiant ingénieur en 5ème (et dernière) année d'Informatique et Gestion à Polytech Montpellier, France.",
     "roleDescription": "Je suis actuellement en stage de fin d'études chez Infomaniak à Genève.",
     "contact": {
-      "serious": "N'hésitez pas à me contacter pour une proposition d'emploi ou de stage, ou pour toute autre question.",
+      "serious": "N'hésitez pas à me contacter pour une proposition d'emploi ou pour toute autre question, je serai ravi de vous répondre",
       "fun": "Vous pouvez aussi me contacter si vous ne trouvez pas la fonctionnalité secrete :)"
     }
   },
