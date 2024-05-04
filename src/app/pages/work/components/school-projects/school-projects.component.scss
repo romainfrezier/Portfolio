@@ -26,14 +26,14 @@
     justify-content: flex-start;
     height: min-content;
     width: 90%;
-    overflow-y: scroll;
 
     .project-item {
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      width: 90%;
+      width: 100%;
+      max-width: min(1000px, 90%);
       height: min-content;
       border-radius: 20px;
       border: solid 1px;
@@ -113,6 +113,7 @@
       user-select: none;
       cursor: pointer;
       margin-bottom: 10px;
+      border: solid 1px;
     }
   }
 

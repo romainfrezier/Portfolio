@@ -19,6 +19,8 @@
     flex-direction: column;
     justify-content: flex-start;
     height: 90%;
+    width: 100%;
+    max-width: min(1000px, 90%);
     overflow-y: scroll;
   }
 }

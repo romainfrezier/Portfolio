@@ -68,7 +68,7 @@
 
   .button-container {
     p {
-      color: map-get($dynamic-theme, 'clear');
+      color: map-get($dynamic-theme, 'text');
     }
   }
 
@@ -81,6 +81,6 @@
   }
 
   .home-mountains {
-    filter: invert(76%) sepia(66%) saturate(3443%) hue-rotate(8deg) brightness(117%) contrast(89%);
+    filter: invert(33%) sepia(66%) saturate(6115%) hue-rotate(346deg) brightness(89%) contrast(103%);
   }
 }

@@ -24,14 +24,14 @@
     justify-content: flex-start;
     height: min-content;
     width: 90%;
-    overflow-y: scroll;
 
     .achievement-item {
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: flex-start;
-      width: 90%;
+      width: 100%;
+      max-width: min(1000px, 90%);
       height: min-content;
       border-radius: 20px;
       border: solid 1px;
