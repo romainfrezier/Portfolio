@@ -13,6 +13,7 @@ export class SkillsComponent implements OnInit {
   public webTechnologies: Skill[]
   public databases: Skill[]
   public softwares: Skill[]
+  public soft: Skill[]
   public services: Skill[]
 
   constructor(private dataService: DataService) {
@@ -20,6 +21,7 @@ export class SkillsComponent implements OnInit {
     this.webTechnologies = []
     this.databases = []
     this.softwares = []
+    this.soft = []
     this.services = []
   }
 
@@ -28,7 +30,8 @@ export class SkillsComponent implements OnInit {
       this.programmingLanguages = skills.programming_languages
       this.webTechnologies = skills.web
       this.databases = skills.db
-      this.softwares = skills.soft
+      this.softwares = skills.softwares
+      this.soft = skills.soft
       this.services = skills.services
     })
   }

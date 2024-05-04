@@ -14,12 +14,16 @@
       <app-loader *ngIf="databases == []" />
     </section>
     <section class="category-container">
-      <app-skills-section [skills]="softwares" [name]="'tools'" *ngIf="softwares != []" />
+      <app-skills-section [skills]="softwares" [name]="'softwares'" *ngIf="softwares != []" />
       <app-loader *ngIf="softwares == []" />
     </section>
     <section class="category-container">
       <app-skills-section [skills]="services" [name]="'services'" *ngIf="services != []" />
       <app-loader *ngIf="services == []" />
+    </section>
+    <section class="category-container">
+      <app-skills-section [skills]="soft" [name]="'soft.title'" *ngIf="soft != []" />
+      <app-loader *ngIf="soft == []" />
     </section>
   </div>
 </div>

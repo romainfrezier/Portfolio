@@ -2,5 +2,5 @@ export type Skill = {
   id: number;
   name: string;
   src: string;
-  link: string;
+  link: string | null;
 }

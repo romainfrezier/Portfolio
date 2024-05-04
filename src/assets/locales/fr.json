@@ -80,8 +80,16 @@
     "languages": "Langages de programmation",
     "web": "Programmation web et technologies",
     "databases": "Bases de données",
-    "tools": "Logiciels et outils",
-    "services": "Services"
+    "softwares": "Logiciels et outils",
+    "services": "Services",
+    "soft": {
+      "title": "Soft Skills",
+      "english": "Anglais",
+      "communication": "Communication",
+      "teamwork": "Travail en équipe",
+      "scrum": "Scrum",
+      "adaptability": "Adaptabilité"
+    }
   },
   "contact-me": "N'hésitez pas à me contacter pour une proposition d'emploi ou de stage, ou pour toute autre question.",
   "error": {

@@ -1,4 +1,5 @@
 <div class="skill">
   <img [src]="skill.src" [alt]="skill.name">
-  <a href="{{ skill.link }}" target="_blank">{{ skill.name }}</a>
+  <a *ngIf="skill.link" href="{{ skill.link }}" target="_blank">{{ skill.name }}</a>
+  <p *ngIf="!skill.link">{{ ('skills.soft.' + skill.name) | translate }}</p>
 </div>

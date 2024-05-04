@@ -8,7 +8,7 @@
       <div class="experience-info">
         <h2>{{ experience.company }}</h2>
         <p class="italic">{{ experience.position }}</p>
-        <p>{{ 'work_experiences.date' | translate }} : {{ experience.date }}</p>
+        <p class="bold">{{ 'work_experiences.date' | translate }} : {{ experience.date }}</p>
         <p>{{ experience.place }}</p>
         <p>{{ experience.description | translate }}</p>
         <p>{{ (experience.skills.split(',').length === 1 ? 'work_experiences.skills' : 'work_experiences.skills') | translate }} : {{ experience.skills }}</p>

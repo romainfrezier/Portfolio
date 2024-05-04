@@ -80,8 +80,16 @@
     "languages": "Programming Languages",
     "web": "Web Programming and technologies",
     "databases": "Databases",
-    "tools": "Softwares and tools",
-    "services": "Services"
+    "softwares": "Softwares and tools",
+    "services": "Services",
+    "soft": {
+      "title": "Soft Skills",
+      "english": "English",
+      "communication": "Communication",
+      "teamwork": "Teamwork",
+      "scrum": "Scrum",
+      "adaptability": "Adaptability"
+    }
   },
   "contact-me": "You can contact me for any internship or job proposal, or for any other information.",
   "error": {
