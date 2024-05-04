@@ -11,8 +11,13 @@
        (click)="hideBurgerMenu()">{{ 'header.resume' | translate }}</a>
     <a class="header-item" routerLink="{{ achievements }}" routerLinkActive="active"
        (click)="hideBurgerMenu()">{{ 'header.achievements' | translate }}</a>
-    <a class="header-item" routerLink="{{ work }}" routerLinkActive="active"
-       (click)="hideBurgerMenu()">{{ 'header.work' | translate }}</a>
+    <div class="header-item" (click)="toggleWorkMenu($event)">
+      {{ 'header.work' | translate }}
+      <div *ngIf="isWorkMenuShown" class="work-menu menu">
+        <span routerLink="{{ workExperience }}" routerLinkActive="active" (click)="hideWorkMenu($event)">💼 {{ 'work.work_experience' | translate }}</span>
+        <span routerLink="{{ schoolProjects }}" routerLinkActive="active" (click)="hideWorkMenu($event)">🎓 {{ 'work.school_projects' | translate }}</span>
+      </div>
+    </div>
     <a class="header-item" routerLink="{{ skills }}" routerLinkActive="active"
        (click)="hideBurgerMenu()">{{ 'header.skills' | translate }}</a>
     <div class="header-item" (click)="toggleThemeMenu($event)">
@@ -25,7 +30,7 @@
         <span (click)="switchTheme(AppConstants.THEMES.LIGHT); hideThemeMenu($event)"
               class="{{(getCurrentTheme() | async) === AppConstants.THEMES.LIGHT ? 'active' : ''}}">☀️ {{ 'header.themes.light' | translate }}</span>
         <span (click)="switchTheme(AppConstants.THEMES.DYNAMIC); hideThemeMenu($event)"
-              class="{{(getCurrentTheme() | async) === AppConstants.THEMES.DYNAMIC ? 'active' : ''}}">⚡️ {{ 'header.themes.dynamic' | translate }}</span>
+              class="{{(getCurrentTheme() | async) === AppConstants.THEMES.DYNAMIC ? 'active' : ''}}">️🧨 {{ 'header.themes.dynamic' | translate }}</span>
       </div>
     </div>
     <div class="header-item" (click)="toggleLanguageMenu($event)">

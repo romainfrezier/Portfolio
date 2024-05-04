@@ -13,6 +13,7 @@ import {Observable} from "rxjs";
 export class HeaderComponent {
   public isLanguageMenuShown: boolean;
   public isThemeMenuShown: boolean;
+  public isWorkMenuShown: boolean;
   public emoji: string;
   public isBurgerMenuOpen: boolean;
 
@@ -20,7 +21,8 @@ export class HeaderComponent {
   public readonly about: string;
   public readonly resume: string;
   public readonly achievements: string;
-  public readonly work: string;
+  public schoolProjects: string;
+  public workExperience: string;
   public readonly skills: string;
 
   protected readonly AppConstants = AppConstants;
@@ -30,7 +32,8 @@ export class HeaderComponent {
     this.about = AppConstants.ROUTES.ABOUT;
     this.resume = AppConstants.ROUTES.RESUME;
     this.achievements = AppConstants.ROUTES.ACHIEVEMENTS;
-    this.work = AppConstants.ROUTES.WORK;
+    this.schoolProjects = AppConstants.ROUTES.WORK + "/" + AppConstants.ROUTES.SCHOOL_PROJECTS;
+    this.workExperience = AppConstants.ROUTES.WORK + "/" + AppConstants.ROUTES.EXPERIENCES;
     this.skills = AppConstants.ROUTES.SKILLS;
     const language: string | null = localStorage.getItem(AppConstants.LOCALSTORAGE.LANGUAGE);
     if (language) {
@@ -43,6 +46,7 @@ export class HeaderComponent {
     this.isLanguageMenuShown = false;
     this.isThemeMenuShown = false;
     this.isBurgerMenuOpen = false;
+    this.isWorkMenuShown = false;
   }
 
   public hideLanguageMenu(event: MouseEvent): void {
@@ -61,6 +65,9 @@ export class HeaderComponent {
     if (this.isThemeMenuShown && this.isLanguageMenuShown) {
       this.isThemeMenuShown = false;
     }
+    if (this.isWorkMenuShown && this.isLanguageMenuShown) {
+      this.isWorkMenuShown = false;
+    }
     if (this.isLanguageMenuShown) {
       document.addEventListener('click', () => {
         this.isLanguageMenuShown = false;
@@ -74,9 +81,28 @@ export class HeaderComponent {
     if (this.isLanguageMenuShown && this.isThemeMenuShown) {
       this.isLanguageMenuShown = false;
     }
+    if (this.isWorkMenuShown && this.isThemeMenuShown) {
+      this.isWorkMenuShown = false;
+    }
     if (this.isThemeMenuShown) {
       document.addEventListener('click', () => {
         this.isThemeMenuShown = false;
+      }, {once: true});
+    }
+  }
+
+  public toggleWorkMenu(event: MouseEvent): void {
+    event.stopPropagation();
+    this.isWorkMenuShown = !this.isWorkMenuShown;
+    if (this.isThemeMenuShown && this.isWorkMenuShown) {
+      this.isThemeMenuShown = false;
+    }
+    if (this.isWorkMenuShown && this.isLanguageMenuShown) {
+      this.isLanguageMenuShown = false;
+    }
+    if (this.isWorkMenuShown) {
+      document.addEventListener('click', () => {
+        this.isWorkMenuShown = false;
       }, {once: true});
     }
   }
@@ -101,6 +127,12 @@ export class HeaderComponent {
 
   public hideBurgerMenu() {
     this.isBurgerMenuOpen = false;
+  }
+
+  public hideWorkMenu(event: MouseEvent) {
+    event.stopPropagation();
+    this.isBurgerMenuOpen = false;
+    this.isWorkMenuShown = false;
   }
 
   public toggleBurgerMenu() {
