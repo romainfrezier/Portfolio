@@ -5,7 +5,7 @@
       <img class="home-mountains" src="assets/images/home-background.png" alt="home background - mountains"/>
     </section>
     <section class="infos">
-      <p>{{ 'home.role' | translate }}</p>
+      <p *ngIf="this.introText">{{ this.introText }}</p>
       <p>{{ 'home.roleDescription' | translate }}</p>
     </section>
     <section class="contact">

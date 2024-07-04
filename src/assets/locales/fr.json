@@ -18,7 +18,7 @@
   },
   "home": {
     "name": "Bonjour, je suis Romain Frezier.",
-    "role": "J'ai 22 ans et je suis étudiant ingénieur en 5ème (et dernière) année d'Informatique et Gestion à Polytech Montpellier, France.",
+    "role": "J'ai {{age}} ans et je suis étudiant ingénieur en 5ème (et dernière) année d'Informatique et Gestion à Polytech Montpellier, France.",
     "roleDescription": "Je suis actuellement en stage de fin d'études chez Infomaniak à Genève.",
     "contact": {
       "serious": "N'hésitez pas à me contacter pour une proposition d'emploi ou pour toute autre question, je serai ravi de vous répondre",
