@@ -1,15 +1,5 @@
 [
   {
-    "name": "Projet AWI",
-    "date": "Janvier 2023 - Mars 2023",
-    "languages": "Angular, Firebase, Express, MongoDB, Node.js, TypeScript",
-    "number": "2",
-    "description": "Le projet AWI (Application Web et Interopérabilité) est un projet que nous avons eu à réaliser durant notre 4ème année d'école d'ingénieur. Le but de ce projet est de créer une API REST qui sera utilisée par une application web.",
-    "demoLink": "https://www.youtube.com/embed/rDaWjrxN57k?rel=0&autoplay=0&mute=1",
-    "githubLink": "https://github.com/romainfrezier/AWI-project-frontend",
-    "documentUrl": ""
-  },
-  {
     "name": "Projet de Software Engineering",
     "date": "Novembre 2022 - Janvier 2023",
     "languages": "Java, JavaFX",

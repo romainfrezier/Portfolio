@@ -7,20 +7,21 @@
     "work": "Work",
     "skills": "Skills",
     "languages": "🇬🇧/ 🇫🇷",
-    "choose-language": "Choose your language"
-  },
-  "theme": {
-    "vibrant-theme": "Vibrant",
-    "dark-theme": "Dark",
-    "relax-theme": "Relax",
-    "dynamic-theme": "Dynamic"
+    "choose-language": "Choose your language",
+    "themes": {
+      "title": "Themes",
+      "dark": "Dark",
+      "black": "Black",
+      "light": "Light",
+      "dynamic": "Dynamic"
+    }
   },
   "home": {
     "name": "Hello, I am Romain Frezier.",
-    "role": "I am 22 years old and I'm a 5th (and last) year engineering student in Computer Science and Management at Polytech Montpellier, France.",
+    "role": "I'm {{age}} years old and I'm a 5th (and last) year engineering student in Computer Science and Management at Polytech Montpellier, France.",
     "roleDescription": "I'm currently working at Infomaniak in Geneva for my end-of-studies internship.",
     "contact": {
-      "serious": "Don't hesitate to contact me for any internship or job proposal, or for any other information.",
+      "serious": "Don't hesitate to contact me for any job proposal or for any other information, I will be happy to answer you",
       "fun": "You can also contact me if you don't find the secret feature :)"
     }
   },
@@ -48,8 +49,8 @@
   "school_projects": {
     "title": "Some of my projects",
     "date": "Date",
-    "language": "Language",
-    "languages": "Languages",
+    "language": "Technology",
+    "languages": "Technologies",
     "group": "Group of",
     "person": "person",
     "people": "people",
@@ -79,8 +80,16 @@
     "languages": "Programming Languages",
     "web": "Web Programming and technologies",
     "databases": "Databases",
-    "tools": "Softwares and tools",
-    "services": "Services"
+    "softwares": "Softwares and tools",
+    "services": "Services",
+    "soft": {
+      "title": "Soft Skills",
+      "english": "English",
+      "communication": "Communication",
+      "teamwork": "Teamwork",
+      "scrum": "Scrum",
+      "adaptability": "Adaptability"
+    }
   },
   "contact-me": "You can contact me for any internship or job proposal, or for any other information.",
   "error": {

@@ -5,11 +5,16 @@
   justify-content: flex-start;
   height: 100%;
   width: 100%;
+  box-sizing: border-box;
 
   h1 {
     text-align: center;
-    margin: 20px 0;
     height: 10%;
+    margin: 50px;
+
+    @media (max-width: 1000px) {
+      margin: 30px;
+    }
   }
 
   .content {
@@ -19,14 +24,14 @@
     justify-content: flex-start;
     height: min-content;
     width: 90%;
-    overflow-y: scroll;
 
     .achievement-item {
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: flex-start;
-      width: 90%;
+      width: 100%;
+      max-width: min(1000px, 90%);
       height: min-content;
       border-radius: 20px;
       border: solid 1px;
@@ -38,10 +43,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 20px;
+        box-sizing: border-box;
 
         img {
           width: 70%;
           height: 70%;
+          max-height: min(300px,100%);
           object-fit: contain;
         }
       }

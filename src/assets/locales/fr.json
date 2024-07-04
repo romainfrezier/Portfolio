@@ -7,20 +7,21 @@
     "work": "Travaux",
     "skills": "Compétences",
     "languages": "🇫🇷/ 🇬🇧",
-    "choose-language": "Choisissez votre langue"
-  },
-  "theme": {
-    "vibrant-theme": "Vibrant",
-    "dark-theme": "Sombre",
-    "relax-theme": "Relaxant",
-    "dynamic-theme": "Dynamique"
+    "choose-language": "Choisissez votre langue",
+    "themes": {
+      "title": "Thèmes",
+      "dark": "Sombre",
+      "black": "Noir",
+      "light": "Clair",
+      "dynamic": "Dynamique"
+    }
   },
   "home": {
     "name": "Bonjour, je suis Romain Frezier.",
-    "role": "J'ai 22 ans et je suis étudiant ingénieur en 5ème (et dernière) année d'Informatique et Gestion à Polytech Montpellier, France.",
+    "role": "J'ai {{age}} ans et je suis étudiant ingénieur en 5ème (et dernière) année d'Informatique et Gestion à Polytech Montpellier, France.",
     "roleDescription": "Je suis actuellement en stage de fin d'études chez Infomaniak à Genève.",
     "contact": {
-      "serious": "N'hésitez pas à me contacter pour une proposition d'emploi ou de stage, ou pour toute autre question.",
+      "serious": "N'hésitez pas à me contacter pour une proposition d'emploi ou pour toute autre question, je serai ravi de vous répondre",
       "fun": "Vous pouvez aussi me contacter si vous ne trouvez pas la fonctionnalité secrete :)"
     }
   },
@@ -48,8 +49,8 @@
   "school_projects": {
     "title": "Quelques-uns de mes projets",
     "date": "Date",
-    "language": "Langage",
-    "languages": "Langages",
+    "language": "Technologie",
+    "languages": "Technologies",
     "group": "Groupe de",
     "person": "personne",
     "people": "personnes",
@@ -79,8 +80,16 @@
     "languages": "Langages de programmation",
     "web": "Programmation web et technologies",
     "databases": "Bases de données",
-    "tools": "Logiciels et outils",
-    "services": "Services"
+    "softwares": "Logiciels et outils",
+    "services": "Services",
+    "soft": {
+      "title": "Soft Skills",
+      "english": "Anglais",
+      "communication": "Communication",
+      "teamwork": "Travail en équipe",
+      "scrum": "Scrum",
+      "adaptability": "Adaptabilité"
+    }
   },
   "contact-me": "N'hésitez pas à me contacter pour une proposition d'emploi ou de stage, ou pour toute autre question.",
   "error": {

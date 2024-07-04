@@ -19,4 +19,16 @@ export class AppConstants {
 
     public static ERROR_404 = this.ERROR + "/" + this._404
   }
+
+  static THEMES = class {
+    public static DARK = "dark-theme"
+    public static BLACK = "black-theme"
+    public static LIGHT = "light-theme"
+    public static DYNAMIC = "dynamic-theme"
+  }
+
+  static LANGUAGES = class {
+    public static EN = "en"
+    public static FR = "fr"
+  }
 }

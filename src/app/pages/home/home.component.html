@@ -1,25 +1,22 @@
 <div class="home-container">
-  <div class="home-content">
-    <h1>{{ 'home.name' | translate }}</h1>
-    <div class="img-container">
+  <h1>{{ 'home.name' | translate }}</h1>
+  <div class="content">
+    <section class="img-container">
       <img class="home-mountains" src="assets/images/home-background.png" alt="home background - mountains"/>
-    </div>
-    <div class="content">
-      <div class="tile">
-        <p>{{ 'home.role' | translate }}</p>
-        <p>{{ 'home.roleDescription' | translate }}</p>
+    </section>
+    <section class="infos">
+      <p *ngIf="this.introText">{{ this.introText }}</p>
+      <p>{{ 'home.roleDescription' | translate }}</p>
+    </section>
+    <section class="contact">
+      <p>{{ 'home.contact.serious' | translate }} 😁</p>
+      <div class="links">
+        <div class="link-circle" *ngFor="let link of socialLinks">
+          <a [href]="link.url" rel="noopener noreferrer" target="_blank">
+            <img [src]="link.icon" alt="{{ link.name }}"/>
+          </a>
+        </div>
       </div>
-      <div class="contact">
-        <p>{{ 'home.contact.serious' | translate }}</p>
-        <p>{{ 'home.contact.fun' | translate }}</p>
-      </div>
-    </div>
-  </div>
-  <div class="links">
-    <div class="link-circle" *ngFor="let link of socialLinks">
-      <a [href]="link.url" rel="noopener noreferrer" target="_blank">
-        <img [src]="link.icon" alt="{{ link.name }}"/>
-      </a>
-    </div>
+    </section>
   </div>
 </div>

@@ -2,10 +2,14 @@
 
 .html-dark-theme {
   background-image: linear-gradient(to right bottom, map-get($dark-theme, 'top'), map-get($dark-theme, 'bottom'));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .dark-theme {
   background-image: linear-gradient(to right bottom, map-get($dark-theme, 'top'), map-get($dark-theme, 'bottom'));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: map-get($dark-theme, 'text');
 
   .secret {
@@ -32,6 +36,11 @@
   .menu {
     background-color: map-get($dark-theme, 'contrast');
     color: map-get($dark-theme, 'clear');
+
+    .active {
+      background-color: map-get($dark-theme, 'clear');
+      color: map-get($dark-theme, 'contrast');
+    }
   }
 
   .menu-open {
@@ -58,10 +67,8 @@
   }
 
   .button-container {
-    background-image: linear-gradient(to right bottom, map-get($dark-theme, 'contrast'), map-get($dark-theme, 'bottom'));
-
     p {
-      color: map-get($dark-theme, 'clear');
+      color: map-get($dark-theme, 'text');
     }
   }
 
@@ -71,10 +78,6 @@
 
   a {
     color: map-get($dark-theme, 'text');
-  }
-
-  .skills-images {
-    background-color: map-get($dark-theme, 'tile');
   }
 
   .home-mountains {

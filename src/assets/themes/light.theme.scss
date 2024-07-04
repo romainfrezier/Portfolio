@@ -1,0 +1,95 @@
+@import "themes.colors";
+
+.html-light-theme {
+  background-image: linear-gradient(to right bottom, map-get($light-theme, 'top'), map-get($light-theme, 'bottom'));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.light-theme {
+  background-image: linear-gradient(to right bottom, map-get($light-theme, 'top'), map-get($light-theme, 'bottom'));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: map-get($light-theme, 'text');
+
+  .secret {
+    color: map-get($light-theme, 'clear');
+  }
+
+  .circle {
+    background-image: linear-gradient(to right, map-get($light-theme, 'contrast'), transparentize(map-get($light-theme, 'contrast'), 0.5));
+  }
+
+  .link-circle {
+    background-image: linear-gradient(to bottom, map-get($light-theme, 'contrast'), transparentize(map-get($light-theme, 'contrast'), 0.5));
+    box-shadow: rgba(0, 0, 0, 0.25) 0 0 20px 1px;
+
+    a {
+      img {
+        filter: invert(100%);
+      }
+    }
+  }
+
+  .header-item {
+    color: map-get($light-theme, 'clear');
+  }
+
+  .active {
+    background-color: map-get($light-theme, 'contrast');
+  }
+
+  .menu {
+    background-color: map-get($light-theme, 'contrast');
+    color: map-get($light-theme, 'clear');
+
+    .active {
+      background-color: map-get($light-theme, 'clear');
+      color: map-get($light-theme, 'contrast');
+    }
+  }
+
+  .menu-open {
+    background-image: linear-gradient(to right bottom, map-get($light-theme, 'contrast'), map-get($light-theme, 'bottom'));
+    color: map-get($light-theme, 'clear');
+
+    .active {
+      background-color: map-get($light-theme, 'clear');
+      color: map-get($light-theme, 'contrast');
+    }
+  }
+
+  .tile {
+    background-color: map-get($light-theme, 'tile');
+    box-shadow: rgba(0, 0, 0, 0.25) 0 0 20px 1px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: map-get($light-theme, 'contrast');
+
+    &:hover {
+      background-color: darken(map-get($light-theme, 'contrast'), 20%);
+    }
+  }
+
+  .button-container {
+    img {
+      filter: invert(100%);
+    }
+    p {
+      color: map-get($light-theme, 'text');
+    }
+  }
+
+  .loader {
+    border-color: map-get($light-theme, 'contrast');
+  }
+
+  a {
+    color: map-get($light-theme, 'text');
+  }
+
+  .home-mountains {
+    filter: invert(13%) sepia(8%) saturate(12%) hue-rotate(351deg) brightness(106%) contrast(83%);
+  }
+}

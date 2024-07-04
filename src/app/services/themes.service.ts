@@ -14,7 +14,7 @@ export class ThemesService {
     if (savedTheme) {
       this.theme = new BehaviorSubject<string>(savedTheme)
     } else {
-      this.theme = new BehaviorSubject('dark-theme');
+      this.theme = new BehaviorSubject(AppConstants.THEMES.DARK);
     }
     this.currentTheme = this.theme.asObservable()
     this.setHTMLTagTheme(this.theme.getValue())

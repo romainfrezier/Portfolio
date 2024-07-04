@@ -1,12 +1,11 @@
-@import "assets/themes/vibrant.theme";
+@import "assets/themes/black.theme";
 @import "assets/themes/dark.theme";
 @import "assets/themes/dynamic.theme";
-@import "assets/themes/relax.theme";
+@import "assets/themes/light.theme";
 
 html, body {
   height: 100%;
   width: 100%;
-  //min-height: 700px;
 }
 
 body {
@@ -16,13 +15,9 @@ body {
   font-size: 1rem;
 }
 
-.vibrant-theme, .dark-theme, .dynamic-theme, .relax-theme, app-home, app-about, app-resume, app-achievements, app-skills, app-work, app-school-projects, app-personal-projects, app-experience {
+.black-theme, .dark-theme, .dynamic-theme, .light-theme, app-home, app-about, app-resume, app-achievements, app-skills, app-work, app-school-projects, app-personal-projects, app-experience {
   height: 100%;
   width: 100%;
-}
-
-.vibrant-theme, .dark-theme, .dynamic-theme, .relax-theme {
-  min-height: 500px;
 }
 
 ::-webkit-scrollbar {
@@ -42,6 +37,10 @@ body {
     font-size: 1.2rem;
   }
 
+  h3 {
+    font-size: 1rem;
+  }
+
   p, a {
     font-size: 0.9rem;
   }
@@ -56,6 +55,10 @@ body {
     font-size: 1.4rem;
   }
 
+  h3 {
+    font-size: 1.2rem;
+  }
+
   p, a {
     font-size: 1rem;
   }
@@ -68,6 +71,10 @@ body {
 
   h2 {
     font-size: 1.7rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
   }
 
   p, a {

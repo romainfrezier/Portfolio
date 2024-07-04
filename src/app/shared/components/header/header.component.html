@@ -1,21 +1,44 @@
-<div class="header-container">
-  <span class="header-emoji">{{ emoji }}</span>
+<header class="header-container">
   <div class="menu-burger" (click)="toggleBurgerMenu()">
     <mat-icon>{{ isBurgerMenuOpen ? "close" : "menu" }}</mat-icon>
   </div>
-  <div class="menu-items {{ isBurgerMenuOpen ? 'menu-open' : 'menu-close' }}">
-    <a class="header-item" routerLink="{{ home }}" routerLinkActive="active" (click)="hideBurgerMenu()">{{ 'header.home' | translate }}</a>
-    <a class="header-item" routerLink="{{ about }}" routerLinkActive="active" (click)="hideBurgerMenu()">{{ 'header.about' | translate }}</a>
-    <a class="header-item" routerLink="{{ resume }}" routerLinkActive="active" (click)="hideBurgerMenu()">{{ 'header.resume' | translate }}</a>
-    <a class="header-item" routerLink="{{ achievements }}" routerLinkActive="active" (click)="hideBurgerMenu()">{{ 'header.achievements' | translate }}</a>
-    <a class="header-item" routerLink="{{ work }}" routerLinkActive="active" (click)="hideBurgerMenu()">{{ 'header.work' | translate }}</a>
-    <a class="header-item" routerLink="{{ skills }}" routerLinkActive="active" (click)="hideBurgerMenu()">{{ 'header.skills' | translate }}</a>
+  <nav class="menu-items {{ isBurgerMenuOpen ? 'menu-open' : 'menu-close' }}">
+    <a class="header-item" routerLink="{{ home }}" routerLinkActive="active"
+       (click)="hideBurgerMenu()">{{ 'header.home' | translate }}</a>
+    <a class="header-item" routerLink="{{ about }}" routerLinkActive="active"
+       (click)="hideBurgerMenu()">{{ 'header.about' | translate }}</a>
+    <a class="header-item" routerLink="{{ resume }}" routerLinkActive="active"
+       (click)="hideBurgerMenu()">{{ 'header.resume' | translate }}</a>
+    <a class="header-item" routerLink="{{ achievements }}" routerLinkActive="active"
+       (click)="hideBurgerMenu()">{{ 'header.achievements' | translate }}</a>
+    <div class="header-item" (click)="toggleWorkMenu($event)">
+      {{ 'header.work' | translate }}
+      <div *ngIf="isWorkMenuShown" class="work-menu menu">
+        <span routerLink="{{ workExperience }}" routerLinkActive="active" (click)="hideWorkMenu($event)">💼 {{ 'work.work_experience' | translate }}</span>
+        <span routerLink="{{ schoolProjects }}" routerLinkActive="active" (click)="hideWorkMenu($event)">🎓 {{ 'work.school_projects' | translate }}</span>
+      </div>
+    </div>
+    <a class="header-item" routerLink="{{ skills }}" routerLinkActive="active"
+       (click)="hideBurgerMenu()">{{ 'header.skills' | translate }}</a>
+    <div class="header-item" (click)="toggleThemeMenu($event)">
+      {{ 'header.themes.title' | translate }}
+      <div *ngIf="isThemeMenuShown" class="theme-menu menu">
+        <span (click)="switchTheme(AppConstants.THEMES.DARK); hideThemeMenu($event)"
+              class="{{(getCurrentTheme() | async) === AppConstants.THEMES.DARK ? 'active' : ''}}">🌚 {{ 'header.themes.dark' | translate }}</span>
+        <span (click)="switchTheme(AppConstants.THEMES.BLACK); hideThemeMenu($event)"
+              class="{{(getCurrentTheme() | async) === AppConstants.THEMES.BLACK ? 'active' : ''}}">🦇 {{ 'header.themes.black' | translate }}</span>
+        <span (click)="switchTheme(AppConstants.THEMES.LIGHT); hideThemeMenu($event)"
+              class="{{(getCurrentTheme() | async) === AppConstants.THEMES.LIGHT ? 'active' : ''}}">☀️ {{ 'header.themes.light' | translate }}</span>
+        <span (click)="switchTheme(AppConstants.THEMES.DYNAMIC); hideThemeMenu($event)"
+              class="{{(getCurrentTheme() | async) === AppConstants.THEMES.DYNAMIC ? 'active' : ''}}">️🧨 {{ 'header.themes.dynamic' | translate }}</span>
+      </div>
+    </div>
     <div class="header-item" (click)="toggleLanguageMenu($event)">
       {{ 'header.languages' | translate }}
       <div *ngIf="isLanguageMenuShown" class="language-menu menu">
-        <span (click)="switchLanguage('fr'); hideLanguageMenu($event)">Français 🇫🇷</span>
-        <span (click)="switchLanguage('en'); hideLanguageMenu($event)">English 🇬🇧</span>
+        <span (click)="switchLanguage('fr'); hideLanguageMenu($event)" class="{{getCurrentLanguage() === AppConstants.LANGUAGES.FR ? 'active' : ''}}">🇫🇷 Français</span>
+        <span (click)="switchLanguage('en'); hideLanguageMenu($event)" class="{{getCurrentLanguage() === AppConstants.LANGUAGES.EN ? 'active' : ''}}">🇬🇧 English</span>
       </div>
     </div>
-  </div>
-</div>
+  </nav>
+</header>

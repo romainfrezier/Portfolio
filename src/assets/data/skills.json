@@ -45,12 +45,6 @@
       "link": "https://reactjs.org/"
     },
     {
-      "id": 3,
-      "name": "Typescript",
-      "src": "/assets/images/skills/typescript-logo.png",
-      "link": "https://www.typescriptlang.org/"
-    },
-    {
       "id": 4,
       "name": "SCSS",
       "src": "/assets/images/skills/scss-logo.png",
@@ -101,7 +95,7 @@
       "link": "https://www.mariadb.org/"
     }
   ],
-  "soft": [
+  "softwares": [
     {
       "id": 1,
       "name": "MacOS",
@@ -110,9 +104,9 @@
     },
     {
       "id": 2,
-      "name": "GitHub",
-      "src": "/assets/images/skills/github-logo-light.png",
-      "link": "https://www.github.com/"
+      "name": "Git",
+      "src": "/assets/images/skills/git-logo.png",
+      "link": "https://www.git-scm.com/"
     },
     {
       "id": 3,
@@ -121,34 +115,40 @@
       "link": "https://www.postman.com/"
     },
     {
-      "id": 4,
-      "name": "Notion",
-      "src": "/assets/images/skills/notion-logo.png",
-      "link": "https://notion.so/"
+      "id": 5,
+      "name": "Jira",
+      "src": "/assets/images/skills/jira-logo.png",
+      "link": "https://www.atlassian.com/software/jira"
     },
     {
-      "id": 5,
+      "id": 6,
       "name": "IntelliJ",
       "src": "/assets/images/skills/intellij-logo.png",
       "link": "https://www.jetbrains.com/idea/"
     },
     {
-      "id": 6,
+      "id": 7,
       "name": "WebStorm",
       "src": "/assets/images/skills/webstorm-logo.png",
       "link": "https://www.jetbrains.com/webstorm/"
     },
     {
-      "id": 7,
+      "id": 8,
       "name": "Figma",
       "src": "/assets/images/skills/figma-logo.png",
       "link": "https://www.figma.com/"
     },
     {
-      "id": 8,
+      "id": 9,
       "name": "Gimp",
       "src": "/assets/images/skills/gimp-logo.png",
       "link": "https://www.gimp.org/"
+    },
+    {
+      "id": 10,
+      "name": "Unity",
+      "src": "/assets/images/skills/unity-logo.png",
+      "link": "https://unity.com/"
     }
   ],
   "services": [
@@ -181,6 +181,33 @@
       "name": "Apache Kafka",
       "src": "/assets/images/skills/kafka-logo.png",
       "link": "https://kafka.apache.org/"
+    }
+  ],
+  "soft": [
+    {
+      "id": 1,
+      "name": "teamwork",
+      "src": "/assets/images/skills/teamwork-logo.png"
+    },
+    {
+      "id": 2,
+      "name": "communication",
+      "src": "/assets/images/skills/communication-logo.png"
+    },
+    {
+      "id": 3,
+      "name": "english",
+      "src": "/assets/images/skills/english-logo.png"
+    },
+    {
+      "id": 4,
+      "name": "scrum",
+      "src": "/assets/images/skills/scrum-logo.png"
+    },
+    {
+      "id": 5,
+      "name": "adaptability",
+      "src": "/assets/images/skills/adaptability-logo.png"
     }
   ]
 }
