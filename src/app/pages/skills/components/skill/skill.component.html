@@ -1,5 +1,7 @@
 <div class="skill">
-  <img [src]="skill.src" [alt]="skill.name">
-  <a *ngIf="skill.link" href="{{ skill.link }}" target="_blank">{{ skill.name }}</a>
-  <p *ngIf="!skill.link">{{ ('skills.soft.' + skill.name) | translate }}</p>
+  <img [src]="skill.src" [alt]="skill.name" />
+  <a *ngIf="skill.link" href="{{ skill.link }}" target="_blank" rel="noopener">{{
+    skill.name
+  }}</a>
+  <p *ngIf="!skill.link">{{ "skills.soft." + skill.name | translate }}</p>
 </div>

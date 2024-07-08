@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { AchievementsComponent } from './achievements.component';
+import {AchievementsComponent} from './achievements.component';
 
 describe('AchievementsComponent', () => {
   let component: AchievementsComponent;
@@ -8,7 +8,7 @@ describe('AchievementsComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [AchievementsComponent]
+      declarations: [AchievementsComponent],
     });
     fixture = TestBed.createComponent(AchievementsComponent);
     component = fixture.componentInstance;

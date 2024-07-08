@@ -1,43 +1,165 @@
 <header class="header-container">
-  <div class="menu-burger" (click)="toggleBurgerMenu()">
+  <div class="menu-burger"
+       (click)="toggleBurgerMenu()"
+       (keyup.enter)="toggleBurgerMenu()"
+       (keydown.enter)="toggleBurgerMenu()"
+       tabindex="0"
+  >
     <mat-icon>{{ isBurgerMenuOpen ? "close" : "menu" }}</mat-icon>
   </div>
   <nav class="menu-items {{ isBurgerMenuOpen ? 'menu-open' : 'menu-close' }}">
-    <a class="header-item" routerLink="{{ home }}" routerLinkActive="active"
-       (click)="hideBurgerMenu()">{{ 'header.home' | translate }}</a>
-    <a class="header-item" routerLink="{{ about }}" routerLinkActive="active"
-       (click)="hideBurgerMenu()">{{ 'header.about' | translate }}</a>
-    <a class="header-item" routerLink="{{ resume }}" routerLinkActive="active"
-       (click)="hideBurgerMenu()">{{ 'header.resume' | translate }}</a>
-    <a class="header-item" routerLink="{{ achievements }}" routerLinkActive="active"
-       (click)="hideBurgerMenu()">{{ 'header.achievements' | translate }}</a>
-    <div class="header-item" (click)="toggleWorkMenu($event)">
-      {{ 'header.work' | translate }}
+    <a
+      class="header-item"
+      routerLink="{{ home }}"
+      routerLinkActive="active"
+      (click)="hideBurgerMenu()"
+      >{{ "header.home" | translate }}</a
+    >
+    <a
+      class="header-item"
+      routerLink="{{ about }}"
+      routerLinkActive="active"
+      (click)="hideBurgerMenu()"
+      >{{ "header.about" | translate }}</a
+    >
+    <a
+      class="header-item"
+      routerLink="{{ resume }}"
+      routerLinkActive="active"
+      (click)="hideBurgerMenu()"
+      >{{ "header.resume" | translate }}</a
+    >
+    <a
+      class="header-item"
+      routerLink="{{ achievements }}"
+      routerLinkActive="active"
+      (click)="hideBurgerMenu()"
+      tabindex="0"
+    >{{ "header.achievements" | translate }}</a>
+    <div class="header-item"
+         (click)="toggleWorkMenu($event)"
+         (keyup.enter)="toggleWorkMenu($event)"
+         (keydown.enter)="toggleWorkMenu($event)"
+         tabindex="0"
+    >
+      {{ "header.work" | translate }}
       <div *ngIf="isWorkMenuShown" class="work-menu menu">
-        <span routerLink="{{ workExperience }}" routerLinkActive="active" (click)="hideWorkMenu($event)">💼 {{ 'work.work_experience' | translate }}</span>
-        <span routerLink="{{ schoolProjects }}" routerLinkActive="active" (click)="hideWorkMenu($event)">🎓 {{ 'work.school_projects' | translate }}</span>
+        <span
+          routerLink="{{ workExperience }}"
+          routerLinkActive="active"
+          (click)="hideWorkMenu($event)"
+          (keyup.enter)="hideWorkMenu($event)"
+          (keydown.enter)="hideWorkMenu($event)"
+          tabindex="0"
+          >💼 {{ "work.work_experience" | translate }}</span
+        >
+        <span
+          routerLink="{{ schoolProjects }}"
+          routerLinkActive="active"
+          (click)="hideWorkMenu($event)"
+          (keyup.enter)="hideWorkMenu($event)"
+          (keydown.enter)="hideWorkMenu($event)"
+          tabindex="0"
+          >🎓 {{ "work.school_projects" | translate }}</span
+        >
       </div>
     </div>
-    <a class="header-item" routerLink="{{ skills }}" routerLinkActive="active"
-       (click)="hideBurgerMenu()">{{ 'header.skills' | translate }}</a>
-    <div class="header-item" (click)="toggleThemeMenu($event)">
-      {{ 'header.themes.title' | translate }}
+    <a
+      class="header-item"
+      routerLink="{{ skills }}"
+      routerLinkActive="active"
+      (click)="hideBurgerMenu()"
+      (keyup.enter)="hideBurgerMenu()"
+      (keydown.enter)="hideBurgerMenu()"
+      tabindex="0"
+      >{{ "header.skills" | translate }}</a
+    >
+    <div class="header-item"
+         (click)="toggleThemeMenu($event)"
+         (keyup.enter)="toggleThemeMenu($event)"
+         (keydown.enter)="toggleThemeMenu($event)"
+         tabindex="0"
+    >
+      {{ "header.themes.title" | translate }}
       <div *ngIf="isThemeMenuShown" class="theme-menu menu">
-        <span (click)="switchTheme(AppConstants.THEMES.DARK); hideThemeMenu($event)"
-              class="{{(getCurrentTheme() | async) === AppConstants.THEMES.DARK ? 'active' : ''}}">🌚 {{ 'header.themes.dark' | translate }}</span>
-        <span (click)="switchTheme(AppConstants.THEMES.BLACK); hideThemeMenu($event)"
-              class="{{(getCurrentTheme() | async) === AppConstants.THEMES.BLACK ? 'active' : ''}}">🦇 {{ 'header.themes.black' | translate }}</span>
-        <span (click)="switchTheme(AppConstants.THEMES.LIGHT); hideThemeMenu($event)"
-              class="{{(getCurrentTheme() | async) === AppConstants.THEMES.LIGHT ? 'active' : ''}}">☀️ {{ 'header.themes.light' | translate }}</span>
-        <span (click)="switchTheme(AppConstants.THEMES.DYNAMIC); hideThemeMenu($event)"
-              class="{{(getCurrentTheme() | async) === AppConstants.THEMES.DYNAMIC ? 'active' : ''}}">️🧨 {{ 'header.themes.dynamic' | translate }}</span>
+        <span
+          (click)="switchTheme(AppConstants.THEMES.DARK); hideThemeMenu($event)"
+          (keyup.enter)="switchTheme(AppConstants.THEMES.DARK); hideThemeMenu($event)"
+          (keydown.enter)="switchTheme(AppConstants.THEMES.DARK); hideThemeMenu($event)"
+          tabindex="0"
+          class="{{
+            (getCurrentTheme() | async) === AppConstants.THEMES.DARK
+              ? 'active'
+              : ''
+          }}"
+          >🌚 {{ "header.themes.dark" | translate }}</span
+        >
+        <span
+          (click)="switchTheme(AppConstants.THEMES.BLACK); hideThemeMenu($event)"
+          (keyup.enter)="switchTheme(AppConstants.THEMES.BLACK); hideThemeMenu($event)"
+          (keydown.enter)="switchTheme(AppConstants.THEMES.BLACK); hideThemeMenu($event)"
+          tabindex="0"
+          class="{{
+            (getCurrentTheme() | async) === AppConstants.THEMES.BLACK
+              ? 'active'
+              : ''
+          }}"
+          >🦇 {{ "header.themes.black" | translate }}</span
+        >
+        <span
+          (click)="switchTheme(AppConstants.THEMES.LIGHT); hideThemeMenu($event)"
+          (keyup.enter)="switchTheme(AppConstants.THEMES.LIGHT); hideThemeMenu($event)"
+          (keydown.enter)="switchTheme(AppConstants.THEMES.LIGHT); hideThemeMenu($event)"
+          tabindex="0"
+          class="{{
+            (getCurrentTheme() | async) === AppConstants.THEMES.LIGHT
+              ? 'active'
+              : ''
+          }}"
+          >☀️ {{ "header.themes.light" | translate }}</span
+        >
+        <span
+          (click)="switchTheme(AppConstants.THEMES.DYNAMIC); hideThemeMenu($event)"
+          (keyup.enter)="switchTheme(AppConstants.THEMES.DYNAMIC); hideThemeMenu($event)"
+          (keydown.enter)="switchTheme(AppConstants.THEMES.DYNAMIC); hideThemeMenu($event)"
+          tabindex="0"
+          class="{{
+            (getCurrentTheme() | async) === AppConstants.THEMES.DYNAMIC
+              ? 'active'
+              : ''
+          }}"
+          >️🧨 {{ "header.themes.dynamic" | translate }}</span
+        >
       </div>
     </div>
-    <div class="header-item" (click)="toggleLanguageMenu($event)">
-      {{ 'header.languages' | translate }}
+    <div class="header-item"
+         (click)="toggleLanguageMenu($event)"
+         (keyup.enter)="toggleLanguageMenu($event)"
+         (keydown.enter)="toggleLanguageMenu($event)"
+         tabindex="0"
+    >
+      {{ "header.languages" | translate }}
       <div *ngIf="isLanguageMenuShown" class="language-menu menu">
-        <span (click)="switchLanguage('fr'); hideLanguageMenu($event)" class="{{getCurrentLanguage() === AppConstants.LANGUAGES.FR ? 'active' : ''}}">🇫🇷 Français</span>
-        <span (click)="switchLanguage('en'); hideLanguageMenu($event)" class="{{getCurrentLanguage() === AppConstants.LANGUAGES.EN ? 'active' : ''}}">🇬🇧 English</span>
+        <span
+          (click)="switchLanguage('fr'); hideLanguageMenu($event)"
+          (keyup.enter)="switchLanguage('fr'); hideLanguageMenu($event)"
+          (keydown.enter)="switchLanguage('fr'); hideLanguageMenu($event)"
+          tabindex="0"
+          class="{{
+            getCurrentLanguage() === AppConstants.LANGUAGES.FR ? 'active' : ''
+          }}"
+          >🇫🇷 Français</span
+        >
+        <span
+          (click)="switchLanguage('en'); hideLanguageMenu($event)"
+          (keyup.enter)="switchLanguage('en'); hideLanguageMenu($event)"
+          (keydown.enter)="switchLanguage('en'); hideLanguageMenu($event)"
+          tabindex="0"
+          class="{{
+            getCurrentLanguage() === AppConstants.LANGUAGES.EN ? 'active' : ''
+          }}"
+          >🇬🇧 English</span
+        >
       </div>
     </div>
   </nav>
