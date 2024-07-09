@@ -1,5 +1,5 @@
 <div class="skills">
-  <h2>{{ 'skills.' + name | translate }}</h2>
+  <h2>{{ "skills." + name | translate }}</h2>
   <div class="skills-images">
     <app-skill *ngFor="let skill of skills" [skill]="skill"></app-skill>
   </div>

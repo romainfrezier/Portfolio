@@ -7,4 +7,4 @@ export type WorkExperience = {
   company: string;
   companyUrl: string;
   companyLogo: string;
-}
+};

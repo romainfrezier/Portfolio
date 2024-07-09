@@ -7,4 +7,4 @@ export type SchoolProject = {
   number: number;
   languages: string;
   documentUrl: string;
-}
+};

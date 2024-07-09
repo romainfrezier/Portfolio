@@ -1,23 +1,29 @@
 import {Component, OnInit} from '@angular/core';
-import {Achievement} from "@models/achievement.model";
-import {LangChangeEvent, TranslateService} from "@ngx-translate/core";
-import {AppConstants} from "@app/app.constants";
-import {DataService} from "@services/data.service";
+import {Achievement} from '@models/achievement.model';
+import {LangChangeEvent, TranslateService} from '@ngx-translate/core';
+import {AppConstants} from '@app/app.constants';
+import {DataService} from '@services/data.service';
 
 @Component({
   selector: 'app-achievements',
   templateUrl: './achievements.component.html',
-  styleUrls: ['./achievements.component.scss']
+  styleUrls: ['./achievements.component.scss'],
 })
 export class AchievementsComponent implements OnInit {
-
   public achievements!: Achievement[];
 
-  constructor(private dataService: DataService, private translate: TranslateService) {
-    const lang: string = localStorage.getItem(AppConstants.LOCALSTORAGE.LANGUAGE) || translate.defaultLang;
-    this.dataService.getAchievements(lang).subscribe((data: Achievement[]): void => {
-      this.achievements = data;
-    });
+  constructor(
+    private dataService: DataService,
+    private translate: TranslateService,
+  ) {
+    const lang: string =
+      localStorage.getItem(AppConstants.LOCALSTORAGE.LANGUAGE) ??
+      translate.defaultLang;
+    this.dataService
+      .getAchievements(lang)
+      .subscribe((data: Achievement[]): void => {
+        this.achievements = data;
+      });
   }
 
   ngOnInit(): void {
@@ -27,9 +33,10 @@ export class AchievementsComponent implements OnInit {
   }
 
   private fetchAchievements(lang: string): void {
-    this.dataService.getAchievements(lang).subscribe((data: Achievement[]): void => {
-      this.achievements = data;
-    });
+    this.dataService
+      .getAchievements(lang)
+      .subscribe((data: Achievement[]): void => {
+        this.achievements = data;
+      });
   }
-
 }

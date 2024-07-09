@@ -4,4 +4,4 @@ export type PersonalProject = {
   url: string;
   githubLink: string;
   languages: string;
-}
+};
