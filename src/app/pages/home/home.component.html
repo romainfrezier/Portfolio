@@ -9,7 +9,9 @@
       />
     </section>
     <section class="infos">
-      <p *ngIf="this.introText">{{ this.introText }}</p>
+      @if (this.introText) {
+        <p>{{ this.introText }}</p>
+      }
       <p>{{ "home.roleDescription" | translate }}</p>
     </section>
     <section class="contact">

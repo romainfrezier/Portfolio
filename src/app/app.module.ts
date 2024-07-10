@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {CommonModule} from '@angular/common';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {HttpClient, provideHttpClient, withInterceptorsFromDi} from '@angular/common/http';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -18,11 +18,10 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [
-    BrowserModule,
+  exports: [AppRoutingModule],
+  bootstrap: [AppComponent], imports: [BrowserModule,
     CommonModule,
     BrowserAnimationsModule,
-    HttpClientModule,
     SharedModule,
     TranslateModule.forRoot({
       loader: {
@@ -31,10 +30,6 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [HttpClient],
       },
     }),
-    AppRoutingModule,
-  ],
-  exports: [AppRoutingModule],
-  providers: [ThemesService, DataService],
-  bootstrap: [AppComponent],
+    AppRoutingModule], providers: [ThemesService, DataService, provideHttpClient(withInterceptorsFromDi())]
 })
 export class AppModule {}
