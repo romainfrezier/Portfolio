@@ -17,11 +17,13 @@
     <section class="contact">
       <p>{{ "home.contact.serious" | translate }} 😁</p>
       <div class="links">
-        <div class="link-circle" *ngFor="let link of socialLinks">
-          <a [href]="link.url" rel="noopener noreferrer" target="_blank">
-            <img [src]="link.icon" alt="{{ link.name }}" />
-          </a>
-        </div>
+        @for (link of socialLinks; track $index) {
+          <div class="link-circle">
+            <a [href]="link.url" rel="noopener noreferrer" target="_blank">
+              <img [src]="link.icon" alt="{{ link.name }}" />
+            </a>
+          </div>
+        }
       </div>
     </section>
   </div>

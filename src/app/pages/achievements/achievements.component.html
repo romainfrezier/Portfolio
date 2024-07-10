@@ -1,17 +1,19 @@
 <div class="achievements-container">
   <h1>{{ "achievements.title" | translate }}</h1>
   <div class="content">
-    <div class="achievement-item" *ngFor="let achievement of achievements">
-      <div class="img-container">
-        <img src="{{ achievement.badge }}" alt="achievement icon" />
+    @for (achievement of achievements; track $index) {
+      <div class="achievement-item">
+        <div class="img-container">
+          <img src="{{ achievement.badge }}" alt="achievement icon" />
+        </div>
+        <div class="achievement-info">
+          <h2>{{ achievement.name | translate }}</h2>
+          <p>{{ achievement.description | translate }}</p>
+          <a href="{{ achievement.link }}" target="_blank" rel="noopener">{{
+              achievement.linkName
+            }}</a>
+        </div>
       </div>
-      <div class="achievement-info">
-        <h2>{{ achievement.name | translate }}</h2>
-        <p>{{ achievement.description | translate }}</p>
-        <a href="{{ achievement.link }}" target="_blank" rel="noopener">{{
-          achievement.linkName
-        }}</a>
-      </div>
-    </div>
+    }
   </div>
 </div>
