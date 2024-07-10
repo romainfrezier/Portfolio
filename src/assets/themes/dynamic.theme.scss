@@ -1,83 +1,88 @@
+@use "sass:color";
+@use "sass:map";
 @import "themes.colors";
 
 .html-dynamic-theme {
-  background-image: linear-gradient(to right bottom, map-get($dynamic-theme, 'top'), map-get($dynamic-theme, 'bottom'));
+  background-image: linear-gradient(to right bottom, map.get($dynamic-theme, 'top'), map.get($dynamic-theme, 'bottom'));
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
 .dynamic-theme {
-  background-image: linear-gradient(to right bottom, map-get($dynamic-theme, 'top'), map-get($dynamic-theme, 'bottom'));
+  background-image: linear-gradient(to right bottom, map.get($dynamic-theme, 'top'), map.get($dynamic-theme, 'bottom'));
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color: map-get($dynamic-theme, 'text');
+  color: map.get($dynamic-theme, 'text');
 
   .secret {
-    color: map-get($dynamic-theme, 'clear');
+    color: map.get($dynamic-theme, 'clear');
   }
 
   .circle {
-    background-image: linear-gradient(to right, map-get($dynamic-theme, 'contrast'), transparentize(map-get($dynamic-theme, 'contrast'), 0.5));
+    background-image: linear-gradient(to right, map.get($dynamic-theme, 'contrast'), color.adjust(map.get($dynamic-theme, 'contrast'), $alpha: -0.5));
   }
 
   .link-circle {
-    background-image: linear-gradient(to bottom, map-get($dynamic-theme, 'contrast'), transparentize(map-get($dynamic-theme, 'contrast'), 0.5));
-    box-shadow: rgba(0, 0, 0, 0.25) 0 0 20px 1px;
+    background-image: linear-gradient(to bottom, map.get($dynamic-theme, 'contrast'), color.adjust(map.get($dynamic-theme, 'contrast'), $alpha: -0.5));
+    box-shadow: rgb(0 0 0 / 25%) 0 0 20px 1px;
   }
 
   .header-item {
-    color: map-get($dynamic-theme, 'clear');
+    color: map.get($dynamic-theme, 'clear');
   }
 
   .active {
-    background-color: map-get($dynamic-theme, 'contrast');
+    background-color: map.get($dynamic-theme, 'contrast');
   }
 
   .menu {
-    background-color: map-get($dynamic-theme, 'contrast');
-    color: map-get($dynamic-theme, 'clear');
+    background-color: map.get($dynamic-theme, 'contrast');
+    color: map.get($dynamic-theme, 'clear');
 
     .active {
-      background-color: map-get($dynamic-theme, 'clear');
-      color: map-get($dynamic-theme, 'contrast');
+      background-color: map.get($dynamic-theme, 'clear');
+      color: map.get($dynamic-theme, 'contrast');
     }
   }
 
   .menu-open {
-    background-image: linear-gradient(to right bottom, map-get($dynamic-theme, 'contrast'), map-get($dynamic-theme, 'bottom'));
-    color: map-get($dynamic-theme, 'clear');
+    background-image: linear-gradient(to right bottom, map.get($dynamic-theme, 'contrast'), map.get($dynamic-theme, 'bottom'));
+    color: map.get($dynamic-theme, 'clear');
 
     .active {
-      background-color: map-get($dynamic-theme, 'clear');
-      color: map-get($dynamic-theme, 'contrast');
+      background-color: map.get($dynamic-theme, 'clear');
+      color: map.get($dynamic-theme, 'contrast');
     }
   }
 
   .tile {
-    background-color: map-get($dynamic-theme, 'tile');
-    box-shadow: rgba(0, 0, 0, 0.25) 0 0 20px 1px;
+    background-color: map.get($dynamic-theme, 'tile');
+    box-shadow: rgb(0 0 0 / 25%) 0 0 20px 1px;
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: map-get($dynamic-theme, 'contrast');
+    background-color: map.get($dynamic-theme, 'contrast');
 
     &:hover {
-      background-color: darken(map-get($dynamic-theme, 'contrast'), 20%);
+      background-color: color.adjust(map.get($dynamic-theme, 'contrast'), $lightness: -20%);
     }
   }
 
   .button-container {
     p {
-      color: map-get($dynamic-theme, 'text');
+      color: map.get($dynamic-theme, 'text');
     }
+
+    background-color: transparent;
+    border: 1px solid map.get($dynamic-theme, 'text');
   }
 
   .loader {
-    border-color: map-get($dynamic-theme, 'contrast');
+    border-color: map.get($dynamic-theme, 'contrast');
   }
 
   a {
-    color: map-get($dynamic-theme, 'text');
+    color: map.get($dynamic-theme, 'text');
   }
 
   .home-mountains {

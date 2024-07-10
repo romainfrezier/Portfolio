@@ -8,7 +8,7 @@
   box-sizing: border-box;
   margin-top: 100px;
 
-  @media (max-width: 1000px) {
+  @media (width <= 1000px) {
     margin-top: 30px;
   }
 
@@ -53,14 +53,13 @@
       gap: 20px;
       user-select: none;
       cursor: pointer;
-      border: solid 1px;
 
       img {
         height: 50%;
       }
     }
 
-    @media (max-width: 1400px) {
+    @media (width <= 1400px) {
       h1 {
         font-size: 1.2rem;
         height: 15%;
@@ -71,7 +70,7 @@
     }
   }
 
-  @media (max-width: 650px) {
+  @media (width <= 650px) {
     flex-direction: column-reverse;
     justify-content: flex-start;
     gap: 30px;

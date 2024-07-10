@@ -1,37 +1,38 @@
 <div class="work-experiences-container">
   <h1>{{ "work_experiences.title" | translate }}</h1>
   <div class="content">
-    <div
-      class="experience-item"
-      *ngFor="let experience of experiences; let i = index"
-    >
-      <div class="logo-container">
-        <img
-          [src]="experience.companyLogo"
-          alt="Logo {{ experience.company }}"
-        />
+    @for (experience of experiences; track $index) {
+      <div
+        class="experience-item"
+      >
+        <div class="logo-container">
+          <img
+            [src]="experience.companyLogo"
+            alt="Logo {{ experience.company }}"
+          />
+        </div>
+        <div class="experience-info">
+          <h2>{{ experience.company }}</h2>
+          <p class="italic">{{ experience.position }}</p>
+          <p class="bold">
+            {{ "work_experiences.date" | translate }} : {{ experience.date }}
+          </p>
+          <p>{{ experience.place }}</p>
+          <p>{{ experience.description | translate }}</p>
+          <p>
+            {{
+              (experience.skills.split(",").length === 1
+                  ? "work_experiences.skills"
+                  : "work_experiences.skills"
+              ) | translate
+            }}
+            : {{ experience.skills }}
+          </p>
+          <a href="{{ experience.companyUrl }}" rel="noopener" target="_blank">{{
+              "work_experiences.company_url" | translate
+            }}</a>
+        </div>
       </div>
-      <div class="experience-info">
-        <h2>{{ experience.company }}</h2>
-        <p class="italic">{{ experience.position }}</p>
-        <p class="bold">
-          {{ "work_experiences.date" | translate }} : {{ experience.date }}
-        </p>
-        <p>{{ experience.place }}</p>
-        <p>{{ experience.description | translate }}</p>
-        <p>
-          {{
-            (experience.skills.split(",").length === 1
-              ? "work_experiences.skills"
-              : "work_experiences.skills"
-            ) | translate
-          }}
-          : {{ experience.skills }}
-        </p>
-        <a href="{{ experience.companyUrl }}" rel="noopener" target="_blank">{{
-          "work_experiences.company_url" | translate
-        }}</a>
-      </div>
-    </div>
+    }
   </div>
 </div>

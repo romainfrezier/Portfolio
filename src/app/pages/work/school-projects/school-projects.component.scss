@@ -14,7 +14,7 @@
     margin: 50px;
     height: 10%;
 
-    @media (max-width: 1000px) {
+    @media (width <= 1000px) {
       margin: 30px;
     }
   }
@@ -86,7 +86,7 @@
         }
       }
 
-      @media (max-width: 1400px) {
+      @media (width <= 1400px) {
         flex-direction: column;
 
         .video-container {
@@ -113,11 +113,10 @@
       user-select: none;
       cursor: pointer;
       margin-bottom: 10px;
-      border: solid 1px;
     }
   }
 
-  @media (max-width: 1400px) {
+  @media (width <= 1400px) {
     h1 {
       font-size: 1.2rem;
       height: 15%;

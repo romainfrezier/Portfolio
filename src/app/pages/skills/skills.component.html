@@ -2,52 +2,64 @@
   <h1>{{ "skills.title" | translate }}</h1>
   <div class="content">
     <section class="category-container">
-      <app-skills-section
-        [skills]="programmingLanguages"
-        [name]="'languages'"
-        *ngIf="programmingLanguages !== []"
-      />
-      <app-loader *ngIf="programmingLanguages === []" />
+      @if (programmingLanguages !== []) {
+        <app-skills-section
+          [skills]="programmingLanguages"
+          [name]="'languages'"
+        />
+      } @else {
+        <app-loader></app-loader>
+      }
     </section>
     <section class="category-container">
-      <app-skills-section
-        [skills]="webTechnologies"
-        [name]="'web'"
-        *ngIf="webTechnologies !== []"
-      />
-      <app-loader *ngIf="webTechnologies === []" />
+      @if (webTechnologies !== []) {
+        <app-skills-section
+          [skills]="webTechnologies"
+          [name]="'web'"
+        />
+      } @else {
+        <app-loader></app-loader>
+      }
     </section>
     <section class="category-container">
-      <app-skills-section
-        [skills]="databases"
-        [name]="'databases'"
-        *ngIf="databases !== []"
-      />
-      <app-loader *ngIf="databases === []" />
+      @if (databases !== []) {
+        <app-skills-section
+          [skills]="databases"
+          [name]="'databases'"
+        />
+      } @else {
+        <app-loader></app-loader>
+      }
     </section>
     <section class="category-container">
-      <app-skills-section
-        [skills]="softwares"
-        [name]="'softwares'"
-        *ngIf="softwares !== []"
-      />
-      <app-loader *ngIf="softwares === []" />
+      @if (softwares !== []) {
+        <app-skills-section
+          [skills]="softwares"
+          [name]="'softwares'"
+        />
+      } @else {
+        <app-loader></app-loader>
+      }
     </section>
     <section class="category-container">
-      <app-skills-section
-        [skills]="services"
-        [name]="'services'"
-        *ngIf="services !== []"
-      />
-      <app-loader *ngIf="services === []" />
+      @if (services !== []) {
+        <app-skills-section
+          [skills]="services"
+          [name]="'services'"
+        />
+      } @else {
+        <app-loader></app-loader>
+      }
     </section>
     <section class="category-container">
-      <app-skills-section
-        [skills]="soft"
-        [name]="'soft.title'"
-        *ngIf="soft !== []"
-      />
-      <app-loader *ngIf="soft === []" />
+      @if (soft !== []) {
+        <app-skills-section
+          [skills]="soft"
+          [name]="'soft.title'"
+        />
+      } @else {
+        <app-loader></app-loader>
+      }
     </section>
   </div>
 </div>

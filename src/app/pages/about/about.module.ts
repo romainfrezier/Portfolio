@@ -5,7 +5,6 @@ import {SharedModule} from '@shared/shared.module';
 import {TranslateModule} from '@ngx-translate/core';
 import {RouterModule, Routes} from '@angular/router';
 import {AppConstants} from '@app/app.constants';
-import {NgxSkeletonLoaderModule} from 'ngx-skeleton-loader';
 
 const routes: Routes = [
   { path: '', component: AboutComponent },
@@ -18,7 +17,6 @@ const routes: Routes = [
     CommonModule,
     TranslateModule,
     SharedModule,
-    NgxSkeletonLoaderModule,
     RouterModule.forChild(routes),
   ],
   exports: [AboutComponent],

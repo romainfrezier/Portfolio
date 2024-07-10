@@ -16,13 +16,13 @@
       <h1>{{ "resume.title" | translate }}</h1>
       <p>{{ "resume.subtitle" | translate }}</p>
     </div>
-    <div (click)="download_resume()"
+    <button (click)="download_resume()"
          (keyup.enter)="download_resume()"
          (keydown.enter)="download_resume()"
          class="button-container"
          tabindex="0">
       <img src="assets/images/download.png" alt="download icon"/>
       <p>{{ "resume.download" | translate }}</p>
-    </div>
+    </button>
   </section>
 </div>

@@ -1,90 +1,95 @@
+@use 'sass:color';
+@use "sass:map";
 @import "themes.colors";
 
 .html-black-theme {
-  background-image: linear-gradient(to right bottom, map-get($black-theme, 'top'), map-get($black-theme, 'bottom'));
+  background-image: linear-gradient(to right bottom, map.get($black-theme, 'top'), map.get($black-theme, 'bottom'));
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
 .black-theme {
-  background-image: linear-gradient(to right bottom, map-get($black-theme, 'top'), map-get($black-theme, 'bottom'));
+  background-image: linear-gradient(to right bottom, map.get($black-theme, 'top'), map.get($black-theme, 'bottom'));
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color: map-get($black-theme, 'text');
+  color: map.get($black-theme, 'text');
 
   .secret {
-    color: map-get($black-theme, 'clear');
+    color: map.get($black-theme, 'clear');
   }
 
   .circle {
-    background-image: linear-gradient(to right, map-get($black-theme, 'contrast'), transparentize(map-get($black-theme, 'contrast'), 0.5));
+    background-image: linear-gradient(to right, map.get($black-theme, 'contrast'), color.adjust(map.get($black-theme, 'contrast'), $alpha: -0.5));
   }
 
   .link-circle {
-    background-image: linear-gradient(to bottom, map-get($black-theme, 'contrast'), transparentize(map-get($black-theme, 'contrast'), 0.5));
-    box-shadow: rgba(0, 0, 0, 0.25) 0 0 20px 1px;
+    background-image: linear-gradient(to bottom, map.get($black-theme, 'contrast'), color.adjust(map.get($black-theme, 'contrast'), $alpha: -0.5));
+    box-shadow: rgb(0 0 0 / 25%) 0 0 20px 1px;
   }
 
   .header-item {
-    color: map-get($black-theme, 'clear');
+    color: map.get($black-theme, 'clear');
   }
 
   .active {
-    background-color: map-get($black-theme, 'contrast');
+    background-color: map.get($black-theme, 'contrast');
   }
 
   .menu {
-    background-color: map-get($black-theme, 'contrast');
-    color: map-get($black-theme, 'clear');
+    background-color: map.get($black-theme, 'contrast');
+    color: map.get($black-theme, 'clear');
 
     .active {
-      background-color: map-get($black-theme, 'clear');
-      color: map-get($black-theme, 'contrast');
+      background-color: map.get($black-theme, 'clear');
+      color: map.get($black-theme, 'contrast');
     }
   }
 
   .menu-open {
-    background-image: linear-gradient(to right bottom, map-get($black-theme, 'contrast'), map-get($black-theme, 'bottom'));
-    color: map-get($black-theme, 'clear');
+    background-image: linear-gradient(to right bottom, map.get($black-theme, 'contrast'), map.get($black-theme, 'bottom'));
+    color: map.get($black-theme, 'clear');
 
     .active {
-      background-color: map-get($black-theme, 'clear');
-      color: map-get($black-theme, 'contrast');
+      background-color: map.get($black-theme, 'clear');
+      color: map.get($black-theme, 'contrast');
     }
   }
 
   .tile {
-    background-color: map-get($black-theme, 'tile');
-    box-shadow: rgba(0, 0, 0, 0.25) 0 0 20px 1px;
+    background-color: map.get($black-theme, 'tile');
+    box-shadow: rgb(0 0 0 / 25%) 0 0 20px 1px;
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: map-get($black-theme, 'contrast');
+    background-color: map.get($black-theme, 'contrast');
     transition: ease-in-out 0.2s;
 
     &:hover {
-      background-color: darken(map-get($black-theme, 'contrast'), 10%);
+      background-color: color.adjust(map.get($black-theme, 'contrast'), $lightness: -10%);
     }
   }
 
   .button-container {
     p {
-      color: map-get($black-theme, 'text');
+      color: map.get($black-theme, 'text');
     }
+
+    background-color: transparent;
+    border: 1px solid map.get($black-theme, 'text');
   }
 
   .loader {
-    border-color: map-get($black-theme, 'contrast');
+    border-color: map.get($black-theme, 'contrast');
   }
 
   a {
-    color: map-get($black-theme, 'text');
+    color: map.get($black-theme, 'text');
   }
 
   .skills-images {
     .skill {
       a {
-        color: map-get($black-theme, 'clear');
+        color: map.get($black-theme, 'clear');
       }
     }
   }
