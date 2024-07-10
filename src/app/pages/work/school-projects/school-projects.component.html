@@ -59,23 +59,19 @@
       </div>
     }
     @if (!showArchivedProjects) {
-      <div
+      <button
         class="button-container"
         (click)="seeMoreProjects()"
-        (keyup.enter)="seeMoreProjects()"
-        tabindex="0"
       >
         <p>{{ "school_projects.see-more" | translate }}</p>
-      </div>
+      </button>
     } @else {
-      <div
+      <button
         class="button-container"
         (click)="seeLessProjects()"
-        (keyup.enter)="seeLessProjects()"
-        tabindex="0"
       >
         <p>{{ "school_projects.see-less" | translate }}</p>
-      </div>
+      </button>
     }
   </div>
 </div>

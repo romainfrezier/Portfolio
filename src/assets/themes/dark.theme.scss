@@ -1,83 +1,88 @@
+@use "sass:color";
+@use "sass:map";
 @import "themes.colors";
 
 .html-dark-theme {
-  background-image: linear-gradient(to right bottom, map-get($dark-theme, 'top'), map-get($dark-theme, 'bottom'));
+  background-image: linear-gradient(to right bottom, map.get($dark-theme, 'top'), map.get($dark-theme, 'bottom'));
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
 .dark-theme {
-  background-image: linear-gradient(to right bottom, map-get($dark-theme, 'top'), map-get($dark-theme, 'bottom'));
+  background-image: linear-gradient(to right bottom, map.get($dark-theme, 'top'), map.get($dark-theme, 'bottom'));
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color: map-get($dark-theme, 'text');
+  color: map.get($dark-theme, 'text');
 
   .secret {
-    color: map-get($dark-theme, 'clear');
+    color: map.get($dark-theme, 'clear');
   }
 
   .circle {
-    background-image: linear-gradient(to right, map-get($dark-theme, 'contrast'), transparentize(map-get($dark-theme, 'contrast'), 0.5));
+    background-image: linear-gradient(to right, map.get($dark-theme, 'contrast'), color.adjust(map.get($dark-theme, 'contrast'), $alpha: -0.5));
   }
 
   .link-circle {
-    background-image: linear-gradient(to bottom, map-get($dark-theme, 'contrast'), transparentize(map-get($dark-theme, 'contrast'), 0.5));
-    box-shadow: rgba(0, 0, 0, 0.25) 0 0 20px 1px;
+    background-image: linear-gradient(to bottom, map.get($dark-theme, 'contrast'), color.adjust(map.get($dark-theme, 'contrast'), $alpha: -0.5));
+    box-shadow: rgb(0 0 0 / 25%) 0 0 20px 1px;
   }
 
   .header-item {
-    color: map-get($dark-theme, 'clear');
+    color: map.get($dark-theme, 'clear');
   }
 
   .active {
-    background-color: map-get($dark-theme, 'contrast');
+    background-color: map.get($dark-theme, 'contrast');
   }
 
   .menu {
-    background-color: map-get($dark-theme, 'contrast');
-    color: map-get($dark-theme, 'clear');
+    background-color: map.get($dark-theme, 'contrast');
+    color: map.get($dark-theme, 'clear');
 
     .active {
-      background-color: map-get($dark-theme, 'clear');
-      color: map-get($dark-theme, 'contrast');
+      background-color: map.get($dark-theme, 'clear');
+      color: map.get($dark-theme, 'contrast');
     }
   }
 
   .menu-open {
-    background-image: linear-gradient(to right bottom, map-get($dark-theme, 'contrast'), map-get($dark-theme, 'bottom'));
-    color: map-get($dark-theme, 'clear');
+    background-image: linear-gradient(to right bottom, map.get($dark-theme, 'contrast'), map.get($dark-theme, 'bottom'));
+    color: map.get($dark-theme, 'clear');
 
     .active {
-      background-color: map-get($dark-theme, 'clear');
-      color: map-get($dark-theme, 'contrast');
+      background-color: map.get($dark-theme, 'clear');
+      color: map.get($dark-theme, 'contrast');
     }
   }
 
   .tile {
-    background-color: map-get($dark-theme, 'tile');
-    box-shadow: rgba(0, 0, 0, 0.25) 0 0 20px 1px;
+    background-color: map.get($dark-theme, 'tile');
+    box-shadow: rgb(0 0 0 / 25%) 0 0 20px 1px;
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: map-get($dark-theme, 'contrast');
+    background-color: map.get($dark-theme, 'contrast');
 
     &:hover {
-      background-color: darken(map-get($dark-theme, 'contrast'), 20%);
+      background-color: color.adjust(map.get($dark-theme, 'contrast'), $lightness: -20%);
     }
   }
 
   .button-container {
     p {
-      color: map-get($dark-theme, 'text');
+      color: map.get($dark-theme, 'text');
     }
+
+    background-color: transparent;
+    border: 1px solid map.get($dark-theme, 'text');
   }
 
   .loader {
-    border-color: map-get($dark-theme, 'contrast');
+    border-color: map.get($dark-theme, 'contrast');
   }
 
   a {
-    color: map-get($dark-theme, 'text');
+    color: map.get($dark-theme, 'text');
   }
 
   .home-mountains {
