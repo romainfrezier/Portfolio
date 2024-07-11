@@ -94,5 +94,15 @@
   "contact-me": "You can contact me for any internship or job proposal, or for any other information.",
   "error": {
     "404": "Oops, the page you are looking for does not exist."
+  },
+  "contact-form": {
+    "title": "Contact me",
+    "name": "Last Name",
+    "firstName": "First name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Send",
+    "success": "Your message has been sent successfully",
+    "error": "An error occurred while sending your message"
   }
 }

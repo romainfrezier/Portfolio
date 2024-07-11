@@ -4,6 +4,8 @@ import {HomeComponent} from './home.component';
 import {TranslateModule} from '@ngx-translate/core';
 import {RouterModule, Routes} from '@angular/router';
 import {AppConstants} from '@app/app.constants';
+import {ContactModalComponent} from "@pages/home/contact-modal/contact-modal.component";
+import {ReactiveFormsModule} from "@angular/forms";
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -11,8 +13,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [HomeComponent],
-  imports: [CommonModule, TranslateModule, RouterModule.forChild(routes)],
+  declarations: [HomeComponent, ContactModalComponent],
+  imports: [CommonModule, TranslateModule, RouterModule.forChild(routes), ReactiveFormsModule],
   exports: [HomeComponent],
 })
 export class HomeModule {}

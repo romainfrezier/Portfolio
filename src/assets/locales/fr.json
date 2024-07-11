@@ -94,5 +94,15 @@
   "contact-me": "N'hésitez pas à me contacter pour une proposition d'emploi ou de stage, ou pour toute autre question.",
   "error": {
     "404": "Oups, la page que vous cherchez n'existe pas !"
+  },
+  "contact-form": {
+    "title": "Contactez-moi",
+    "name": "Nom",
+    "firstName": "Prénom",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Envoyer",
+    "success": "Votre message a bien été envoyé !",
+    "error": "Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer plus tard."
   }
 }

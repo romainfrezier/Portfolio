@@ -11,7 +11,7 @@
     text-align: center;
     width: 100%;
 
-    @media (max-width: 1000px) {
+    @media (width <= 1000px) {
       margin: 30px;
     }
   }
@@ -46,7 +46,7 @@
       padding: 20px;
       margin: 30px;
 
-      @media (max-width: 1000px) {
+      @media (width <= 1000px) {
         width: 80%;
       }
 
@@ -80,6 +80,7 @@
           width: 50px;
           aspect-ratio: 1 / 1;
           border-radius: 50%;
+          cursor: pointer;
 
           a {
             display: flex;

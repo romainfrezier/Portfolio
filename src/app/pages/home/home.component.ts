@@ -11,6 +11,8 @@ import {TranslateService} from '@ngx-translate/core';
 export class HomeComponent implements OnInit {
   public socialLinks!: Link[];
   public introText?: string;
+  public showContactModal: boolean;
+
   private birthDate: Date;
 
   constructor(
@@ -26,6 +28,7 @@ export class HomeComponent implements OnInit {
     this.translate.onLangChange.subscribe(() => {
       this.getRoleText();
     });
+    this.showContactModal = false;
   }
 
   public ngOnInit(): void {
@@ -51,5 +54,14 @@ export class HomeComponent implements OnInit {
     }
 
     return age;
+  }
+
+  public openContactModal() {
+    this.showContactModal = true;
+
+  }
+
+  public closeContactModal() {
+    this.showContactModal = false;
   }
 }
