@@ -20,10 +20,7 @@
     "name": "Hello, I am Romain Frezier.",
     "role": "I'm {{age}} years old and I'm a 5th (and last) year engineering student in Computer Science and Management at Polytech Montpellier, France.",
     "roleDescription": "I'm currently working at Infomaniak in Geneva for my end-of-studies internship.",
-    "contact": {
-      "serious": "Don't hesitate to contact me for any job proposal or for any other information, I will be happy to answer you",
-      "fun": "You can also contact me if you don't find the secret feature :)"
-    }
+    "contact-me": "Don't hesitate to contact me! You'll find my social networks and a contact form below. I'll be happy to get back to you"
   },
   "about": {
     "title": "About Me",
@@ -91,8 +88,17 @@
       "adaptability": "Adaptability"
     }
   },
-  "contact-me": "You can contact me for any internship or job proposal, or for any other information.",
   "error": {
     "404": "Oops, the page you are looking for does not exist."
+  },
+  "contact-form": {
+    "title": "Contact me",
+    "name": "Last Name",
+    "firstName": "First name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Send",
+    "success": "Your message has been sent successfully",
+    "error": "Your message could not be sent. The mailbox seems full..."
   }
 }

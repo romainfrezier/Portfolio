@@ -1,0 +1,9 @@
+<div class="toast-container">
+  @for (toast of toastService.toasts; track $index) {
+    <div class="toast" [ngClass]="[toast.type, 'show']">
+      <div class="toast-body">
+        {{ toast.message }}
+      </div>
+    </div>
+  }
+</div>

@@ -6,7 +6,6 @@
         alt="resume_preview"
         (click)="download_resume()"
         (keyup.enter)="download_resume()"
-        (keydown.enter)="download_resume()"
         tabindex="0"
       />
     </div>
@@ -18,9 +17,9 @@
     </div>
     <button (click)="download_resume()"
          (keyup.enter)="download_resume()"
-         (keydown.enter)="download_resume()"
          class="button-container"
-         tabindex="0">
+         tabindex="0"
+    >
       <img src="assets/images/download.png" alt="download icon"/>
       <p>{{ "resume.download" | translate }}</p>
     </button>

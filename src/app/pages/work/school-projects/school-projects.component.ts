@@ -20,9 +20,7 @@ export class SchoolProjectsComponent implements OnInit {
   ) {
     this.showArchivedProjects = false;
     this.isLoading = [];
-    const lang: string =
-      localStorage.getItem(AppConstants.LOCALSTORAGE.LANGUAGE) ||
-      translate.defaultLang;
+    const lang: string = localStorage.getItem(AppConstants.LOCALSTORAGE.LANGUAGE) ?? translate.defaultLang;
     this.fetchProjects(lang);
   }
 
@@ -56,9 +54,7 @@ export class SchoolProjectsComponent implements OnInit {
   }
 
   public seeMoreProjects() {
-    const lang: string =
-      localStorage.getItem(AppConstants.LOCALSTORAGE.LANGUAGE) ||
-      this.translate.defaultLang;
+    const lang: string = localStorage.getItem(AppConstants.LOCALSTORAGE.LANGUAGE) ?? this.translate.defaultLang;
     this.dataService
       .getArchivedProjects(lang)
       .subscribe((data: SchoolProject[]): void => {
@@ -72,9 +68,7 @@ export class SchoolProjectsComponent implements OnInit {
   }
 
   public seeLessProjects() {
-    const lang =
-      localStorage.getItem(AppConstants.LOCALSTORAGE.LANGUAGE) ||
-      this.translate.defaultLang;
+    const lang: string = localStorage.getItem(AppConstants.LOCALSTORAGE.LANGUAGE) ?? this.translate.defaultLang;
     this.dataService
       .getArchivedProjects(lang)
       .subscribe((data: SchoolProject[]): void => {

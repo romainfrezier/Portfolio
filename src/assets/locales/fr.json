@@ -20,10 +20,7 @@
     "name": "Bonjour, je suis Romain Frezier.",
     "role": "J'ai {{age}} ans et je suis étudiant ingénieur en 5ème (et dernière) année d'Informatique et Gestion à Polytech Montpellier, France.",
     "roleDescription": "Je suis actuellement en stage de fin d'études chez Infomaniak à Genève.",
-    "contact": {
-      "serious": "N'hésitez pas à me contacter pour une proposition d'emploi ou pour toute autre question, je serai ravi de vous répondre",
-      "fun": "Vous pouvez aussi me contacter si vous ne trouvez pas la fonctionnalité secrete :)"
-    }
+    "contact-me": "N'hésitez pas à me contacter ! Vous trouverez mes réseaux sociaux et un formulaire de contact ci-dessous. Je serai ravi de répondre à vos messages"
   },
   "about": {
     "title": "À propos de moi",
@@ -91,8 +88,17 @@
       "adaptability": "Adaptabilité"
     }
   },
-  "contact-me": "N'hésitez pas à me contacter pour une proposition d'emploi ou de stage, ou pour toute autre question.",
   "error": {
     "404": "Oups, la page que vous cherchez n'existe pas !"
+  },
+  "contact-form": {
+    "title": "Contactez-moi !",
+    "name": "Nom",
+    "firstName": "Prénom",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Envoyer",
+    "success": "Votre message a bien été envoyé !",
+    "error": "Votre message n'a pas pu être envoyé. La boîte aux lettres semble pleine..."
   }
 }

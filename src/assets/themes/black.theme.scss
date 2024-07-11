@@ -97,4 +97,44 @@
   .home-mountains {
     filter: invert(93%) sepia(76%) saturate(1%) hue-rotate(321deg) brightness(93%) contrast(91%);
   }
+
+  .contact-modal {
+    background-color: map.get($black-theme, 'contrast');
+    color: map.get($black-theme, 'text');
+
+    .form-group {
+      input,textarea {
+        color: map.get($black-theme, 'text');
+        border-color: map.get($black-theme, 'text');
+
+        &:focus {
+          outline: color.adjust(map.get($black-theme, 'contrast'), $lightness: 10%) solid 1px;
+        }
+      }
+    }
+
+    button[type="submit"] {
+      background-color: map.get($black-theme, 'text');
+      color: map.get($black-theme, 'contrast');
+
+      &:hover {
+        background-color: color.adjust(map.get($black-theme, 'text'), $lightness: -20%);
+        color: map.get($black-theme, 'contrast');
+      }
+
+      &:disabled {
+        background-color: color.adjust(map.get($black-theme, 'contrast'), $lightness: 10%);
+        color: color.adjust(map.get($black-theme, 'text'), $lightness: -20%)
+      }
+
+      &:disabled &:hover {
+        background-color: color.adjust(map.get($black-theme, 'contrast'), $lightness: 10%);
+        color: color.adjust(map.get($black-theme, 'text'), $lightness: -20%)
+      }
+    }
+
+    .close-button {
+      color: map.get($black-theme, 'text');
+    }
+  }
 }

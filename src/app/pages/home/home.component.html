@@ -15,7 +15,7 @@
       <p>{{ "home.roleDescription" | translate }}</p>
     </section>
     <section class="contact">
-      <p>{{ "home.contact.serious" | translate }} 😁</p>
+      <p>{{ "home.contact-me" | translate }} 😁</p>
       <div class="links">
         @for (link of socialLinks; track $index) {
           <div class="link-circle">
@@ -24,7 +24,21 @@
             </a>
           </div>
         }
+        <div class="link-circle">
+          <a
+            (click)="this.openContactModal()"
+            (keydown.enter)="this.openContactModal()"
+            tabindex="0"
+          >
+            <img src="assets/images/mail-icon.png" alt="email icon" />
+          </a>
+        </div>
       </div>
     </section>
   </div>
 </div>
+@if (this.showContactModal) {
+  <app-contact-modal
+    (closeModal)="this.closeContactModal()"
+  ></app-contact-modal>
+}

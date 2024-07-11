@@ -31,4 +31,13 @@ export class AppConstants {
     public static readonly EN = 'en';
     public static readonly FR = 'fr';
   };
+
+  public static readonly TOAST = class {
+    public static readonly TYPES = class {
+      public static readonly SUCCESS = 'success';
+      public static readonly ERROR = 'error';
+      public static readonly INFO = 'info';
+    }
+    public static readonly DELAY = 3000;
+  }
 }

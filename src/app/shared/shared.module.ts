@@ -7,10 +7,11 @@ import {TranslateModule} from '@ngx-translate/core';
 import {SafePipe} from '@pipes/safe.pipe';
 import {RouterModule} from '@angular/router';
 import {FooterComponent} from './components/footer/footer.component';
+import {ToastComponent} from "@shared/components/toast/toast.component";
 
 @NgModule({
-  declarations: [HeaderComponent, LoaderComponent, SafePipe, FooterComponent],
+  declarations: [HeaderComponent, LoaderComponent, SafePipe, FooterComponent, ToastComponent],
   imports: [CommonModule, TranslateModule, MatIconModule, RouterModule],
-  exports: [HeaderComponent, LoaderComponent, FooterComponent, SafePipe],
+  exports: [HeaderComponent, LoaderComponent, FooterComponent, ToastComponent, SafePipe],
 })
 export class SharedModule {}
