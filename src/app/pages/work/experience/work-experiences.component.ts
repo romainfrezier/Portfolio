@@ -16,9 +16,7 @@ export class WorkExperiencesComponent implements OnInit {
     private dataService: DataService,
     private translate: TranslateService,
   ) {
-    const lang: string =
-      localStorage.getItem(AppConstants.LOCALSTORAGE.LANGUAGE) ||
-      translate.defaultLang;
+    const lang: string = localStorage.getItem(AppConstants.LOCALSTORAGE.LANGUAGE) ?? translate.defaultLang;
     this.fetchProjects(lang);
   }
 
