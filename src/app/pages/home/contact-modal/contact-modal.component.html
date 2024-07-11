@@ -1,6 +1,7 @@
 <!-- eslint-disable-next-line -->
 <div class="contact-modal-backdrop" (click)="onBackdropClick($event)" [class.show]="this.modalShown"></div>
 <div class="contact-modal" [class.show]="this.modalShown">
+  <button class="close-button" (click)="this.closeModalWithAnimation()">×</button>
   <form (ngSubmit)="onSubmit()" [formGroup]="contactForm">
     <h2>✉️ {{ "contact-form.title" | translate }}</h2>
     <div class="form-group">
@@ -19,6 +20,11 @@
       <label for="message">{{ "contact-form.message" | translate }}</label>
       <textarea id="message" formControlName="message"></textarea>
     </div>
-    <button type="submit" [disabled]="contactForm.invalid">{{ "contact-form.submit" | translate }} 🚀</button>
+    <button type="submit" [disabled]="contactForm.invalid">
+      {{ "contact-form.submit" | translate }} 🚀
+      @if (this.loading) {
+        <app-loader size="12px" borderWidth="3px"></app-loader>
+      }
+    </button>
   </form>
 </div>

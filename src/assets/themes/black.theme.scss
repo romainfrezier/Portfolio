@@ -113,7 +113,7 @@
       }
     }
 
-    button {
+    button[type="submit"] {
       background-color: map.get($black-theme, 'text');
       color: map.get($black-theme, 'contrast');
 
@@ -131,6 +131,10 @@
         background-color: color.adjust(map.get($black-theme, 'contrast'), $lightness: 10%);
         color: color.adjust(map.get($black-theme, 'text'), $lightness: -20%)
       }
+    }
+
+    .close-button {
+      color: map.get($black-theme, 'text');
     }
   }
 }

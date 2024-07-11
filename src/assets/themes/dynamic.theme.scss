@@ -105,7 +105,7 @@
       }
     }
 
-    button {
+    button[type="submit"] {
       background-color: map.get($dynamic-theme, 'text');
       color: map.get($dynamic-theme, 'top');
 
@@ -123,6 +123,10 @@
         background-color: color.adjust(map.get($dynamic-theme, 'top'), $lightness: 10%);
         color: color.adjust(map.get($dynamic-theme, 'text'), $lightness: -20%)
       }
+    }
+
+    .close-button {
+      color: map.get($dynamic-theme, 'text');
     }
   }
 }

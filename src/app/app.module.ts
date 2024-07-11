@@ -19,17 +19,18 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [AppComponent],
   exports: [AppRoutingModule],
-  bootstrap: [AppComponent], imports: [BrowserModule,
-    CommonModule,
-    BrowserAnimationsModule,
-    SharedModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient],
-      },
-    }),
-    AppRoutingModule], providers: [ThemesService, DataService, provideHttpClient(withInterceptorsFromDi())]
+  bootstrap: [AppComponent],
+    imports: [BrowserModule,
+        CommonModule,
+        BrowserAnimationsModule,
+        SharedModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient],
+            },
+        }),
+        AppRoutingModule], providers: [ThemesService, DataService, provideHttpClient(withInterceptorsFromDi())]
 })
 export class AppModule {}

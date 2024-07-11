@@ -2,6 +2,8 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {MailService} from "@services/mail.service";
 import {EmailJSResponseStatus} from "@emailjs/browser";
+import {ToastService} from "@services/toast.service";
+import {TranslateService} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-contact-modal',
@@ -13,13 +15,22 @@ export class ContactModalComponent implements OnInit {
 
   public contactForm: FormGroup;
   public modalShown: boolean;
+  public loading: boolean;
 
-  constructor(private formBuilder: FormBuilder, private mailService: MailService) {
+  private toastMessage: string;
+
+  constructor(private formBuilder: FormBuilder,
+              private mailService: MailService,
+              private toastService: ToastService,
+              private translate: TranslateService,
+  ) {
     this.closeModal = new EventEmitter<void>();
     this.modalShown = false;
+    this.loading = false;
+    this.toastMessage = "";
     this.contactForm = this.formBuilder.group({
-      name: ['', Validators.required],
-      firstName: ['', Validators.required],
+      name: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(30)]],
+      firstName: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(30)]],
       email: ['', [Validators.required, Validators.email]],
       message: ['', Validators.required],
     });
@@ -39,20 +50,33 @@ export class ContactModalComponent implements OnInit {
   }
 
   public onSubmit(): void {
+    this.loading = true;
     if (this.contactForm.valid) {
       const formData = this.contactForm.value;
       this.mailService.sendEmail(formData.firstName, formData.name, formData.email, formData.message)
         .then((response: EmailJSResponseStatus): void => {
-          if (response.status !== 200) {
-            alert('An error occurred while sending the email'); // TODO : add a toast
+          if (response.status === 200) {
+            this.translate.get("contact-form.success").subscribe((result): void => {
+              this.toastMessage = result;
+            });
+            this.toastService.showSuccess(this.toastMessage);
           } else {
-            alert('Email sent successfully'); // TODO : add a toast
+            this.translate.get("contact-form.error").subscribe((result): void => {
+              this.toastMessage = result;
+            });
+            this.toastService.showError(this.toastMessage);
           }
         })
         .catch((): void => {
-          alert('An error occurred while sending the email'); // TODO : add a toast
+          this.translate.get("contact-form.error").subscribe((result): void => {
+            this.toastMessage = result;
+          })
+          this.toastService.showError(this.toastMessage);
+        })
+        .finally(() => {
+          this.loading = false;
+          this.closeModalWithAnimation();
         });
-      this.closeModalWithAnimation();
     }
   }
 
