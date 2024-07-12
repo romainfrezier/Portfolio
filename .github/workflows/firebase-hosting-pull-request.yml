@@ -33,3 +33,34 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_PORTFOLIO_63FF4 }}'
           projectId: portfolio-63ff4
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22.4.0'
+      - name: Install dependencies
+        run: npm install
+      - name: Run tests
+        run: npm run test:coverage
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v
+        with:
+          name: coverage-report
+          path: coverage/lcov-report/
+      - name: Create coverage badge
+        run: |
+          npm install -g badge-maker
+          COVERAGE=$(grep -oP 'All files.*?\K\d+\.\d+' coverage/lcov-report/index.html)
+          npx badge-maker --left "coverage" --right "${COVERAGE}%" --color green --output coverage-badge.svg
+        if: success()
+      - name: Commit coverage badge
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add coverage-badge.svg
+          git commit -m 'Update coverage badge'
+          git push
+        if: success()
