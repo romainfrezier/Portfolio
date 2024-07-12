@@ -4,9 +4,9 @@
        (keyup.enter)="toggleBurgerMenu()"
        tabindex="0"
   >
-    <mat-icon>{{ isBurgerMenuOpen ? "close" : "menu" }}</mat-icon>
+    <span class="icon">{{ isBurgerMenuOpen ? "✖" : "☰" }}</span>
   </div>
-  <nav class="menu-items {{ isBurgerMenuOpen ? 'menu-open' : 'menu-close' }}">
+  <nav class="menu-items" [ngClass]="{'menu-open': isBurgerMenuOpen, 'menu-close': !isBurgerMenuOpen}">
     <a
       class="header-item"
       routerLink="{{ home }}"

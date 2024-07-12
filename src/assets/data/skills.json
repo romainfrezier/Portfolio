@@ -187,27 +187,27 @@
     {
       "id": 1,
       "name": "teamwork",
-      "src": "/assets/images/skills/teamwork-logo.png"
+      "src": "/assets/images/skills/team-work.svg"
     },
     {
       "id": 2,
       "name": "communication",
-      "src": "/assets/images/skills/communication-logo.png"
+      "src": "/assets/images/skills/communication.svg"
     },
     {
       "id": 3,
       "name": "english",
-      "src": "/assets/images/skills/english-logo.png"
+      "src": "/assets/images/skills/english.svg"
     },
     {
       "id": 4,
       "name": "scrum",
-      "src": "/assets/images/skills/scrum-logo.png"
+      "src": "/assets/images/skills/scrum.svg"
     },
     {
       "id": 5,
       "name": "adaptability",
-      "src": "/assets/images/skills/adaptability-logo.png"
+      "src": "/assets/images/skills/adaptability.svg"
     }
   ]
 }
