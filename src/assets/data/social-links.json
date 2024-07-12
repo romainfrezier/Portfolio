@@ -3,17 +3,17 @@
     {
       "name": "linkedin",
       "url": "https://www.linkedin.com/in/romainfrezier/",
-      "icon": "assets/images/linkedin-social.png"
+      "icon": "assets/images/linkedin-social.webp"
     },
     {
       "name": "github",
       "url": "https://github.com/romainfrezier",
-      "icon": "assets/images/github-social.png"
+      "icon": "assets/images/github-social.webp"
     },
     {
       "name": "messenger",
       "url": "https://m.me/frezierromain",
-      "icon": "assets/images/messenger-social.png"
+      "icon": "assets/images/messenger-social.webp"
     }
   ]
 }

@@ -1,42 +1,42 @@
 [
   {
     "name": "AWS Academy Cloud Foundations",
-    "badge": "/assets/images/aws-academy.png",
+    "badge": "/assets/images/aws-academy.webp",
     "description": "The AWS Academy Cloud Foundations is intended for students who seek an overall understanding of cloud computing concepts, independent of specific technical roles. It provides a detailed overview of cloud concepts, AWS core services, security, architecture, pricing, and support.",
     "link": "https://www.credly.com/badges/93ab2c88-6249-4baa-8ad3-5ea3b3fbc705",
     "linkName": "AWS Academy Cloud Foundations"
   },
   {
     "name": "TOEIC",
-    "badge": "/assets/images/TOEIC_logo.png",
+    "badge": "/assets/images/TOEIC_logo.webp",
     "description": "The Test of English for International Communication (TOEIC) is an international standardized test of English language proficiency for non-native speakers. It is intentionally designed to measure the everyday English skills of people working in an international environment. I scored 920/990.",
     "link": "assets/files/TOEIC.pdf",
     "linkName": "TOEIC"
   },
   {
     "name": "Enterprise Design Thinking Co-Creator",
-    "badge": "/assets/images/enterprise-design-thinking-co-creator.png",
+    "badge": "/assets/images/enterprise-design-thinking-co-creator.webp",
     "description": "As a co-creator, I am an active contributor to Enterprise Design Thinking projects. I help bring concrete user outcomes to life by developing collaborative skills and finding opportunities to step up and lead.",
     "link": "https://www.credly.com/badges/120b4908-bca4-4b86-8721-589ea44b404e/public_url",
     "linkName": "Enterprise Design Thinking Co-Creator"
   },
   {
     "name": "Enterprise Design Thinking Practitioner",
-    "badge": "/assets/images/enterprise-design-thinking-practitioner.png",
+    "badge": "/assets/images/enterprise-design-thinking-practitioner.webp",
     "description": "I have acquired knowledge about the application of Enterprise Design Thinking and its value. As a practitioner, I find opportunities to experiment with it in my daily work.",
     "link": "https://www.credly.com/go/mUVNhRyG",
     "linkName": "Enterprise Design Thinking Practitioner"
   },
   {
     "name": "Nuit de l'Info 2022",
-    "badge": "/assets/images/nuit_info_2022.png",
+    "badge": "/assets/images/nuit_info_2022.webp",
     "description": "La Nuit de l'Info is a national competition that brings together students, teachers and companies to work together on the development of a web application.",
     "link": "https://www.nuitdelinfo.com",
     "linkName": "Nuit de l'Info"
   },
   {
     "name": "Apple Teacher",
-    "badge": "/assets/images/apple-teacher.png",
+    "badge": "/assets/images/apple-teacher.webp",
     "description": "Apple Teacher is a free professional learning program designed to support and celebrate educators using Apple products for teaching and learning. As an Apple Teacher, I have learned how to use Apple products for teaching and learning.",
     "link": "/assets/files/apple-teacher-badge.pdf",
     "linkName": "Apple Teacher Badge"
