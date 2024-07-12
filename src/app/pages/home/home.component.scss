@@ -41,8 +41,6 @@
       align-items: center;
       justify-content: space-around;
       flex-direction: column;
-      border-radius: 20px;
-      border: solid 1px;
       padding: 20px;
       margin: 30px;
 
@@ -66,6 +64,8 @@
       margin: 20px;
       text-align: center;
       box-sizing: border-box;
+      border-top: solid 1px;
+      padding-top: 50px;
 
       .links {
         display: flex;

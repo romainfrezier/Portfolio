@@ -1,3 +1,13 @@
+@keyframes slide-in {
+  from {
+    transform: translateX(110%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
 .header-container {
   display: flex;
   flex-direction: row;
@@ -22,6 +32,12 @@
     height: 2rem;
     width: 2rem;
     cursor: pointer;
+
+    .icon {
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 2000;
+    }
   }
 
   .header-item {
@@ -37,7 +53,7 @@
     }
   }
 
-  @media (max-width: 1401px) {
+  @media (width <= 1401px) {
     width: 100%;
 
     .menu-items {
@@ -51,47 +67,67 @@
       justify-content: center;
       margin-right: 20px;
 
-      mat-icon {
+      .icon {
         font-size: 2rem;
+        position: fixed;
+        top: 10px;
+        right: 10px;
       }
     }
 
     .menu-open {
       display: flex;
       flex-direction: column;
-      position: absolute;
-      top: 100%;
+      position: fixed;
+      top: 0;
       right: 0;
-      width: 100%;
-      padding: 10px;
-      border-radius: 20px;
-      box-shadow: rgba(0, 0, 0, 0.25) 0 0 20px 1px;
+      width: min(85%, 400px);;
+      height: 100%;
+      padding: 75px 10px 10px;
       box-sizing: border-box;
+      z-index: 1000;
+      align-items: flex-end;
+      justify-content: flex-start;
+      gap: 20px;
+      border-radius: 20px 0 0 20px;
+      box-shadow: rgb(0 0 0 / 25%) -7px 4px 20px 0;
+      animation: slide-in 0.5s ease forwards;
+    }
+
+    .header-item.active {
+      margin-right: 15px;
+    }
+  }
+
+  .language-menu, .theme-menu, .work-menu {
+    position: absolute;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    gap: 10px;
+    width: 250px;
+    box-shadow: rgb(0 0 0 / 25%) 0 0 20px 1px;
+    z-index: 50;
+
+    span {
+      cursor: pointer;
+      display: inline-block;
+      padding: 4px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .active {
+      font-weight: bold;
+    }
+  }
+
+  @media (width <= 1401px) {
+    .language-menu, .theme-menu, .work-menu {
+      right: 15px;
     }
   }
 }
 
-.language-menu, .theme-menu, .work-menu {
-  position: absolute;
-  top: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  border-radius: 10px;
-  gap: 10px;
-  width: 250px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0 0 20px 1px;
-  z-index: 50;
-
-  span {
-    cursor: pointer;
-    display: inline-block;
-    padding: 4px;
-    border-radius: 5px;
-    text-decoration: none;
-  }
-
-  .active {
-    font-weight: bold;
-  }
-}
