@@ -60,8 +60,10 @@ jobs:
         if: success()
       - name: Commit coverage badge
         run: |
-          git config --global user.name 'romainfrezier'
-          git config --global user.email 'romainfrezier@users.noreply.github.com'
-          git commit -am 'Update coverage badge'
-          git push
+          BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add coverage-badge.svg
+          git commit -m 'Update coverage badge'
+          git push origin HEAD:$BRANCH_NAME
         if: success()
