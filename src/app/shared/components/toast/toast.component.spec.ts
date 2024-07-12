@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { ToastComponent } from './toast.component';
+import {TestBed, ComponentFixture} from '@angular/core/testing';
+import {ToastComponent} from './toast.component';
+import {NO_ERRORS_SCHEMA} from '@angular/core';
 
 describe('ToastComponent', () => {
   let component: ToastComponent;
@@ -8,9 +8,10 @@ describe('ToastComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ToastComponent]
+      declarations: [ToastComponent],
+      schemas: [NO_ERRORS_SCHEMA],
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(ToastComponent);
     component = fixture.componentInstance;

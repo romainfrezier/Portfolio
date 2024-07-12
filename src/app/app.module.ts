@@ -11,6 +11,8 @@ import {ThemesService} from '@services/themes.service';
 import {DataService} from '@services/data.service';
 import {SharedModule} from '@shared/shared.module';
 import {AppRoutingModule} from './app-routing.module';
+import {ToastService} from "@services/toast.service";
+import {MailService} from "@services/mail.service";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/locales/', '.json');
@@ -20,17 +22,21 @@ export function HttpLoaderFactory(http: HttpClient) {
   declarations: [AppComponent],
   exports: [AppRoutingModule],
   bootstrap: [AppComponent],
-    imports: [BrowserModule,
-        CommonModule,
-        BrowserAnimationsModule,
-        SharedModule,
-        TranslateModule.forRoot({
-            loader: {
-                provide: TranslateLoader,
-                useFactory: HttpLoaderFactory,
-                deps: [HttpClient],
-            },
-        }),
-        AppRoutingModule], providers: [ThemesService, DataService, provideHttpClient(withInterceptorsFromDi())]
+  imports: [
+    BrowserModule,
+    CommonModule,
+    BrowserAnimationsModule,
+    SharedModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
+    AppRoutingModule
+  ],
+  providers: [ThemesService, DataService, ToastService, MailService, provideHttpClient(withInterceptorsFromDi())]
 })
-export class AppModule {}
+export class AppModule {
+}
