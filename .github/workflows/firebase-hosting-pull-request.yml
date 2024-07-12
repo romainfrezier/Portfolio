@@ -45,11 +45,6 @@ jobs:
         run: npm install
       - name: Run tests
         run: npm run test:coverage
-      - name: Upload coverage report
-        uses: actions/upload-artifact@v3
-        with:
-          name: coverage-report
-          path: coverage/lcov-report/
       - name: Create coverage badge
         run: |
           npm install -g badge-maker
@@ -58,15 +53,11 @@ jobs:
           COVERAGE=$(awk "BEGIN {printf \"%.2f\",(${COVERED_LINES}/${TOTAL_LINES})*100}")
           npx badge-maker "coverage" "${COVERAGE}%" > coverage-badge.svg
         if: success()
-      - name: Commit coverage badge
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit test report badge
         run: |
-          BRANCH_NAME=$(echo ${GITHUB_REF#refs/heads/})
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git checkout $BRANCH_NAME
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
           git add coverage-badge.svg
-          git commit -m 'Update coverage badge'
-          git push origin $BRANCH_NAME
+          git commit -m "Add coverage badge"
+          git push
         if: success()
