@@ -2,7 +2,7 @@
   {
     "company": "Infomaniak",
     "companyUrl": "https://infomaniak.com/",
-    "companyLogo": "assets/images/work-experiences/infomaniak.png",
+    "companyLogo": "assets/images/work-experiences/infomaniak.webp",
     "place": "Geneva, Switzerland",
     "date": "March 2024 - August 2024",
     "position": "Fullstack Developer Intern",
@@ -12,7 +12,7 @@
   {
     "company": "Reactional Music",
     "companyUrl": "https://reactionalmusic.com/",
-    "companyLogo": "assets/images/work-experiences/reactional-music.png",
+    "companyLogo": "assets/images/work-experiences/reactional-music.webp",
     "place": "Stockholm, Sweden",
     "date": "June 2023 - August 2023",
     "position": "Fullstack Developer Intern",
@@ -22,7 +22,7 @@
   {
     "company": "JTech SA",
     "companyUrl": "https://www.j-tech.ch/",
-    "companyLogo": "assets/images/work-experiences/jtech.png",
+    "companyLogo": "assets/images/work-experiences/jtech.webp",
     "place": "Geneva, Switzerland",
     "date": "July 2017, 2018, 2019, 2020, 2021, 2022",
     "position": "Ventilation fitter",

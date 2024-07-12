@@ -3,31 +3,31 @@
     {
       "id": 1,
       "name": "Python",
-      "src": "/assets/images/skills/python-logo.png",
+      "src": "/assets/images/skills/python-logo.webp",
       "link": "https://www.python.org/"
     },
     {
       "id": 2,
       "name": "Swift",
-      "src": "/assets/images/skills/swift-logo.png",
+      "src": "/assets/images/skills/swift-logo.webp",
       "link": "https://swift.org/"
     },
     {
       "id": 3,
       "name": "Java",
-      "src": "/assets/images/skills/java-logo.png",
+      "src": "/assets/images/skills/java-logo.webp",
       "link": "https://www.java.com/"
     },
     {
       "id": 4,
       "name": "Kotlin",
-      "src": "/assets/images/skills/kotlin-logo.png",
+      "src": "/assets/images/skills/kotlin-logo.webp",
       "link": "https://kotlinlang.org/"
     },
     {
       "id": 5,
       "name": "C",
-      "src": "/assets/images/skills/c-logo.png",
+      "src": "/assets/images/skills/c-logo.webp",
       "link": "https://en.wikipedia.org/wiki/C_(programming_language)"
     }
   ],
@@ -35,43 +35,43 @@
     {
       "id": 1,
       "name": "Angular",
-      "src": "/assets/images/skills/angular-logo.png",
+      "src": "/assets/images/skills/angular-logo.webp",
       "link": "https://angular.io/"
     },
     {
       "id": 2,
       "name": "React",
-      "src": "/assets/images/skills/react-logo.png",
+      "src": "/assets/images/skills/react-logo.webp",
       "link": "https://reactjs.org/"
     },
     {
       "id": 4,
       "name": "SCSS",
-      "src": "/assets/images/skills/scss-logo.png",
+      "src": "/assets/images/skills/scss-logo.webp",
       "link": "https://sass-lang.com/"
     },
     {
       "id": 5,
       "name": "Express",
-      "src": "/assets/images/skills/express-logo.png",
+      "src": "/assets/images/skills/express-logo.webp",
       "link": "https://expressjs.com/"
     },
     {
       "id": 6,
       "name": "Quarkus",
-      "src": "/assets/images/skills/quarkus-logo.png",
+      "src": "/assets/images/skills/quarkus-logo.webp",
       "link": "https://quarkus.io/"
     },
     {
       "id": 7,
       "name": "Spring Boot",
-      "src": "/assets/images/skills/spring-boot-logo.png",
+      "src": "/assets/images/skills/spring-boot-logo.webp",
       "link": "https://spring.io/projects/spring-boot"
     },
     {
       "id": 8,
       "name": "Laravel",
-      "src": "/assets/images/skills/laravel-logo.png",
+      "src": "/assets/images/skills/laravel-logo.webp",
       "link": "https://laravel.com/"
     }
   ],
@@ -79,19 +79,19 @@
     {
       "id": 1,
       "name": "MongoDB",
-      "src": "/assets/images/skills/mongo-db-logo-light.png",
+      "src": "/assets/images/skills/mongo-db-logo-light.webp",
       "link": "https://www.mongodb.com/"
     },
     {
       "id": 2,
       "name": "PostgreSQL",
-      "src": "/assets/images/skills/postgresql-logo.png",
+      "src": "/assets/images/skills/postgresql-logo.webp",
       "link": "https://www.postgresql.org/"
     },
     {
       "id": 3,
       "name": "MariaDB",
-      "src": "/assets/images/skills/mariadb-logo.png",
+      "src": "/assets/images/skills/mariadb-logo.webp",
       "link": "https://www.mariadb.org/"
     }
   ],
@@ -99,55 +99,55 @@
     {
       "id": 1,
       "name": "MacOS",
-      "src": "/assets/images/skills/macos-logo.png",
+      "src": "/assets/images/skills/macos-logo.webp",
       "link": "https://www.apple.com/macos/"
     },
     {
       "id": 2,
       "name": "Git",
-      "src": "/assets/images/skills/git-logo.png",
+      "src": "/assets/images/skills/git-logo.webp",
       "link": "https://www.git-scm.com/"
     },
     {
       "id": 3,
       "name": "Postman",
-      "src": "/assets/images/skills/postman-logo.png",
+      "src": "/assets/images/skills/postman-logo.webp",
       "link": "https://www.postman.com/"
     },
     {
       "id": 5,
       "name": "Jira",
-      "src": "/assets/images/skills/jira-logo.png",
+      "src": "/assets/images/skills/jira-logo.webp",
       "link": "https://www.atlassian.com/software/jira"
     },
     {
       "id": 6,
       "name": "IntelliJ",
-      "src": "/assets/images/skills/intellij-logo.png",
+      "src": "/assets/images/skills/intellij-logo.webp",
       "link": "https://www.jetbrains.com/idea/"
     },
     {
       "id": 7,
       "name": "WebStorm",
-      "src": "/assets/images/skills/webstorm-logo.png",
+      "src": "/assets/images/skills/webstorm-logo.webp",
       "link": "https://www.jetbrains.com/webstorm/"
     },
     {
       "id": 8,
       "name": "Figma",
-      "src": "/assets/images/skills/figma-logo.png",
+      "src": "/assets/images/skills/figma-logo.webp",
       "link": "https://www.figma.com/"
     },
     {
       "id": 9,
       "name": "Gimp",
-      "src": "/assets/images/skills/gimp-logo.png",
+      "src": "/assets/images/skills/gimp-logo.webp",
       "link": "https://www.gimp.org/"
     },
     {
       "id": 10,
       "name": "Unity",
-      "src": "/assets/images/skills/unity-logo.png",
+      "src": "/assets/images/skills/unity-logo.webp",
       "link": "https://unity.com/"
     }
   ],
@@ -155,31 +155,31 @@
     {
       "id": 1,
       "name": "AWS",
-      "src": "/assets/images/skills/aws-logo.png",
+      "src": "/assets/images/skills/aws-logo.webp",
       "link": "https://aws.amazon.com/"
     },
     {
       "id": 2,
       "name": "Firebase",
-      "src": "/assets/images/skills/firebase-logo.png",
+      "src": "/assets/images/skills/firebase-logo.webp",
       "link": "https://firebase.google.com/"
     },
     {
       "id": 3,
       "name": "Docker",
-      "src": "/assets/images/skills/docker-logo.png",
+      "src": "/assets/images/skills/docker-logo.webp",
       "link": "https://www.docker.com/"
     },
     {
       "id": 4,
       "name": "Keycloak",
-      "src": "/assets/images/skills/keycloak-logo.png",
+      "src": "/assets/images/skills/keycloak-logo.webp",
       "link": "https://www.keycloak.org/"
     },
     {
       "id": 5,
       "name": "Apache Kafka",
-      "src": "/assets/images/skills/kafka-logo.png",
+      "src": "/assets/images/skills/kafka-logo.webp",
       "link": "https://kafka.apache.org/"
     }
   ],
