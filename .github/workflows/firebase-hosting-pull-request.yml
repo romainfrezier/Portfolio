@@ -59,11 +59,14 @@ jobs:
           npx badge-maker "coverage" "${COVERAGE}%" > coverage-badge.svg
         if: success()
       - name: Commit coverage badge
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)
+          BRANCH_NAME=$(echo ${GITHUB_REF#refs/heads/})
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git checkout $BRANCH_NAME
           git add coverage-badge.svg
           git commit -m 'Update coverage badge'
-          git push origin HEAD:$BRANCH_NAME
+          git push origin $BRANCH_NAME
         if: success()
