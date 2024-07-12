@@ -56,8 +56,10 @@ jobs:
       - name: Create coverage badge
         run: |
           npm install -g badge-maker
-          COVERAGE=$(grep -oP 'All files.*?\K\d+\.\d+' coverage/lcov-report/index.html)
-          npx badge-maker --left "coverage" --right "${COVERAGE}%" --color green --output coverage-badge.svg
+          TOTAL_LINES=$(grep -E 'DA:[0-9]+,[0-9]+' coverage/lcov.info | wc -l)
+          COVERED_LINES=$(grep -E 'DA:[0-9]+,1' coverage/lcov.info | wc -l)
+          COVERAGE=$(awk "BEGIN {printf \"%.2f\",(${COVERED_LINES}/${TOTAL_LINES})*100}")
+          npx badge-maker "coverage" "${COVERAGE}%" > coverage-badge.svg
         if: success()
       - name: Commit coverage badge
         run: |
