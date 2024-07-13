@@ -59,6 +59,9 @@
       ],
       "@env/*": [
         "src/environments/*"
+      ],
+      "@tests/*": [
+        "src/tests/*"
       ]
     }
   },
