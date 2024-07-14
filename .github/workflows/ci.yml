@@ -24,16 +24,16 @@ jobs:
         with:
           node-version: '22.4.0'
       - name: Install dependencies
-        run: npm install
+        run: npm install && npm install -g badge-maker
       - name: Run tests
+        id: run_tests
         run: npm run test:coverage
       - name: Create test badge
         run: |
-          npm install -g badge-maker
-          if [ $? -eq 0 ]; then
-            npx badge-maker "tests" "passed" :green > test-badge.svg
+          if [ ${{ steps.run_tests.outcome }} == 'success' ]; then
+            npx badge-maker "tests" "passed" "green" > test-badge.svg
           else
-            npx badge-maker "tests" "failed" :red > test-badge.svg
+            npx badge-maker "tests" "failed" "red" > test-badge.svg
           fi
       - name: Create coverage badge
         run: |

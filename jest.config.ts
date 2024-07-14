@@ -10,6 +10,7 @@ const jestConfig: Config = {
     ...pathsToModuleNameMapper(paths, {prefix: '<rootDir>'}),
   },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+  coverageReporters: ['lcov', 'text'],
 };
 
 export default jestConfig;
