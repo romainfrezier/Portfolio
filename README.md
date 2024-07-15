@@ -24,6 +24,16 @@ This is a portfolio website that showcases my work and provides a way to contact
 
 ## Installation
 
+**Prerequisites**
+
+- `nvm`
+
+First, use the correct version of node (version 22) :
+
+```bash
+nvm use
+```
+
 To install the necessary dependencies, run the following command:
 
 ```bash
@@ -47,7 +57,7 @@ The application will be running on `http://localhost:4200`.
 To run tests, use the following command:
 
 ```bash
-npm test
+npm run test
 ```
 
 or to run tests with coverage, use the following command:
@@ -57,6 +67,11 @@ npm run test:coverage
 ```
 
 ### SonarQube
+
+**Prerequisites**
+
+- `docker`
+- `docker-compose`
 
 To launch sonarqube, use the following command:
 
@@ -82,13 +97,11 @@ Then scan the project using the following command:
 
 ## Technologies
 
-<div>
-    <img src="https://img.shields.io/badge/Angular-red?logo=angular" alt="Angular">
-    <img src="https://img.shields.io/badge/Jest-green?logo=jest" alt="Jest">
-    <img src="https://img.shields.io/badge/SonarQube-blue?logo=sonarqube" alt="SonarQube">
-    <img src="https://img.shields.io/badge/Firebase-yellow?logo=firebase" alt="Firebase">
-    <img src="https://img.shields.io/badge/GitHub%20Actions-black?logo=github" alt="GitHub Actions">
-</div>
+- ![](https://img.shields.io/badge/Angular-v18-red?logo=angular&labelColor=red)
+- ![](https://img.shields.io/badge/Jest-v29-green?logo=jest&labelColor=green) 
+- ![](https://img.shields.io/badge/SonarQube-v10-blue?logo=sonarqube&labelColor=blue)
+- ![](https://img.shields.io/badge/Firebase%20Hosting-v10-yellow?logo=firebase&labelColor=yellow) 
+- ![](https://img.shields.io/badge/GitHub%20Actions-v3-black?logo=github&labelColor=black)
 
 ---
 
