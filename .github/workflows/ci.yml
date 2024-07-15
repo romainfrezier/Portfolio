@@ -79,7 +79,12 @@ jobs:
         run: |
           npx sonar-scanner \
           -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }} \
-          -Dsonar.token=${{ secrets.SONAR_TOKEN }}
+          -Dsonar.token=${{ secrets.SONAR_TOKEN }} \
+          -Dsonar.projectKey=Portfolio \
+          -Dsonar.sources=. \
+          -Dsonar.exclusions=**/node_modules/**,**/dist/** \
+          -Dsonar.tests=./src \
+          -Dsonar.test.inclusions=**/*.spec.ts
       - name: Check Quality Gate
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
