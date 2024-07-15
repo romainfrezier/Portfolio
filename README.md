@@ -2,12 +2,21 @@
 
 ![](coverage-badge.svg)
 ![](test-badge.svg)
-<img src="https://img.shields.io/badge/sonar-failed-red" alt="SonarQube">
+![](sonar-badge.svg)
+
+## Technologies
+
+![](https://img.shields.io/badge/Angular-v18-red?logo=angular&labelColor=red)
+![](https://img.shields.io/badge/Jest-v29-green?logo=jest&labelColor=green)
+![](https://img.shields.io/badge/SonarQube-v10-blue?logo=sonarqube&labelColor=blue)
+![](https://img.shields.io/badge/Firebase%20Hosting-v10-yellow?logo=firebase&labelColor=yellow)
+![](https://img.shields.io/badge/GitHub%20Actions-v3-black?logo=github&labelColor=black)
 
 ## Table of Contents
 
 <!-- TOC -->
 * [Portfolio](#portfolio)
+  * [Technologies](#technologies)
   * [Table of Contents](#table-of-contents)
   * [Description](#description)
   * [Installation](#installation)
@@ -15,7 +24,9 @@
     * [Launch app](#launch-app)
     * [Testing](#testing)
     * [SonarQube](#sonarqube)
-  * [Technologies](#technologies)
+  * [SonarQube in CI](#sonarqube-in-ci)
+    * [Ngrok](#ngrok)
+    * [GitHub Actions](#github-actions)
 <!-- TOC -->
 
 ## Description
@@ -95,13 +106,38 @@ Then scan the project using the following command:
 ./sonar.sh
 ```
 
-## Technologies
+## SonarQube in CI
 
-- ![](https://img.shields.io/badge/Angular-v18-red?logo=angular&labelColor=red)
-- ![](https://img.shields.io/badge/Jest-v29-green?logo=jest&labelColor=green) 
-- ![](https://img.shields.io/badge/SonarQube-v10-blue?logo=sonarqube&labelColor=blue)
-- ![](https://img.shields.io/badge/Firebase%20Hosting-v10-yellow?logo=firebase&labelColor=yellow) 
-- ![](https://img.shields.io/badge/GitHub%20Actions-v3-black?logo=github&labelColor=black)
+**Prerequisites**
+
+- `SonarQube` running on port `9000`
+- `ngrok` account
+
+### Ngrok
+
+Install `ngrok`:
+
+```bash
+brew install ngrok/ngrok/ngrok
+```
+
+Log into `ngrok` dashboard, and get the token from the setup section:
+
+```bash
+ngrok config add-authtoken <token>
+```
+
+Start `ngrok` tunnel
+
+```bash
+ngrok http --domain=<static-free-domain> 9000
+```
+
+### GitHub Actions
+
+Add the following GitHub secrets:
+  1. `SONAR_TOKEN`: `<sonar token from .env>`
+  2. `SONAR_HOST`: `<static-free-domain>`
 
 ---
 
