@@ -12,6 +12,7 @@
   * [Description](#description)
   * [Installation](#installation)
   * [Usage](#usage)
+    * [Launch app](#launch-app)
     * [Testing](#testing)
     * [SonarQube](#sonarqube)
   * [Technologies](#technologies)
@@ -30,6 +31,8 @@ npm install
 ```
 
 ## Usage
+
+### Launch app
 
 To run the application, use the following command:
 
