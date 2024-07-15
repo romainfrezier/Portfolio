@@ -30,7 +30,7 @@ jobs:
         run: npm run test:coverage
       - name: Create test badge
         run: |
-          if [ ${{ steps.run_tests.outcome }} == 'success' ]; then
+          if [ "${{ steps.run_tests.outcome }}" == "success" ]; then
             npx badge-maker "tests" "passed" "green" > test-badge.svg
           else
             npx badge-maker "tests" "failed" "red" > test-badge.svg
@@ -40,19 +40,21 @@ jobs:
           TOTAL_LINES=$(grep -E 'DA:[0-9]+,[0-9]+' coverage/lcov.info | wc -l)
           COVERED_LINES=$(grep -E 'DA:[0-9]+,1' coverage/lcov.info | wc -l)
           COVERAGE=$(awk "BEGIN {printf \"%.2f\",(${COVERED_LINES}/${TOTAL_LINES})*100}")
-          if [ COVERAGE -ge 80 ]; then
-            npx badge-maker "coverage" "${COVERAGE}%" :green > coverage-badge.svg
+          if (( $(echo "$COVERAGE >= 80" | bc -l) )); then
+            npx badge-maker "coverage" "${COVERAGE}%" "green" > coverage-badge.svg
           else
-            npx badge-maker "coverage" "${COVERAGE}%" :red > coverage-badge.svg
+            npx badge-maker "coverage" "${COVERAGE}%" "red" > coverage-badge.svg
           fi
       - name: Commit badges
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
-          if git diff --quiet; then
-            git add test-badge.svg coverage-badge.svg
+          git add test-badge.svg coverage-badge.svg
+          if ! git diff --cached --exit-code; then
             git commit -m "Add test and coverage badges"
             git push
+          else
+            echo "No changes to commit"
           fi
 
   deploy:
