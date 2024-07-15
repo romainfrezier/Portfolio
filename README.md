@@ -1,8 +1,8 @@
 # Portfolio
 
 ![](coverage-badge.svg)
-<img src="https://img.shields.io/badge/tests-passed-green" alt="Tests">
-<img src="https://img.shields.io/badge/sonar-passed-blue" alt="SonarQube">
+![](test-badge.svg)
+<img src="https://img.shields.io/badge/sonar-failed-red" alt="SonarQube">
 
 ## Table of Contents
 
