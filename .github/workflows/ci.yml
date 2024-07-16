@@ -38,9 +38,7 @@ jobs:
           fi
       - name: Create coverage badge
         run: |
-          TOTAL_LINES=$(grep -E 'DA:[0-9]+,[0-9]+' coverage/lcov.info | wc -l)
-          COVERED_LINES=$(grep -E 'DA:[0-9]+,1' coverage/lcov.info | wc -l)
-          COVERAGE=$(awk "BEGIN {printf \"%.2f\",(${COVERED_LINES}/${TOTAL_LINES})*100}")
+          COVERAGE=$(xmllint --html --xpath "string(//div[contains(@class, 'fl pad1y space-right2') and .//span[contains(text(), 'Lines')]]/span[@class='strong'])" coverage/lcov-report/index.html | sed 's/%//')
           if (( $(echo "$COVERAGE >= 80" | bc -l) )); then
             npx badge-maker "coverage" "${COVERAGE}%" "green" > coverage-badge.svg
           else
