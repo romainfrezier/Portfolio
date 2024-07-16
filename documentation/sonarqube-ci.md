@@ -1,5 +1,8 @@
 # SonarQube in CI
 
+![SonarQube](https://img.shields.io/badge/SonarQube-v10-blue?logo=sonarqube)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-v3-black?logo=github)
+
 **Prerequisites**
 
 - `SonarQube` running on port `9000`
