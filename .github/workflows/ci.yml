@@ -36,17 +36,17 @@ jobs:
       - name: Create test badge
         run: |
           if [ "${{ steps.run_tests.outcome }}" == "success" ]; then
-            npx badge-maker "tests" "passed" "green" > test-badge.svg
+            npx badge-maker "tests" "passed" "green" > documentation/badges/test-badge.svg
           else
-            npx badge-maker "tests" "failed" "red" > test-badge.svg
+            npx badge-maker "tests" "failed" "red" > documentation/badges/test-badge.svg
           fi
       - name: Create coverage badge
         run: |
           COVERAGE=$(xmllint --html --xpath "string(//div[contains(@class, 'fl pad1y space-right2') and .//span[contains(text(), 'Lines')]]/span[@class='strong'])" coverage/lcov-report/index.html | sed 's/%//')
           if (( $(echo "$COVERAGE >= 80" | bc -l) )); then
-            npx badge-maker "coverage" "${COVERAGE}%" "green" > coverage-badge.svg
+            npx badge-maker "coverage" "${COVERAGE}%" "green" > documentation/badges/coverage-badge.svg
           else
-            npx badge-maker "coverage" "${COVERAGE}%" "red" > coverage-badge.svg
+            npx badge-maker "coverage" "${COVERAGE}%" "red" > documentation/badges/coverage-badge.svg
           fi
       - name: Commit badges
         run: |
@@ -91,11 +91,11 @@ jobs:
         run: |
           if [ "$status" != "OK" ]; then
             echo "Quality Gate failed!"
-            npx badge-maker "quality gate" "failed" "red" > sonar-badge.svg
+            npx badge-maker "quality gate" "failed" "red" > documentation/badges/sonar-badge.svg
             exit 1
           else
             echo "Quality Gate passed!"
-            npx badge-maker "quality gate" "passed" "green" > sonar-badge.svg
+            npx badge-maker "quality gate" "passed" "green" > documentation/badges/sonar-badge.svg
           fi
       - name: Commit badge
         if: always()
