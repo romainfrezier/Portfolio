@@ -19,6 +19,7 @@
   * [Technologies](#technologies)
   * [Table of Contents](#table-of-contents)
   * [Description](#description)
+  * [License](#license)
   * [Installation](#installation)
   * [Usage](#usage)
     * [Launch app](#launch-app)
@@ -29,6 +30,10 @@
 ## Description
 
 This is a portfolio website that showcases my work and provides a way to contact me.
+
+## License
+
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
 
 ## Installation
 
