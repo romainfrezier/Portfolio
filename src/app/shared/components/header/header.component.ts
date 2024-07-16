@@ -1,7 +1,6 @@
 import {Component} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 import {AppConstants} from '@app/app.constants';
-import {Location} from '@angular/common';
 import {ThemesService} from '@services/themes.service';
 import {Observable} from 'rxjs';
 
@@ -14,7 +13,6 @@ export class HeaderComponent {
   public isLanguageMenuShown: boolean;
   public isThemeMenuShown: boolean;
   public isWorkMenuShown: boolean;
-  public emoji: string;
   public isBurgerMenuOpen: boolean;
 
   public readonly home: string;
@@ -29,7 +27,6 @@ export class HeaderComponent {
 
   constructor(
     private translate: TranslateService,
-    private location: Location,
     private themesService: ThemesService,
   ) {
     this.home = AppConstants.ROUTES.HOME;
@@ -53,7 +50,6 @@ export class HeaderComponent {
         this.translate.currentLang,
       );
     }
-    this.emoji = '👋';
     this.isLanguageMenuShown = false;
     this.isThemeMenuShown = false;
     this.isBurgerMenuOpen = false;
