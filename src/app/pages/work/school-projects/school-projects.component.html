@@ -5,7 +5,7 @@
       <div class="project-item">
         @if (project.demoLink !== '') {
           <div class="video-container">
-            @if (!isLoading[$index]) {
+            @if (!areLoading[$index]) {
               <iframe
                 [src]="project.demoLink | safe"
                 allowfullscreen
