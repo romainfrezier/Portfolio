@@ -93,7 +93,7 @@ jobs:
           -H "Authorization: Bearer ${SONAR_TOKEN}" | grep -o '"status":"[^"]*' | head -1 | cut -d':' -f2 | tr -d '"')
       - name: Generate Badge
         run: |
-          if [ "$status" != "OK" ]; then
+          if [ "$res_status" != "OK" ]; then
             echo "Quality Gate failed!"
             npx badge-maker "quality gate" "failed" "red" > documentation/badges/sonar-badge.svg
             exit 1
