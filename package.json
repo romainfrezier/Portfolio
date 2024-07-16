@@ -9,7 +9,7 @@
     "test": "jest --colors --maxWorkers=3",
     "test:coverage": "jest --colors --maxWorkers=3 --coverage",
     "deploy": "ng build && firebase deploy",
-    "sonar": "SONAR_TOKEN=$SONAR_TOKEN sonar-scanner",
+    "sonar": "SONAR_TOKEN=$SONAR_TOKEN sonar-scanner -Dsonar.host.url=http://localhost:9000",
     "prepare": "husky",
     "lint": "ng lint"
   },
