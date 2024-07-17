@@ -33,7 +33,7 @@ This is a portfolio website that showcases my work and provides a way to contact
 
 ## License
 
-This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE.txt) file for details.
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
 
 ## Installation
 

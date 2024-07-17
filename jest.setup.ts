@@ -36,3 +36,8 @@ beforeEach(async () => {
     ]
   }).compileComponents();
 });
+
+afterEach((): void => {
+  jest.restoreAllMocks();
+  jest.clearAllMocks();
+})

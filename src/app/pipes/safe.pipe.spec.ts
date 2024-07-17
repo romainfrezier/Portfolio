@@ -7,7 +7,6 @@ describe('SafePipe', () => {
   let sanitizer: DomSanitizer;
 
   beforeEach(() => {
-    jest.clearAllMocks();
     sanitizer = TestBed.inject(DomSanitizer);
     fixture = new SafePipe(sanitizer);
   });

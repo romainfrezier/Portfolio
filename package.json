@@ -6,10 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "jest --colors --maxWorkers=3",
-    "test:coverage": "jest --colors --maxWorkers=3 --coverage",
+    "test": "jest --colors",
+    "test:coverage": "jest --colors --coverage",
     "deploy": "ng build && firebase deploy",
-    "sonar": "SONAR_TOKEN=$SONAR_TOKEN sonar-scanner -Dsonar.host.url=http://localhost:9000",
+    "sonar": "sonar-scanner -Dsonar.host.url=$SONAR_HOST_URL -Dsonar.token=$SONAR_TOKEN ",
     "prepare": "husky",
     "lint": "ng lint"
   },

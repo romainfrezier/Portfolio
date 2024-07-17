@@ -30,7 +30,6 @@ describe('ContactModalComponent', (): void => {
   });
 
   beforeEach((): void  => {
-    jest.clearAllMocks();
     fixture = TestBed.createComponent(ContactModalComponent);
     component = fixture.componentInstance;
     mailService = TestBed.inject(MailService);

@@ -60,60 +60,6 @@ jobs:
             echo "No changes to commit"
           fi
 
-  sonarqube:
-    runs-on: ubuntu-latest
-    name: Sonar quality gate
-    needs: tests
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.pull_request.head.ref }}
-          fetch-depth: 0
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '22.4.0'
-      - name: Install dependencies
-        run: npm install && npm install -g badge-maker
-      - name: Run tests to get coverage
-        id: run_tests
-        run: npm run test:coverage
-      - name: SonarQube Scan
-        uses: SonarSource/sonarqube-scan-action@v2.3.0
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-      - name: Check Quality Gate
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-        run: |
-          res_status=$(curl -s "${SONAR_HOST_URL}/api/qualitygates/project_status?projectKey=Portfolio" \
-          -H "Accept: application/json" \
-          -H "Authorization: Bearer ${SONAR_TOKEN}" | grep -o '"status":"[^"]*' | head -1 | cut -d':' -f2 | tr -d '"')
-      - name: Generate Badge
-        run: |
-          if [ "$res_status" != "OK" ]; then
-            echo "Quality Gate failed!"
-            npx badge-maker "quality gate" "failed" "red" > documentation/badges/sonar-badge.svg
-            exit 1
-          else
-            echo "Quality Gate passed!"
-            npx badge-maker "quality gate" "passed" "green" > documentation/badges/sonar-badge.svg
-          fi
-      - name: Commit badge
-        if: always()
-        run: |
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git config --global user.name "github-actions[bot]"
-          git add documentation/badges/sonar-badge.svg
-          if ! git diff --cached --exit-code; then
-            git commit -m "Add sonar badge"
-            git push
-          else
-            echo "No changes to commit"
-          fi
-
   deploy:
     runs-on: ubuntu-latest
     name: Deploy to Firebase Hosting

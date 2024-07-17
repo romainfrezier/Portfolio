@@ -25,7 +25,6 @@ describe('HeaderComponent', () => {
   });
 
   beforeEach((): void  => {
-    jest.clearAllMocks();
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
     translateService = TestBed.inject(TranslateService);

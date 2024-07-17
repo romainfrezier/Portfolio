@@ -20,7 +20,7 @@ export class TranslateServiceMock extends TranslateService {
   }
 
   override get currentLang(): string {
-    return this.currentLanguage ?? '';
+    return this.currentLanguage ?? 'en';
   }
 
 

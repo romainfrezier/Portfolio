@@ -25,7 +25,6 @@ describe('SchoolProjectsComponent', () => {
   });
 
   beforeEach((): void => {
-    jest.clearAllMocks();
     fixture = TestBed.createComponent(SchoolProjectsComponent);
     component = fixture.componentInstance;
     dataService = TestBed.inject(DataService);
