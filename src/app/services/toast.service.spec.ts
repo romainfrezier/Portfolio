@@ -43,6 +43,14 @@ describe('ToastService', () => {
     expect(service.toasts[0]).toEqual({message, type: AppConstants.TOAST.TYPES.INFO});
   });
 
+  it('should show an info toast by default', () => {
+    const message = 'Info message';
+    service['showToast'](message);
+
+    expect(service.toasts.length).toBe(1);
+    expect(service.toasts[0]).toEqual({message, type: AppConstants.TOAST.TYPES.INFO});
+  });
+
   it('should remove a toast after the delay', () => {
     const message = 'Info message';
     service.showInfo(message);
