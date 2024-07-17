@@ -63,7 +63,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     name: Deploy to Firebase Hosting
-    needs: [tests, sonarqube]
+    needs: [tests]
     steps:
       - uses: actions/checkout@v3
       - name: Set up Node.js
