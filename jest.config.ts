@@ -17,7 +17,14 @@ const config: Config = {
   moduleNameMapper: {
     ...pathsToModuleNameMapper(paths, {prefix: '<rootDir>'}),
   },
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts']
+  setupFilesAfterEnv: [
+    '<rootDir>/jest.setup.ts'
+  ],
+  coveragePathIgnorePatterns: [
+    '<rootDir>/node_modules/',
+    '<rootDir>/src/app/app-routing.module.ts',
+    '<rootDir>/src/tests/'
+  ],
 };
 
 export default config;
