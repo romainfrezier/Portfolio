@@ -4,6 +4,7 @@ import {MailService} from "@services/mail.service";
 import {EmailJSResponseStatus} from "@emailjs/browser";
 import {ToastService} from "@services/toast.service";
 import {TranslateService} from "@ngx-translate/core";
+import {lastValueFrom} from "rxjs";
 
 @Component({
   selector: 'app-contact-modal',
@@ -49,35 +50,27 @@ export class ContactModalComponent implements OnInit {
     }
   }
 
-  public onSubmit(): void {
+  public async onSubmit(): Promise<void> {
     this.loading = true;
     if (this.contactForm.valid) {
       const formData = this.contactForm.value;
-      this.mailService.sendEmail(formData.firstName, formData.name, formData.email, formData.message)
-        .then((response: EmailJSResponseStatus): void => {
-          if (response.status === 200) {
-            this.translate.get("contact-form.success").subscribe((result): void => {
-              this.toastMessage = result;
-            });
-            this.toastService.showSuccess(this.toastMessage);
-          } else {
-            this.translate.get("contact-form.error").subscribe((result): void => {
-              this.toastMessage = result;
-            });
-            this.toastService.showError(this.toastMessage);
-          }
-        })
-        .catch((): void => {
-          this.translate.get("contact-form.error").subscribe((result): void => {
-            this.toastMessage = result;
-          })
+      try {
+        const response: EmailJSResponseStatus = await this.mailService.sendEmail(formData.firstName, formData.name, formData.email, formData.message);
+        if (response.status === 200) {
+          this.toastMessage = await lastValueFrom(this.translate.get("contact-form.success"));
+          this.toastService.showSuccess(this.toastMessage);
+        } else {
+          this.toastMessage = await lastValueFrom(this.translate.get("contact-form.error"));
           this.toastService.showError(this.toastMessage);
-        })
-        .finally(() => {
-          this.loading = false;
-          this.closeModalWithAnimation();
-        });
+        }
+      } catch (error) {
+        this.toastMessage = await lastValueFrom(this.translate.get("contact-form.error"));
+        this.toastService.showError(this.toastMessage);
+      }
     }
+
+    this.loading = false;
+    this.closeModalWithAnimation();
   }
 
   public closeModalWithAnimation(): void {

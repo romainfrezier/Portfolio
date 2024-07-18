@@ -1,0 +1,97 @@
+name: CI Workflow
+
+'on':
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  checks: write
+  contents: write
+  deployments: write
+  statuses: write
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    name: Jest tests
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22.4.0'
+      - name: Install dependencies
+        run: |
+          npm install
+          npm install -g badge-maker
+          sudo apt-get update
+          sudo apt-get install -y libxml2-utils
+      - name: Run tests
+        id: run_tests
+        run: npm run test:coverage
+      - name: Create test badge
+        run: |
+          if [ "${{ steps.run_tests.outcome }}" == "success" ]; then
+            npx badge-maker "tests" "passed" "green" > documentation/badges/test-badge.svg
+          else
+            npx badge-maker "tests" "failed" "red" > documentation/badges/test-badge.svg
+          fi
+      - name: Create coverage badge
+        run: |
+          COVERAGE=$(xmllint --html --xpath "string(//div[contains(@class, 'fl pad1y space-right2') and .//span[contains(text(), 'Lines')]]/span[@class='strong'])" coverage/lcov-report/index.html | sed 's/%//')
+          if (( $(echo "$COVERAGE >= 80" | bc -l) )); then
+            npx badge-maker "coverage" "${COVERAGE}%" "green" > documentation/badges/coverage-badge.svg
+          else
+            npx badge-maker "coverage" "${COVERAGE}%" "red" > documentation/badges/coverage-badge.svg
+          fi
+      - name: Commit badges
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git add documentation/badges/test-badge.svg documentation/badges/coverage-badge.svg
+          if ! git diff --cached --exit-code; then
+            git commit -m "Add test and coverage badges"
+            git push
+          else
+            echo "No changes to commit"
+          fi
+
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy to Firebase Hosting
+    needs: [tests]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22.4.0'
+      - name: Install dependencies
+        run: npm install
+      - name: Install Angular CLI
+        run: npm install -g @angular/cli
+      - name: Create environment directory
+        run: mkdir -p ./src/environments
+      - name: Create environment files
+        run: echo "export const environment = ${{ secrets.ENVIRONMENT }};" > ./src/environments/environment.prod.ts
+      - name: Build Angular app
+        run: npm run build
+      - name: Deploy to Firebase Hosting on Preview
+        if: github.event_name == 'pull_request'
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_PORTFOLIO_63FF4 }}'
+          projectId: portfolio-63ff4
+      - name: Deploy to Firebase Hosting on Production
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_PORTFOLIO_63FF4 }}'
+          channelId: live
+          projectId: portfolio-63ff4

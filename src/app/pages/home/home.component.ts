@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Link} from '@models/link.model';
-import {HttpClient} from '@angular/common/http';
 import {TranslateService} from '@ngx-translate/core';
+import {DataService} from "@services/data.service";
 
 @Component({
   selector: 'app-home',
@@ -16,14 +16,12 @@ export class HomeComponent implements OnInit {
   private birthDate: Date;
 
   constructor(
-    private http: HttpClient,
+    private dataService: DataService,
     private translate: TranslateService,
   ) {
-    this.http
-      .get<{ links: Link[] }>('./assets/data/social-links.json')
-      .subscribe((data) => {
-        this.socialLinks = data.links;
-      });
+    this.dataService.getLinks().subscribe((data) => {
+      this.socialLinks = data;
+    });
     this.birthDate = new Date(2001, 5, 29);
     this.translate.onLangChange.subscribe(() => {
       this.getRoleText();
@@ -35,9 +33,9 @@ export class HomeComponent implements OnInit {
     this.getRoleText();
   }
 
-  private getRoleText(): void {
+  public getRoleText(): void {
     this.translate
-      .get('home.role', { age: this.calculateAge() })
+      .get('home.role', {age: this.calculateAge()})
       .subscribe((res: string): void => {
         this.introText = res;
       });

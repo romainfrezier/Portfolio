@@ -1,27 +1,113 @@
 # Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.3.
+![](documentation/badges/coverage-badge.svg)
+![](documentation/badges/test-badge.svg)
+![](documentation/badges/sonar-badge.svg)
 
-## Development server
+## Technologies
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+![](https://img.shields.io/badge/Angular-v18-red?logo=angular&labelColor=red)
+![](https://img.shields.io/badge/Jest-v29-green?logo=jest&labelColor=green)
+![](https://img.shields.io/badge/SonarQube-v10-blue?logo=sonarqube&labelColor=blue)
+![](https://img.shields.io/badge/Firebase%20Hosting-v10-yellow?logo=firebase&labelColor=yellow)
+![](https://img.shields.io/badge/GitHub%20Actions-v3-black?logo=github&labelColor=black)
 
-## Code scaffolding
+## Table of Contents
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<!-- TOC -->
+* [Portfolio](#portfolio)
+  * [Technologies](#technologies)
+  * [Table of Contents](#table-of-contents)
+  * [Description](#description)
+  * [License](#license)
+  * [Installation](#installation)
+  * [Usage](#usage)
+    * [Launch app](#launch-app)
+    * [Testing](#testing)
+    * [SonarQube](#sonarqube)
+<!-- TOC -->
 
-## Build
+## Description
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+This is a portfolio website that showcases my work and provides a way to contact me.
 
-## Running unit tests
+## License
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
 
-## Running end-to-end tests
+## Installation
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+**Prerequisites**
 
-## Further help
+- `nvm`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+First, use the correct version of node (version 22) :
+
+```bash
+nvm use
+```
+
+To install the necessary dependencies, run the following command:
+
+```bash
+npm install
+```
+
+## Usage
+
+### Launch app
+
+To run the application, use the following command:
+
+```bash
+npm start
+```
+
+The application will be running on `http://localhost:4200`.
+
+### Testing
+
+To run tests, use the following command:
+
+```bash
+npm run test
+```
+
+or to run tests with coverage, use the following command:
+
+```bash
+npm run test:coverage
+```
+
+### SonarQube
+
+**Prerequisites**
+
+- `docker`
+- `docker-compose`
+
+To launch sonarqube, use the following command:
+
+```bash
+docker-compose -f docker-compose.sonar.yml up -d
+```
+
+The application will be running on `http://localhost:9000`.
+
+Create a `.env` file with the following content:
+
+```bash
+SONAR_TOKEN=your_token
+```
+
+Replace `your_token` with your sonarqube token created from the `Security` tab in the `User` settings
+
+Then scan the project using the following command:
+
+```bash
+./sonar.sh
+```
+
+---
+
+© Romain Frezier - 2024

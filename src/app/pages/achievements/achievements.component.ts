@@ -16,9 +16,7 @@ export class AchievementsComponent implements OnInit {
     private dataService: DataService,
     private translate: TranslateService,
   ) {
-    const lang: string =
-      localStorage.getItem(AppConstants.LOCALSTORAGE.LANGUAGE) ??
-      translate.defaultLang;
+    const lang: string = localStorage.getItem(AppConstants.LOCALSTORAGE.LANGUAGE) ?? this.translate.defaultLang;
     this.dataService
       .getAchievements(lang)
       .subscribe((data: Achievement[]): void => {

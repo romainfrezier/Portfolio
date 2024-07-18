@@ -11,7 +11,7 @@ import {DataService} from '@services/data.service';
 })
 export class SchoolProjectsComponent implements OnInit {
   public projects!: SchoolProject[];
-  public isLoading: boolean[];
+  public areLoading: boolean[];
   public showArchivedProjects: boolean;
 
   constructor(
@@ -19,7 +19,7 @@ export class SchoolProjectsComponent implements OnInit {
     private translate: TranslateService,
   ) {
     this.showArchivedProjects = false;
-    this.isLoading = [];
+    this.areLoading = [];
     const lang: string = localStorage.getItem(AppConstants.LOCALSTORAGE.LANGUAGE) ?? translate.defaultLang;
     this.fetchProjects(lang);
   }
@@ -33,22 +33,22 @@ export class SchoolProjectsComponent implements OnInit {
     });
   }
 
-  private fetchProjects(lang: string): void {
+  fetchProjects(lang: string): void {
     this.dataService
       .getSchoolProjects(lang)
       .subscribe((data: SchoolProject[]): void => {
         this.projects = data;
         this.projects.forEach(() => {
-          this.isLoading.push(true);
+          this.areLoading.push(true);
         });
         this.loadVideos();
       });
   }
 
-  private loadVideos(): void {
+  protected loadVideos(): void {
     for (let i = 0; i < this.projects.length; i++) {
       setTimeout(() => {
-        this.isLoading[i] = false;
+        this.areLoading[i] = false;
       }, 1000);
     }
   }
@@ -60,7 +60,7 @@ export class SchoolProjectsComponent implements OnInit {
       .subscribe((data: SchoolProject[]): void => {
         this.projects = this.projects.concat(data);
         data.forEach(() => {
-          this.isLoading.push(true);
+          this.areLoading.push(true);
         });
         this.loadVideos();
         this.showArchivedProjects = true;

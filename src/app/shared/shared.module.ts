@@ -7,10 +7,11 @@ import {SafePipe} from '@pipes/safe.pipe';
 import {RouterModule} from '@angular/router';
 import {FooterComponent} from './components/footer/footer.component';
 import {ToastComponent} from "@shared/components/toast/toast.component";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [HeaderComponent, LoaderComponent, SafePipe, FooterComponent, ToastComponent],
-  imports: [CommonModule, TranslateModule, RouterModule],
-  exports: [HeaderComponent, LoaderComponent, FooterComponent, ToastComponent, SafePipe],
+  imports: [CommonModule, TranslateModule, RouterModule, ReactiveFormsModule],
+  exports: [HeaderComponent, LoaderComponent, FooterComponent, ToastComponent, SafePipe, ReactiveFormsModule],
 })
 export class SharedModule {}
