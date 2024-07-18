@@ -101,7 +101,7 @@ describe('DataService', () => {
       expect(links).toEqual(fakeLinks);
     });
 
-    const req = httpMock.expectOne('./assets/data/skills.json');
+    const req = httpMock.expectOne('./assets/data/social-links.json');
     expect(req.request.method).toBe('GET');
     req.flush(fakeSkills);
   });
