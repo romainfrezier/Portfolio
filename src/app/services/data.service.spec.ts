@@ -3,7 +3,7 @@ import {HttpTestingController, provideHttpClientTesting} from '@angular/common/h
 import {DataService} from './data.service';
 import {
   fakeAchievements,
-  fakeArchivedProjects,
+  fakeArchivedProjects, fakeLinks,
   fakePersonalProjects,
   fakeSchoolProjects, fakeSkills,
   fakeWorkExperiences
@@ -89,6 +89,16 @@ describe('DataService', () => {
   it('should fetch skills', () => {
     service.getSkills().subscribe(skills => {
       expect(skills).toEqual(fakeSkills);
+    });
+
+    const req = httpMock.expectOne('./assets/data/skills.json');
+    expect(req.request.method).toBe('GET');
+    req.flush(fakeSkills);
+  });
+
+  it('should fetch links', () => {
+    service.getLinks().subscribe(links => {
+      expect(links).toEqual(fakeLinks);
     });
 
     const req = httpMock.expectOne('./assets/data/skills.json');

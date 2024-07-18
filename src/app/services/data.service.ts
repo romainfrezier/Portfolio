@@ -6,6 +6,7 @@ import {SchoolProject} from '@models/school-project.model';
 import {PersonalProject} from '@models/personal-project.model';
 import {WorkExperience} from '@models/work-experience.model';
 import {Skills} from '@models/skills.model';
+import {Link} from "@models/link.model";
 
 @Injectable({
   providedIn: 'root',
@@ -45,5 +46,9 @@ export class DataService {
 
   public getSkills(): Observable<Skills> {
     return this.http.get<Skills>(`./assets/data/skills.json`);
+  }
+
+  public getLinks(): Observable<Link[]> {
+    return this.http.get<Link[]>('./assets/data/social-links.json');
   }
 }

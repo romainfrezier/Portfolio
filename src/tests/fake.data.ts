@@ -3,6 +3,7 @@ import {PersonalProject} from "@models/personal-project.model";
 import {WorkExperience} from "@models/work-experience.model";
 import {Achievement} from "@models/achievement.model";
 import {Skills} from "@models/skills.model";
+import {Link} from "@models/link.model";
 
 export const fakeSchoolProjects: SchoolProject[] = [
   {
@@ -83,3 +84,21 @@ export const fakeSkills: Skills = {
     {id: 1, name: 'Soft 1', src: 'https://src.com', link: 'https://link.com'},
   ]
 };
+
+export const fakeLinks: Link[] = [
+  {
+    name: "linkedin",
+    url: "https://www.linkedin.com/in/romainfrezier/",
+    icon: "assets/images/linkedin-social.webp"
+  },
+  {
+    name: "github",
+    url: "https://github.com/romainfrezier",
+    icon: "assets/images/github-social.webp"
+  },
+  {
+    name: "messenger",
+    url: "https://m.me/frezierromain",
+    icon: "assets/images/messenger-social.webp"
+  }
+]

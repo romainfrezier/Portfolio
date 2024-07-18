@@ -6,9 +6,10 @@ import {PersonalProject} from "@models/personal-project.model";
 import {WorkExperience} from "@models/work-experience.model";
 import {Achievement} from "@models/achievement.model";
 import {Skills} from "@models/skills.model";
+import {Link} from "@models/link.model";
 import {
   fakeAchievements,
-  fakeArchivedProjects,
+  fakeArchivedProjects, fakeLinks,
   fakePersonalProjects,
   fakeSchoolProjects, fakeSkills,
   fakeWorkExperiences
@@ -60,6 +61,13 @@ export class DataServiceMock extends DataService {
   override getSkills(): Observable<Skills> {
     return new Observable<Skills>(subscriber => {
       subscriber.next(fakeSkills);
+      subscriber.complete();
+    });
+  }
+
+  override getLinks(): Observable<Link[]> {
+    return new Observable<Link[]>(subscriber => {
+      subscriber.next(fakeLinks);
       subscriber.complete();
     });
   }
