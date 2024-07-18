@@ -94,11 +94,7 @@ docker-compose -f docker-compose.sonar.yml up -d
 
 The application will be running on `http://localhost:9000`.
 
-Create a `.env` file with the following content:
-
-```bash
-SONAR_TOKEN=your_token
-```
+Create a `.env` file with the same content as `.env.example`:
 
 Replace `your_token` with your sonarqube token created from the `Security` tab in the `User` settings
 
