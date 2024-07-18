@@ -10,6 +10,10 @@ import {TranslateServiceMock} from "@tests/mocks/translate.service.mock";
 import {MailServiceMock} from "@tests/mocks/mail.service.mock";
 import {ToastServiceMock} from "@tests/mocks/toast.service.mock";
 
+/**
+ * @author Romain Frezier
+ * @test
+ */
 describe('ContactModalComponent', (): void => {
   let component: ContactModalComponent;
   let fixture: ComponentFixture<ContactModalComponent>;

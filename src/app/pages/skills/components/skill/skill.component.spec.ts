@@ -3,6 +3,10 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {SkillComponent} from './skill.component';
 import {fakeSkills} from "@tests/fake.data";
 
+/**
+ * @author Romain Frezier
+ * @test
+ */
 describe('SkillComponent', () => {
   let component: SkillComponent;
   let fixture: ComponentFixture<SkillComponent>;

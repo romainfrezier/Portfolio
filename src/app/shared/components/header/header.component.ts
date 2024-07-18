@@ -4,6 +4,12 @@ import {AppConstants} from '@app/app.constants';
 import {ThemesService} from '@services/themes.service';
 import {Observable} from 'rxjs';
 
+/**
+ * @author Romain Frezier
+ * @component
+ * @description
+ * This component displays the header with the menu
+ */
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -25,6 +31,11 @@ export class HeaderComponent {
 
   protected readonly AppConstants = AppConstants;
 
+  /**
+   * @constructor
+   * @param translate - Service to handle translations.
+   * @param themesService - Service to manage themes.
+   */
   constructor(
     private translate: TranslateService,
     private themesService: ThemesService,
@@ -56,16 +67,28 @@ export class HeaderComponent {
     this.isWorkMenuShown = false;
   }
 
+  /**
+   * Hides the language menu.
+   * @param event - The mouse event.
+   */
   public hideLanguageMenu(event: MouseEvent | Event): void {
     event.stopPropagation();
     this.isLanguageMenuShown = false;
   }
 
+  /**
+   * Hides the theme menu.
+   * @param event - The mouse event.
+   */
   public hideThemeMenu(event: MouseEvent | Event): void {
     event.stopPropagation();
     this.isThemeMenuShown = false;
   }
 
+  /**
+   * Toggles the visibility of the language menu.
+   * @param event - The mouse event.
+   */
   public toggleLanguageMenu(event: MouseEvent | Event): void {
     event.stopPropagation();
     this.isLanguageMenuShown = !this.isLanguageMenuShown;
@@ -86,6 +109,10 @@ export class HeaderComponent {
     }
   }
 
+  /**
+   * Toggles the visibility of the theme menu.
+   * @param event - The mouse event.
+   */
   public toggleThemeMenu(event: MouseEvent | Event): void {
     event.stopPropagation();
     this.isThemeMenuShown = !this.isThemeMenuShown;
@@ -106,6 +133,10 @@ export class HeaderComponent {
     }
   }
 
+  /**
+   * Toggles the visibility of the work menu.
+   * @param event - The mouse event.
+   */
   public toggleWorkMenu(event: MouseEvent | Event): void {
     event.stopPropagation();
     this.isWorkMenuShown = !this.isWorkMenuShown;
@@ -126,6 +157,10 @@ export class HeaderComponent {
     }
   }
 
+  /**
+   * Switches the language of the application.
+   * @param lang - The language code to switch to.
+   */
   public switchLanguage(lang: string): void {
     const htmlTag: HTMLElement | null = document.querySelector('html');
     htmlTag?.setAttribute('lang', lang);
@@ -136,6 +171,10 @@ export class HeaderComponent {
     }
   }
 
+  /**
+   * Switches the theme of the application.
+   * @param theme - The theme to switch to.
+   */
   public switchTheme(theme: string): void {
     this.themesService.changeTheme(theme);
     localStorage.setItem(AppConstants.LOCALSTORAGE.THEME, theme);
@@ -144,16 +183,26 @@ export class HeaderComponent {
     }
   }
 
+  /**
+   * Hides the burger menu.
+   */
   public hideBurgerMenu() {
     this.isBurgerMenuOpen = false;
   }
 
+  /**
+   * Hides the work menu.
+   * @param event - The mouse event.
+   */
   public hideWorkMenu(event: MouseEvent | Event) {
     event.stopPropagation();
     this.isBurgerMenuOpen = false;
     this.isWorkMenuShown = false;
   }
 
+  /**
+   * Toggles the visibility of the burger menu.
+   */
   public toggleBurgerMenu() {
     this.isBurgerMenuOpen = !this.isBurgerMenuOpen;
     if (this.isBurgerMenuOpen) {
@@ -166,10 +215,18 @@ export class HeaderComponent {
     }
   }
 
+  /**
+   * Gets the current theme.
+   * @returns An observable of the current theme.
+   */
   public getCurrentTheme(): Observable<string> {
     return this.themesService.currentTheme;
   }
 
+  /**
+   * Gets the current language.
+   * @returns The current language code.
+   */
   public getCurrentLanguage(): string {
     return this.translate.currentLang;
   }

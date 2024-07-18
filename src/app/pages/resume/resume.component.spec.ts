@@ -6,6 +6,10 @@ import {AppConstants} from "@app/app.constants";
 import {By} from "@angular/platform-browser";
 import {DebugElement} from "@angular/core";
 
+/**
+ * @author Romain Frezier
+ * @test
+ */
 describe('ResumeComponent', () => {
   let component: ResumeComponent;
   let fixture: ComponentFixture<ResumeComponent>;

@@ -10,6 +10,10 @@ import {
 } from "@tests/fake.data";
 import {AppConstants} from "@app/app.constants";
 
+/**
+ * @author Romain Frezier
+ * @test
+ */
 describe('DataService', () => {
   let service: DataService;
   let httpMock: HttpTestingController;

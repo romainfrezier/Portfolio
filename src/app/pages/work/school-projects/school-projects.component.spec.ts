@@ -8,6 +8,10 @@ import {fakeArchivedProjects, fakeSchoolProjects} from "@tests/fake.data";
 import {AppConstants} from "@app/app.constants";
 import {By} from "@angular/platform-browser";
 
+/**
+ * @author Romain Frezier
+ * @test
+ */
 describe('SchoolProjectsComponent', () => {
   let component: SchoolProjectsComponent;
   let fixture: ComponentFixture<SchoolProjectsComponent>;

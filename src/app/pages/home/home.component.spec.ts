@@ -8,6 +8,10 @@ import {DataServiceMock} from "@tests/mocks/data.service.mock";
 import {fakeLinks} from "@tests/fake.data";
 import {AppConstants} from "@app/app.constants";
 
+/**
+ * @author Romain Frezier
+ * @test
+ */
 describe('HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;

@@ -3,6 +3,10 @@ import {MailService} from './mail.service';
 import emailjs, {EmailJSResponseStatus} from '@emailjs/browser';
 import {environment} from "@env/environment";
 
+/**
+ * @author Romain Frezier
+ * @test
+ */
 describe('MailService', () => {
   let service: MailService;
 

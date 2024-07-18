@@ -1,3 +1,8 @@
+/**
+ * @author Romain Frezier
+ * @description
+ * Mock local storage.
+ */
 export class MockLocalStorage {
   private store: { [key: string]: string } = {};
 

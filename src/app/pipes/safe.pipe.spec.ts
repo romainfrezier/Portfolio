@@ -2,6 +2,10 @@ import {TestBed} from '@angular/core/testing';
 import {SafePipe} from './safe.pipe';
 import {DomSanitizer, SafeResourceUrl} from '@angular/platform-browser';
 
+/**
+ * @author Romain Frezier
+ * @test
+ */
 describe('SafePipe', () => {
   let fixture: SafePipe;
   let sanitizer: DomSanitizer;

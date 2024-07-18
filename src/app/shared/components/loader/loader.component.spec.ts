@@ -2,6 +2,10 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {LoaderComponent} from './loader.component';
 
+/**
+ * @author Romain Frezier
+ * @test
+ */
 describe('LoaderComponent', () => {
   let component: LoaderComponent;
   let fixture: ComponentFixture<LoaderComponent>;

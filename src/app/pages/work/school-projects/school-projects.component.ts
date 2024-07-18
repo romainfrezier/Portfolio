@@ -4,16 +4,36 @@ import {SchoolProject} from '@models/school-project.model';
 import {AppConstants} from '@app/app.constants';
 import {DataService} from '@services/data.service';
 
+/**
+ * @author Romain Frezier
+ * @component
+ * @description
+ * This component displays a list of school projects
+ */
 @Component({
   selector: 'app-work',
   templateUrl: './school-projects.component.html',
   styleUrls: ['./school-projects.component.scss'],
 })
 export class SchoolProjectsComponent implements OnInit {
+  /**
+   * List of school projects to be displayed.
+   */
   public projects!: SchoolProject[];
+  /**
+   * Array to track the loading state of each project videos.
+   */
   public areLoading: boolean[];
+  /**
+   * Flag indicating whether archived projects are being shown.
+   */
   public showArchivedProjects: boolean;
 
+  /**
+   * @constructor
+   * @param dataService - Service to fetch school projects data.
+   * @param translate - Service to handle translations.
+   */
   constructor(
     private dataService: DataService,
     private translate: TranslateService,
@@ -24,6 +44,9 @@ export class SchoolProjectsComponent implements OnInit {
     this.fetchProjects(lang);
   }
 
+  /**
+   * Subscribe to language change events to fetch school projects in the new language.
+   */
   ngOnInit(): void {
     this.translate.onLangChange.subscribe((event: LangChangeEvent): void => {
       this.fetchProjects(event.lang);
@@ -33,7 +56,11 @@ export class SchoolProjectsComponent implements OnInit {
     });
   }
 
-  fetchProjects(lang: string): void {
+  /**
+   * Fetches school projects data based on the specified language.
+   * @param lang - The language code to fetch school projects data for.
+   */
+  public fetchProjects(lang: string): void {
     this.dataService
       .getSchoolProjects(lang)
       .subscribe((data: SchoolProject[]): void => {
@@ -45,6 +72,10 @@ export class SchoolProjectsComponent implements OnInit {
       });
   }
 
+  /**
+   * Simulates loading of project videos.
+   * Sets loading state to false after a delay for each project.
+   */
   protected loadVideos(): void {
     for (let i = 0; i < this.projects.length; i++) {
       setTimeout(() => {
@@ -53,7 +84,10 @@ export class SchoolProjectsComponent implements OnInit {
     }
   }
 
-  public seeMoreProjects() {
+  /**
+   * Loads and displays archived projects.
+   */
+  public seeMoreProjects(): void {
     const lang: string = localStorage.getItem(AppConstants.LOCALSTORAGE.LANGUAGE) ?? this.translate.defaultLang;
     this.dataService
       .getArchivedProjects(lang)
@@ -67,7 +101,10 @@ export class SchoolProjectsComponent implements OnInit {
       });
   }
 
-  public seeLessProjects() {
+  /**
+   * Hides archived projects.
+   */
+  public seeLessProjects(): void {
     const lang: string = localStorage.getItem(AppConstants.LOCALSTORAGE.LANGUAGE) ?? this.translate.defaultLang;
     this.dataService
       .getArchivedProjects(lang)
