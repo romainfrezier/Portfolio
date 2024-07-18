@@ -43,6 +43,13 @@ describe('HeaderComponent', () => {
       expect(component.isBurgerMenuOpen).toBe(false);
       expect(component.isWorkMenuShown).toBe(false);
     });
+
+    it('should initialize with default language if not set in localStorage', () => {
+      localStorage.removeItem(AppConstants.LOCALSTORAGE.LANGUAGE);
+      new HeaderComponent(translateService, themesService);
+      expect(translateService.currentLang).toBe(AppConstants.LANGUAGES.EN);
+      expect(localStorage.getItem(AppConstants.LOCALSTORAGE.LANGUAGE)).toBe(AppConstants.LANGUAGES.EN);
+    });
   });
 
   describe('Template', () => {
@@ -86,59 +93,139 @@ describe('HeaderComponent', () => {
   });
 
   describe('Interaction', () => {
-    it('should toggle language menu', () => {
-      component.toggleLanguageMenu(new MouseEvent('click'));
-      expect(component.isLanguageMenuShown).toBe(true);
-      component.toggleLanguageMenu(new MouseEvent('click'));
-      expect(component.isLanguageMenuShown).toBe(false);
-    });
+    describe('Toggle', () => {
+      it('should toggle burger menu', () => {
+        component.toggleBurgerMenu();
+        expect(component.isBurgerMenuOpen).toBe(true);
+        component.toggleBurgerMenu();
+        expect(component.isBurgerMenuOpen).toBe(false);
+      });
 
-    it('should toggle theme menu', () => {
-      component.toggleThemeMenu(new MouseEvent('click'));
-      expect(component.isThemeMenuShown).toBe(true);
-      component.toggleThemeMenu(new MouseEvent('click'));
-      expect(component.isThemeMenuShown).toBe(false);
-    });
+      it('should toggle language menu', () => {
+        component.toggleLanguageMenu(new MouseEvent('click'));
+        expect(component.isLanguageMenuShown).toBe(true);
+        component.toggleLanguageMenu(new MouseEvent('click'));
+        expect(component.isLanguageMenuShown).toBe(false);
+      });
 
-    it('should toggle work menu', () => {
-      component.toggleWorkMenu(new MouseEvent('click'));
-      expect(component.isWorkMenuShown).toBe(true);
-      component.toggleWorkMenu(new MouseEvent('click'));
-      expect(component.isWorkMenuShown).toBe(false);
-    });
+      it('should toggle theme menu', () => {
+        component.toggleThemeMenu(new MouseEvent('click'));
+        expect(component.isThemeMenuShown).toBe(true);
+        component.toggleThemeMenu(new MouseEvent('click'));
+        expect(component.isThemeMenuShown).toBe(false);
+      });
 
-    it('should switch language', () => {
-      jest.spyOn(translateService, 'use');
-      component.switchLanguage(AppConstants.LANGUAGES.FR);
-      expect(translateService.use).toHaveBeenCalledWith(AppConstants.LANGUAGES.FR);
-      expect(localStorage.getItem(AppConstants.LOCALSTORAGE.LANGUAGE)).toBe(AppConstants.LANGUAGES.FR);
-    });
+      it('should toggle work menu', () => {
+        component.toggleWorkMenu(new MouseEvent('click'));
+        expect(component.isWorkMenuShown).toBe(true);
+        component.toggleWorkMenu(new MouseEvent('click'));
+        expect(component.isWorkMenuShown).toBe(false);
+      });
 
-    it('should switch theme', () => {
-      jest.spyOn(themesService, 'changeTheme');
-      component.switchTheme(AppConstants.THEMES.DARK);
-      expect(themesService.changeTheme).toHaveBeenCalledWith(AppConstants.THEMES.DARK);
-      expect(localStorage.getItem(AppConstants.LOCALSTORAGE.THEME)).toBe(AppConstants.THEMES.DARK);
-    });
+      it('should toggle language menu and hide other menus', () => {
+        component.isThemeMenuShown = true;
+        component.isWorkMenuShown = true;
+        component.toggleLanguageMenu(new MouseEvent('click'));
+        expect(component.isLanguageMenuShown).toBe(true);
+        expect(component.isThemeMenuShown).toBe(false);
+        expect(component.isWorkMenuShown).toBe(false);
+      });
 
-    it('should toggle burger menu', () => {
-      component.toggleBurgerMenu();
-      expect(component.isBurgerMenuOpen).toBe(true);
-      component.toggleBurgerMenu();
-      expect(component.isBurgerMenuOpen).toBe(false);
-    });
+      it('should toggle theme menu and hide other menus', () => {
+        component.isLanguageMenuShown = true;
+        component.isWorkMenuShown = true;
+        component.toggleThemeMenu(new MouseEvent('click'));
+        expect(component.isThemeMenuShown).toBe(true);
+        expect(component.isLanguageMenuShown).toBe(false);
+        expect(component.isWorkMenuShown).toBe(false);
+      });
 
-    it('should get current theme', (done) => {
-      themesService.changeTheme(AppConstants.THEMES.LIGHT)
-      component.getCurrentTheme().subscribe(theme => {
-        expect(theme).toBe(AppConstants.THEMES.LIGHT);
-        done();
+      it('should toggle work menu and hide other menus', () => {
+        component.isLanguageMenuShown = true;
+        component.isThemeMenuShown = true;
+        component.toggleWorkMenu(new MouseEvent('click'));
+        expect(component.isWorkMenuShown).toBe(true);
+        expect(component.isLanguageMenuShown).toBe(false);
+        expect(component.isThemeMenuShown).toBe(false);
       });
     });
 
-    it('should get current language', () => {
-      translateService.use(AppConstants.LANGUAGES.EN)
-      expect(component.getCurrentLanguage()).toBe(AppConstants.LANGUAGES.EN);
+    describe('Switch', () => {
+      it('should switch language', () => {
+        jest.spyOn(translateService, 'use');
+        jest.spyOn(component, 'hideBurgerMenu');
+        component.isBurgerMenuOpen = true;
+        component.switchLanguage(AppConstants.LANGUAGES.FR);
+        expect(translateService.use).toHaveBeenCalledWith(AppConstants.LANGUAGES.FR);
+        expect(localStorage.getItem(AppConstants.LOCALSTORAGE.LANGUAGE)).toBe(AppConstants.LANGUAGES.FR);
+        expect(component.hideBurgerMenu).toHaveBeenCalled();
+      });
+
+      it('should switch theme and update localStorage', () => {
+        jest.spyOn(themesService, 'changeTheme');
+        jest.spyOn(component, 'hideBurgerMenu');
+        component.isBurgerMenuOpen = true;
+        component.switchTheme(AppConstants.THEMES.DARK);
+        expect(themesService.changeTheme).toHaveBeenCalledWith(AppConstants.THEMES.DARK);
+        expect(localStorage.getItem(AppConstants.LOCALSTORAGE.THEME)).toBe(AppConstants.THEMES.DARK);
+        expect(component.hideBurgerMenu).toHaveBeenCalled();
+      });
+
+      it('should switch language and set lang attribute on html tag', () => {
+        jest.spyOn(translateService, 'use');
+        component.switchLanguage(AppConstants.LANGUAGES.EN);
+        component.switchLanguage(AppConstants.LANGUAGES.FR);
+        const htmlTag: HTMLHtmlElement | null = document.querySelector('html');
+        expect(htmlTag?.getAttribute('lang')).toBe(AppConstants.LANGUAGES.FR);
+        expect(translateService.use).toHaveBeenCalledWith(AppConstants.LANGUAGES.FR);
+        expect(localStorage.getItem(AppConstants.LOCALSTORAGE.LANGUAGE)).toBe(AppConstants.LANGUAGES.FR);
+
+      });
+    });
+
+    describe('Get', () => {
+      it('should get current theme', (done) => {
+        component.getCurrentTheme().subscribe(theme => {
+          expect(theme).toBe(AppConstants.THEMES.LIGHT);
+          done();
+        });
+        themesService.changeTheme(AppConstants.THEMES.LIGHT);
+      });
+
+      it('should get current language', () => {
+        translateService.use(AppConstants.LANGUAGES.EN)
+        expect(component.getCurrentLanguage()).toBe(AppConstants.LANGUAGES.EN);
+      });
+    });
+
+    it('should hide burger menu', () => {
+      component.isBurgerMenuOpen = true;
+      component.hideBurgerMenu();
+      expect(component.isBurgerMenuOpen).toBe(false);
+    });
+
+    it('should hide work menu', () => {
+      component.isWorkMenuShown = true;
+      component.isBurgerMenuOpen = true;
+      component.hideWorkMenu(new MouseEvent('click'));
+      expect(component.isWorkMenuShown).toBe(false);
+      expect(component.isBurgerMenuOpen).toBe(false);
+    });
+
+    it('should hide language menu', () => {
+      component.isLanguageMenuShown = true;
+      component.isBurgerMenuOpen = true;
+      component.hideLanguageMenu(new MouseEvent('click'));
+      expect(component.isLanguageMenuShown).toBe(false);
+      expect(component.isBurgerMenuOpen).toBe(true);
+    });
+
+    it('should hide theme menu', () => {
+      component.isThemeMenuShown = true;
+      component.isBurgerMenuOpen = true;
+      component.hideThemeMenu(new MouseEvent('click'));
+      expect(component.isThemeMenuShown).toBe(false);
+      expect(component.isBurgerMenuOpen).toBe(true);
     });
   });
 });
