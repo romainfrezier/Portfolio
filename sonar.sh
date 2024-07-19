@@ -24,11 +24,11 @@ if [ "$status" != "OK" ]; then
   echo -e "${YELLOW}##########################################${RESET}"
   echo -e "${RED}${BOLD}      ⚠️  Quality Gate failed! ⚠️      ${RESET}"
   echo -e "${YELLOW}##########################################${RESET}"
-  npx badge-maker "quality gate" "failed" "red" > documentation/badges/sonar-badge.svg
+  npx badge-maker "quality gate" "failed" "red" > documentation/assets/badges/sonar-badge.svg
   exit 1
 else
   echo -e "${YELLOW}##########################################${RESET}"
   echo -e "${GREEN}${BOLD}      ✅  Quality Gate passed! ✅      ${RESET}"
   echo -e "${YELLOW}##########################################${RESET}"
-  npx badge-maker "quality gate" "passed" "green" > documentation/badges/sonar-badge.svg
+  npx badge-maker "quality gate" "passed" "green" > documentation/assets/badges/sonar-badge.svg
 fi

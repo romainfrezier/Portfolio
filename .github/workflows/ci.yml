@@ -44,15 +44,15 @@ jobs:
         run: |
           COVERAGE=$(xmllint --html --xpath "string(//div[contains(@class, 'fl pad1y space-right2') and .//span[contains(text(), 'Lines')]]/span[@class='strong'])" coverage/lcov-report/index.html | sed 's/%//')
           if (( $(echo "$COVERAGE >= 80" | bc -l) )); then
-            npx badge-maker "coverage" "${COVERAGE}%" "green" > documentation/badges/coverage-badge.svg
+            npx badge-maker "coverage" "${COVERAGE}%" "green" > documentation/assets/badges/coverage-badge.svg
           else
-            npx badge-maker "coverage" "${COVERAGE}%" "red" > documentation/badges/coverage-badge.svg
+            npx badge-maker "coverage" "${COVERAGE}%" "red" > documentation/assets/badges/coverage-badge.svg
           fi
       - name: Commit badges
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
-          git add documentation/badges/test-badge.svg documentation/badges/coverage-badge.svg
+          git add documentation/assets/badges/test-badge.svg documentation/assets/badges/coverage-badge.svg
           if ! git diff --cached --exit-code; then
             git commit -m "Add test and coverage badges"
             git push
