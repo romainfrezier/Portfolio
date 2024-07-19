@@ -36,9 +36,9 @@ jobs:
       - name: Create test badge
         run: |
           if [ "${{ steps.run_tests.outcome }}" == "success" ]; then
-            npx badge-maker "tests" "passed" "green" > documentation/badges/test-badge.svg
+            npx badge-maker "tests" "passed" "green" > documentation/assets/badges/test-badge.svg
           else
-            npx badge-maker "tests" "failed" "red" > documentation/badges/test-badge.svg
+            npx badge-maker "tests" "failed" "red" > documentation/assets/badges/test-badge.svg
           fi
       - name: Create coverage badge
         run: |
