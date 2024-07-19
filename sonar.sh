@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Echo constants
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BOLD='\033[1m'
+RESET='\033[0m'
+
 # Load env variables
 export $(grep -v '^#SONAR_TOKEN' .env | xargs)
 export $(grep -v '^#SONAR_HOST_URL' .env | xargs)
@@ -14,10 +21,14 @@ status=$(echo $response | jq -r '.projectStatus.status')
 
 # Create a badge depending on the status
 if [ "$status" != "OK" ]; then
-  echo "Quality Gate failed!"
+  echo -e "${YELLOW}##########################################${RESET}"
+  echo -e "${RED}${BOLD}      ⚠️  Quality Gate failed! ⚠️      ${RESET}"
+  echo -e "${YELLOW}##########################################${RESET}"
   npx badge-maker "quality gate" "failed" "red" > documentation/badges/sonar-badge.svg
   exit 1
 else
-  echo "Quality Gate passed!"
+  echo -e "${YELLOW}##########################################${RESET}"
+  echo -e "${GREEN}${BOLD}      ✅  Quality Gate passed! ✅      ${RESET}"
+  echo -e "${YELLOW}##########################################${RESET}"
   npx badge-maker "quality gate" "passed" "green" > documentation/badges/sonar-badge.svg
 fi
