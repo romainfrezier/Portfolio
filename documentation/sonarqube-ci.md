@@ -58,11 +58,13 @@ Add this section in the `ci.yml` workflow :
           ref: ${{ github.event.pull_request.head.ref }}
           fetch-depth: 0
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '22.4.0'
       - name: Install dependencies
-        run: npm install && npm install -g badge-maker
+        run: |
+          npm install -g yarn
+          yarn
       - name: Run tests to get coverage
         id: run_tests
         run: npm run test:coverage
