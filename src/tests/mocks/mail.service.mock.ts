@@ -2,6 +2,12 @@ import {Injectable} from '@angular/core';
 import {MailService} from "@services/mail.service";
 import {EmailJSResponseStatus} from "@emailjs/browser";
 
+/**
+ * @author Romain Frezier
+ * @service
+ * @description
+ * Mock service for testing purposes, extending the MailService to provide mock data.
+ */
 @Injectable()
 export class MailServiceMock extends MailService {
 

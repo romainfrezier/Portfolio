@@ -88,17 +88,17 @@ export const fakeSkills: Skills = {
 export const fakeLinks: Link[] = [
   {
     name: "linkedin",
-    url: "https://www.linkedin.com/in/romainfrezier/",
+    url: "https://www.linkedin.com/in/",
     icon: "assets/images/linkedin-social.webp"
   },
   {
     name: "github",
-    url: "https://github.com/romainfrezier",
+    url: "https://github.com/",
     icon: "assets/images/github-social.webp"
   },
   {
     name: "messenger",
-    url: "https://m.me/frezierromain",
+    url: "https://m.me/",
     icon: "assets/images/messenger-social.webp"
   }
 ]

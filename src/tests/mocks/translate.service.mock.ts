@@ -3,6 +3,12 @@ import {TranslateService, LangChangeEvent} from '@ngx-translate/core';
 import {Injectable} from '@angular/core';
 import {AppConstants} from "@app/app.constants";
 
+/**
+ * @author Romain Frezier
+ * @service
+ * @description
+ * Mock service for testing purposes, extending the TranslateService to provide mock data.
+ */
 @Injectable()
 export class TranslateServiceMock extends TranslateService {
   private currentLanguage: string | undefined;

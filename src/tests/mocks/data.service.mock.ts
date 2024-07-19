@@ -15,6 +15,12 @@ import {
   fakeWorkExperiences
 } from "@tests/fake.data";
 
+/**
+ * @author Romain Frezier
+ * @service
+ * @description
+ * Mock service for testing purposes, extending the DataService to provide mock data.
+ */
 @Injectable()
 export class DataServiceMock extends DataService {
 

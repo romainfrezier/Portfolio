@@ -2,12 +2,25 @@ import {Injectable} from '@angular/core';
 import {AppConstants} from "@app/app.constants";
 import {Toast} from "@models/toast.model";
 
+/**
+ * @author Romain Frezier
+ * @service
+ * @description
+ * Service for managing and applying themes in the application.
+ */
 @Injectable({
   providedIn: 'root'
 })
 export class ToastService {
+  /**
+   * Collection of toasts
+   */
   public toasts: Toast[];
 
+  /**
+   * @constructor
+   * Create an empty collection of toasts
+   */
   constructor() {
     this.toasts = [];
   }

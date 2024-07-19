@@ -4,6 +4,10 @@ import {SkillsSectionComponent} from './skills-section.component';
 import {SkillComponent} from "@pages/skills/components/skill/skill.component";
 import {fakeSkills} from "@tests/fake.data";
 
+/**
+ * @author Romain Frezier
+ * @test
+ */
 describe('SkillsSectionComponent', () => {
   let component: SkillsSectionComponent;
   let fixture: ComponentFixture<SkillsSectionComponent>;

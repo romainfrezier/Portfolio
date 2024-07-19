@@ -8,6 +8,10 @@ import {DataServiceMock} from "@tests/mocks/data.service.mock";
 import {fakeWorkExperiences} from "@tests/fake.data";
 import {AppConstants} from "@app/app.constants";
 
+/**
+ * @author Romain Frezier
+ * @test
+ */
 describe('ExperienceComponent', () => {
   let component: WorkExperiencesComponent;
   let fixture: ComponentFixture<WorkExperiencesComponent>;

@@ -4,6 +4,10 @@ import {AppConstants} from '@app/app.constants';
 
 jest.useFakeTimers();
 
+/**
+ * @author Romain Frezier
+ * @test
+ */
 describe('ToastService', () => {
   let service: ToastService;
 

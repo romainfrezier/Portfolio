@@ -4,6 +4,10 @@ import {AppConstants} from '@app/app.constants';
 import {MockLocalStorage} from '@tests/mocks/local-storage.mock';
 import {Observable} from "rxjs";
 
+/**
+ * @author Romain Frezier
+ * @test
+ */
 describe('ThemesService', () => {
   let service: ThemesService;
   let mockLocalStorage: MockLocalStorage;

@@ -8,6 +8,10 @@ import {ThemesServiceMock} from "@tests/mocks/themes.service.mock";
 import {DebugElement} from "@angular/core";
 import {By} from "@angular/platform-browser";
 
+/**
+ * @author Romain Frezier
+ * @test
+ */
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
   let fixture: ComponentFixture<HeaderComponent>;
