@@ -1,11 +1,11 @@
-<h1 style="text-align: center;">Portfolio</h1>
-<div style="text-align: center;">
+<h1 align="center" style="text-align: center;">Portfolio</h1>
+<div align="center" style="text-align: center;">
   <img src="documentation/assets/badges/coverage-badge.svg" alt="Coverage"/>
   <img src="documentation/assets/badges/test-badge.svg" alt="Test"/>
   <img src="documentation/assets/badges/sonar-badge.svg" alt="Sonar"/>
 </div>
-<h3 style="text-align: center;">Technologies</h3>
-<div style="text-align: center;">
+<h3 align="center" style="text-align: center;">Technologies</h3>
+<div align="center" style="text-align: center;">
   <img src="https://img.shields.io/badge/Angular-v18-red?logo=angular&labelColor=red" alt="Angular"/>
   <img src="https://img.shields.io/badge/Jest-v29-green?logo=jest&labelColor=green" alt="Jest"/>
   <img src="https://img.shields.io/badge/SonarQube-v10-blue?logo=sonarqube&labelColor=blue" alt="SonarQube"/>
@@ -15,7 +15,7 @@
 
 ---
 
-<div style="text-align: center;">
+<div align="center" style="text-align: center;">
   <a href="#description">Description</a> •
   <a href="#installation">Installation</a> •
   <a href="#usage">Usage</a> •
@@ -23,7 +23,7 @@
 </div>
 
 ---
-<div style="text-align: center">
+<div align="center" style="text-align: center">
   <img style="border-radius: 15px; max-height: 600px" src="documentation/assets/preview.jpeg" alt="preview"/>
 </div>
 
