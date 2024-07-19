@@ -16,6 +16,7 @@
 ---
 
 <div align="center" style="text-align: center;">
+  <a href="https://romainfrezier.com/">Live demo</a> •
   <a href="#description">Description</a> •
   <a href="#installation">Installation</a> •
   <a href="#usage">Usage</a> •
