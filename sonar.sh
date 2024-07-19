@@ -5,7 +5,7 @@ export $(grep -v '^#SONAR_TOKEN' .env | xargs)
 export $(grep -v '^#SONAR_HOST_URL' .env | xargs)
 
 # Run sonar scanner
-npm run sonar
+yarn run sonar
 
 # Quality gate check
 response=$(curl -s -H "Authorization: Bearer ${SONAR_TOKEN}" "${SONAR_HOST_URL}/api/qualitygates/project_status?projectKey=Portfolio")

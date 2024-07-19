@@ -40,6 +40,7 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 **Prerequisites**
 
 - `nvm`
+- `yarn`
 
 First, use the correct version of node (version 22) :
 
@@ -50,7 +51,7 @@ nvm use
 To install the necessary dependencies, run the following command:
 
 ```bash
-npm install
+yarn
 ```
 
 ## Usage
@@ -60,7 +61,7 @@ npm install
 To run the application, use the following command:
 
 ```bash
-npm start
+yarn start
 ```
 
 The application will be running on `http://localhost:4200`.
@@ -70,13 +71,13 @@ The application will be running on `http://localhost:4200`.
 To run tests, use the following command:
 
 ```bash
-npm run test
+yarn run test
 ```
 
 or to run tests with coverage, use the following command:
 
 ```bash
-npm run test:coverage
+yarn run test:coverage
 ```
 
 ### SonarQube
