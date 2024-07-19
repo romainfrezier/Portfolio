@@ -1,24 +1,37 @@
-# Portfolio
+<h1 style="text-align: center;">Portfolio</h1>
+<div style="text-align: center;">
+  <img src="documentation/badges/coverage-badge.svg" alt="Coverage"/>
+  <img src="documentation/badges/test-badge.svg" alt="Test"/>
+  <img src="documentation/badges/sonar-badge.svg" alt="Sonar"/>
+</div>
+<h2 style="text-align: center;">Technologies</h2>
+<div style="text-align: center;">
+  <img src="https://img.shields.io/badge/Angular-v18-red?logo=angular&labelColor=red" alt="Angular"/>
+  <img src="https://img.shields.io/badge/Jest-v29-green?logo=jest&labelColor=green" alt="Jest"/>
+  <img src="https://img.shields.io/badge/SonarQube-v10-blue?logo=sonarqube&labelColor=blue" alt="SonarQube"/>
+  <img src="https://img.shields.io/badge/Firebase%20Hosting-v10-yellow?logo=firebase&labelColor=yellow" alt="Firebase"/>
+  <img src="https://img.shields.io/badge/GitHub%20Actions-v4-black?logo=github&labelColor=black" alt="GitHub Actions"/>
+</div>
 
-![](documentation/badges/coverage-badge.svg)
-![](documentation/badges/test-badge.svg)
-![](documentation/badges/sonar-badge.svg)
+---
 
-## Technologies
+<div style="text-align: center;">
+  <a href="#description">Description</a> •
+  <a href="#license">License</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#usage">Usage</a>
+</div>
 
-![](https://img.shields.io/badge/Angular-v18-red?logo=angular&labelColor=red)
-![](https://img.shields.io/badge/Jest-v29-green?logo=jest&labelColor=green)
-![](https://img.shields.io/badge/SonarQube-v10-blue?logo=sonarqube&labelColor=blue)
-![](https://img.shields.io/badge/Firebase%20Hosting-v10-yellow?logo=firebase&labelColor=yellow)
-![](https://img.shields.io/badge/GitHub%20Actions-v3-black?logo=github&labelColor=black)
+---
 
 ## Table of Contents
 
 <!-- TOC -->
-* [Portfolio](#portfolio)
-  * [Technologies](#technologies)
   * [Table of Contents](#table-of-contents)
   * [Description](#description)
+    * [Features](#features)
+    * [Purpose](#purpose)
+    * [How It Works](#how-it-works)
   * [License](#license)
   * [Installation](#installation)
   * [Usage](#usage)
@@ -29,7 +42,34 @@
 
 ## Description
 
-This is a portfolio website that showcases my work and provides a way to contact me.
+This portfolio website showcases my work, skills, and projects, serving as a professional hub for potential employers, collaborators, and clients.
+
+### Features
+
+- Project Gallery: Displays selected projects with descriptions, technologies used, and links to demos and source code.
+- Responsive Design: Ensures a seamless experience on all devices.
+- Contact Form: Allows visitors to contact me directly.
+- Technology Stack: Highlights the tools and technologies I use with badges and version info.
+
+### Purpose
+
+The portfolio aims to:
+
+- Showcase Skills and Experience: Provides a comprehensive view of my capabilities through detailed project presentations.
+- Facilitate Networking: Encourages connections and opportunities with an easy-to-use contact form.
+- Share Knowledge: Includes a blog section for sharing insights and tutorials.
+
+### How It Works
+
+Built with modern web technologies for performance and maintainability:
+
+- Frontend: Developed with Angular for a dynamic user interface.
+- Testing: Uses Jest for reliable and high-quality code.
+- Code Quality: SonarQube integration to maintain code standards.
+- Hosting: Deployed on Firebase Hosting.
+- CI/CD: Utilizes GitHub Actions for continuous integration and deployment.
+
+This portfolio is a dynamic platform that effectively showcases my professional journey and technical expertise.
 
 ## License
 

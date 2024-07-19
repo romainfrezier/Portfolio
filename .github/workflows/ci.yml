@@ -75,7 +75,7 @@ jobs:
           npm install yarn
           yarn
       - name: Install Angular CLI
-        run: yarn install -g @angular/cli
+        run: yarn global add @angular/cli
       - name: Create environment directory
         run: mkdir -p ./src/environments
       - name: Create environment files
