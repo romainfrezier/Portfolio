@@ -1,5 +1,15 @@
 [
   {
+    "name": "Projet de Fin d'Études (PFE)",
+    "date": "Décembre 2023 - Mars 2024",
+    "languages": "Unity, C#, Python, Docker, Flask, MeshLab, ROS",
+    "number": "3",
+    "description": "L'armée française souhaite améliorer l'efficacité opérationnelle et la sécurité de ses troupes en combinant capacités humaines et robotiques. Dans la mission CoHoMa 3, des drones sont utilisés pour localiser, identifier et neutraliser des cibles. L'objectif est de déveloper une application pour un casque VR intégrant une interface utilisateur pour la navigation 3D et la gestion des drones, en communiquant avec ROS pour les données et le contrôle des drones.",
+    "demoLink": "https://www.youtube.com/embed/ymnuewu8O-4?rel=0&autoplay=0&mute=1",
+    "githubLink": "",
+    "documentUrl": ""
+  },
+  {
     "name": "Projet IWA",
     "date": "Septembre 2023 - Novembre 2023",
     "languages": "React Native, Java, Kotlin, Docker, Spring Boot, Spring WebFlux, Keycloak, Kafka, MongoDB, PostgreSQL",

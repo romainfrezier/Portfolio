@@ -85,6 +85,12 @@
     color: map.get($dark-theme, 'text');
   }
 
+  .soft-skills {
+    img {
+      filter: invert(13%) sepia(62%) saturate(3760%) hue-rotate(269deg) brightness(80%) contrast(137%);
+    }
+  }
+
   .home-mountains {
     filter: invert(13%) sepia(62%) saturate(3760%) hue-rotate(269deg) brightness(80%) contrast(137%);
   }

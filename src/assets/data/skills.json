@@ -1,78 +1,55 @@
 {
   "programming_languages": [
+
     {
       "id": 1,
-      "name": "Python",
-      "src": "/assets/images/skills/python-logo.webp",
-      "link": "https://www.python.org/"
-    },
-    {
-      "id": 2,
-      "name": "Swift",
-      "src": "/assets/images/skills/swift-logo.webp",
-      "link": "https://swift.org/"
-    },
-    {
-      "id": 3,
       "name": "Java",
       "src": "/assets/images/skills/java-logo.webp",
       "link": "https://www.java.com/"
     },
     {
-      "id": 4,
-      "name": "Kotlin",
-      "src": "/assets/images/skills/kotlin-logo.webp",
-      "link": "https://kotlinlang.org/"
+      "id": 2,
+      "name": "PHP",
+      "src": "/assets/images/skills/php-logo.webp",
+      "link": "https://www.php.net/"
     },
     {
-      "id": 5,
-      "name": "C",
-      "src": "/assets/images/skills/c-logo.webp",
-      "link": "https://en.wikipedia.org/wiki/C_(programming_language)"
+      "id": 3,
+      "name": "Python",
+      "src": "/assets/images/skills/python-logo.webp",
+      "link": "https://www.python.org/"
     }
   ],
   "web": [
     {
       "id": 1,
-      "name": "Angular",
-      "src": "/assets/images/skills/angular-logo.webp",
-      "link": "https://angular.io/"
-    },
-    {
-      "id": 2,
-      "name": "React",
-      "src": "/assets/images/skills/react-logo.webp",
-      "link": "https://reactjs.org/"
-    },
-    {
-      "id": 4,
-      "name": "SCSS",
-      "src": "/assets/images/skills/scss-logo.webp",
-      "link": "https://sass-lang.com/"
-    },
-    {
-      "id": 5,
-      "name": "Express",
-      "src": "/assets/images/skills/express-logo.webp",
-      "link": "https://expressjs.com/"
-    },
-    {
-      "id": 6,
-      "name": "Quarkus",
-      "src": "/assets/images/skills/quarkus-logo.webp",
-      "link": "https://quarkus.io/"
-    },
-    {
-      "id": 7,
       "name": "Spring Boot",
       "src": "/assets/images/skills/spring-boot-logo.webp",
       "link": "https://spring.io/projects/spring-boot"
     },
     {
-      "id": 8,
+      "id": 2,
       "name": "Laravel",
       "src": "/assets/images/skills/laravel-logo.webp",
       "link": "https://laravel.com/"
+    },
+    {
+      "id": 3,
+      "name": "Quarkus",
+      "src": "/assets/images/skills/quarkus-logo.webp",
+      "link": "https://quarkus.io/"
+    },
+    {
+      "id": 4,
+      "name": "Angular",
+      "src": "/assets/images/skills/angular-logo.webp",
+      "link": "https://angular.io/"
+    },
+    {
+      "id": 5,
+      "name": "React",
+      "src": "/assets/images/skills/react-logo.webp",
+      "link": "https://reactjs.org/"
     }
   ],
   "db": [
@@ -110,45 +87,21 @@
     },
     {
       "id": 3,
-      "name": "Postman",
-      "src": "/assets/images/skills/postman-logo.webp",
-      "link": "https://www.postman.com/"
+      "name": "JetBrains IDE",
+      "src": "/assets/images/skills/jetbrains-logo.webp",
+      "link": "https://www.jetbrains.com/"
     },
     {
-      "id": 5,
-      "name": "Jira",
-      "src": "/assets/images/skills/jira-logo.webp",
-      "link": "https://www.atlassian.com/software/jira"
-    },
-    {
-      "id": 6,
-      "name": "IntelliJ",
-      "src": "/assets/images/skills/intellij-logo.webp",
-      "link": "https://www.jetbrains.com/idea/"
-    },
-    {
-      "id": 7,
-      "name": "WebStorm",
-      "src": "/assets/images/skills/webstorm-logo.webp",
-      "link": "https://www.jetbrains.com/webstorm/"
-    },
-    {
-      "id": 8,
+      "id": 4,
       "name": "Figma",
       "src": "/assets/images/skills/figma-logo.webp",
       "link": "https://www.figma.com/"
     },
     {
-      "id": 9,
+      "id": 5,
       "name": "Gimp",
       "src": "/assets/images/skills/gimp-logo.webp",
       "link": "https://www.gimp.org/"
-    },
-    {
-      "id": 10,
-      "name": "Unity",
-      "src": "/assets/images/skills/unity-logo.webp",
-      "link": "https://unity.com/"
     }
   ],
   "services": [
@@ -172,12 +125,6 @@
     },
     {
       "id": 4,
-      "name": "Keycloak",
-      "src": "/assets/images/skills/keycloak-logo.webp",
-      "link": "https://www.keycloak.org/"
-    },
-    {
-      "id": 5,
       "name": "Apache Kafka",
       "src": "/assets/images/skills/kafka-logo.webp",
       "link": "https://kafka.apache.org/"

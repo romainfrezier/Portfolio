@@ -1,5 +1,15 @@
 [
   {
+    "name": "Final Year Project (PFE)",
+    "date": "December 2023 - March 2024",
+    "languages": "Unity, C#, Python, Docker, Flask, MeshLab, ROS",
+    "number": "3",
+    "description": "The French army aims to improve the operational efficiency and security of its troops by combining human and robotic capabilities. In the CoHoMa 3 mission, drones are being used to locate, identify and neutralize targets. The aim is to develop an application for a VR headset integrating a user interface for 3D navigation and drone management, communicating with ROS for data and drone control.",
+    "demoLink": "https://www.youtube.com/embed/ymnuewu8O-4?rel=0&autoplay=0&mute=1",
+    "githubLink": "",
+    "documentUrl": ""
+  },
+  {
     "name": "IWA Project",
     "date": "September 2023 - November 2023",
     "languages": "React Native, Java, Kotlin, Docker, Spring Boot, Spring WebFlux, Keycloak, Kafka, MongoDB, PostgreSQL",

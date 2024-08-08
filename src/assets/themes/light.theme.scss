@@ -39,6 +39,12 @@
     background-image: linear-gradient(to right, map.get($light-theme, 'contrast'), color.adjust(map.get($light-theme, 'contrast'), $alpha: -0.5));
   }
 
+  .soft-skills {
+    img {
+      filter: invert(13%) sepia(8%) saturate(12%) hue-rotate(351deg) brightness(106%) contrast(83%);
+    }
+  }
+
   .link-circle {
     background-image: linear-gradient(to bottom, map.get($light-theme, 'contrast'),  color.adjust(map.get($light-theme, 'contrast'), $alpha: -0.5));
     box-shadow: rgb(0 0 0 / 25%) 0 0 20px 1px;
