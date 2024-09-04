@@ -18,8 +18,8 @@
   },
   "home": {
     "name": "Hello, I am Romain Frezier.",
-    "role": "I'm {{age}} years old and I'm a 5th (and last) year engineering student in Computer Science and Management at Polytech Montpellier, France.",
-    "roleDescription": "I'm currently working at Infomaniak in Geneva for my end-of-studies internship.",
+    "role": "I'm {{age}} years old and I'm a computer science engineer from Polytech Montpellier, France.",
+    "roleDescription": "I'm currently working at Infomaniak in Geneva as a junior full-stack engineer.",
     "contact-me": "Don't hesitate to contact me! You'll find my social networks and a contact form below. I'll be happy to get back to you"
   },
   "about": {
