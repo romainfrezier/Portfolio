@@ -1,3 +1,5 @@
+import {Position} from "@models/position.model";
+
 /**
  * @author Romain Frezier
  * @model
@@ -5,17 +7,6 @@
  * Represents a work experience
  */
 export type WorkExperience = {
-  /**
-   * A brief description of the work experience
-   */
-  description: string;
-
-  /**
-   * The date or period of the work experience
-   * Should be in a standard date format (e.g., 'April - June 2024')
-   */
-  date: string;
-
   /**
    * The skills utilized or gained during the work experience, typically listed as a comma-separated string
    */
@@ -27,9 +18,9 @@ export type WorkExperience = {
   place: string;
 
   /**
-   * The position or job title held during the work experience
+   * The positions or job titles held during the work experiences
    */
-  position: string;
+  positions: Position[];
 
   /**
    * The name of the company where the work experience took place

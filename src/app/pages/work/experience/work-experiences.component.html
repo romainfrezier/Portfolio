@@ -11,14 +11,10 @@
             alt="Logo {{ experience.company }}"
           />
         </div>
+
         <div class="experience-info">
           <h2>{{ experience.company }}</h2>
-          <p class="italic">{{ experience.position }}</p>
-          <p class="bold">
-            {{ "work_experiences.date" | translate }} : {{ experience.date }}
-          </p>
           <p>{{ experience.place }}</p>
-          <p>{{ experience.description | translate }}</p>
           <p>
             {{
               (experience.skills.split(",").length === 1
@@ -31,6 +27,15 @@
           <a href="{{ experience.companyUrl }}" rel="noopener" target="_blank">{{
               "work_experiences.company_url" | translate
             }}</a>
+          @for (position of experience.positions; track $index) {
+            <div class="position-item {{ $index < experience.positions.length - 1 ? 'has-next' : '' }} {{ $index === 0 ? 'first' : ''}}">
+              <p class="italic">{{ position.position }}</p>
+              <p class="bold">
+                {{ "work_experiences.date" | translate }} : {{ position.date }}
+              </p>
+              <p>{{ position.description }}</p>
+            </div>
+          }
         </div>
       </div>
     }

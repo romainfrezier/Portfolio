@@ -4,29 +4,46 @@
     "companyUrl": "https://infomaniak.com/",
     "companyLogo": "assets/images/work-experiences/infomaniak.webp",
     "place": "Genève, Suisse",
-    "date": "Mars 2024 - Août 2024",
-    "position": "Stagiaire Développer Fullstack",
-    "skills": "Angular, Laravel, MariaDB, Git, Docker, Jira, SCRUM, Communication",
-    "description": "Pendant mon stage chez Infomaniak, je participe au développement d'une application de gestion de billetterie. Mon travail se concentre sur plusieurs fonctionnalités telles que la duplication d'événements sur différentes billetteries. Cette application propose un service complet de billetterie pour les entreprises, les associations et diverses organisations qui organisent des événements."
+    "positions": [
+      {
+        "position": "Ingénieur Fullstack Junior",
+        "date": "Septembre 2024 - Aujourd'hui",
+        "description": "En tant qu’ingénieur fullstack junior chez Infomaniak, je continue à travailler au sein de l’équipe Billetterie comme je l’ai fais durant mon stage. Je travaille majoritairement sur la partie backend en Laravel, mais également sur la partie frontend en Angular. Je fais partie intégrante de l’équipe de développement organisée avec SCRUM."
+      },
+      {
+        "position": "Stagiaire Développeur Fullstack",
+        "date": "Mars 2024 - Août 2024",
+        "description": "Pendant mon stage chez Infomaniak, j’ai participé au développement de nouvelles fonctionnalités pour une application de gestion de billetterie. Cette application propose un service complet de billetterie pour les entreprises, les associations et diverses organisations qui organisent des événements."
+      }
+    ],
+    "skills": "Angular, Laravel, MariaDB, Git, Docker, Jira, SCRUM, Communication"
   },
   {
     "company": "Reactional Music",
     "companyUrl": "https://reactionalmusic.com/",
     "companyLogo": "assets/images/work-experiences/reactional-music.webp",
     "place": "Stockholm, Suède",
-    "date": "Juin 2023 - Août 2023",
-    "position": "Fullstack Developer Intern",
-    "skills": "React, TypeScript, GitLab, Firebase, Figma, Notion, Agilité, Communication",
-    "description": "En tant que stagiaire chez Reactional Music, j'ai travaillé sur une application destinée aux compositeurs de musique, et j'ai développé certaines fonctionnalités comme la page de configuration, la connexion à un compte reactional ou la gestion des thèmes. Cette application permet aux compositeurs de créer et de partager leurs thèmes musicaux pour les jeux vidéo."
+    "positions": [
+      {
+        "position": "Fullstack Developer Intern",
+        "date": "Juin 2023 - Août 2023",
+        "description": "En tant que stagiaire chez Reactional Music, j'ai travaillé sur une application destinée aux compositeurs de musique, et j'ai développé certaines fonctionnalités comme la page de configuration, la connexion à un compte reactional ou la gestion des thèmes. Cette application permet aux compositeurs de créer et de partager leurs thèmes musicaux pour les jeux vidéo."
+      }
+    ],
+    "skills": "React, TypeScript, GitLab, Firebase, Figma, Notion, Agilité, Communication"
   },
   {
     "company": "JTech SA",
     "companyUrl": "https://www.j-tech.ch/",
     "companyLogo": "assets/images/work-experiences/jtech.webp",
     "place": "Genève, Suisse",
-    "date": "Juillet 2017, 2018, 2019, 2020, 2021, 2022",
-    "position": "Monteur en ventilation",
-    "skills": "Travail d'équipe, Adaptabilité, Communication",
-    "description": "J'ai travaillé comme monteur en ventilation pendant mes vacances d'été. J'ai appris à travailler en équipe et à m'adapter à différentes situations."
+    "positions": [
+      {
+        "position": "Monteur en ventilation",
+        "date": "Juillet 2017, 2018, 2019, 2020, 2021, 2022",
+        "description": "J'ai travaillé comme monteur en ventilation pendant mes vacances d'été. J'ai appris à travailler en équipe et à m'adapter à différentes situations."
+      }
+    ],
+    "skills": "Travail d'équipe, Adaptabilité, Communication"
   }
 ]
