@@ -8,12 +8,12 @@
       {
         "position": "Ingénieur Fullstack Junior",
         "date": "Septembre 2024 - Aujourd'hui",
-        "description": "En tant que développeur fullstack junior chez Infomaniak, je travaille sur le développement de nouvelles fonctionnalités pour l'application de gestion de billetterie. Je participe à la conception, au développement et à la maintenance de l'application. Je travaille en étroite collaboration avec l'équipe de développement pour assurer la qualité et la fiabilité de l'application."
+        "description": "En tant qu’ingénieur fullstack junior chez Infomaniak, je continue à travailler au sein de l’équipe Billetterie comme je l’ai fais durant mon stage. Je travaille majoritairement sur la partie backend en Laravel, mais également sur la partie frontend en Angular. Je fais partie intégrante de l’équipe de développement organisée avec SCRUM."
       },
       {
         "position": "Stagiaire Développeur Fullstack",
         "date": "Mars 2024 - Août 2024",
-        "description": "Pendant mon stage chez Infomaniak, je participe au développement d'une application de gestion de billetterie. Mon travail se concentre sur plusieurs fonctionnalités telles que la duplication d'événements sur différentes billetteries. Cette application propose un service complet de billetterie pour les entreprises, les associations et diverses organisations qui organisent des événements."
+        "description": "Pendant mon stage chez Infomaniak, j’ai participé au développement de nouvelles fonctionnalités pour une application de gestion de billetterie. Cette application propose un service complet de billetterie pour les entreprises, les associations et diverses organisations qui organisent des événements."
       }
     ],
     "skills": "Angular, Laravel, MariaDB, Git, Docker, Jira, SCRUM, Communication"
