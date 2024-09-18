@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {Router} from "@angular/router";
 
 /**
  * @author Romain Frezier
@@ -12,4 +13,18 @@ import {Component} from '@angular/core';
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss'],
 })
-export class AboutComponent {}
+export class AboutComponent {
+  /**
+   * @constructor
+   * @param router The router service
+   */
+  constructor(private router: Router) {}
+
+  /**
+   * Go to the photos section
+   * @return void
+   */
+  public goToPhotos(): void {
+    this.router.navigate(['/photos']);
+  }
+}

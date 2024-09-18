@@ -11,6 +11,7 @@ export class AppConstants {
     public static readonly ACHIEVEMENTS = 'achievements';
     public static readonly RESUME = 'resume';
     public static readonly SKILLS = 'skills';
+    public static readonly PHOTOS = 'photos';
     public static readonly ERROR = 'error';
 
     public static readonly SCHOOL_PROJECTS = 'school-projects';
