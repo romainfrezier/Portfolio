@@ -78,7 +78,7 @@ jobs:
       - name: Install dependencies
         run: yarn
       - name: Install Angular CLI
-        run: yarn global add @angular/cli
+        run: yarn dlx @angular/cli
       - name: Create environment directory
         run: mkdir -p ./src/environments
       - name: Create environment files
