@@ -1,23 +1,31 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {PhotoModalComponent} from './photo-modal.component';
+import {TranslateService} from "@ngx-translate/core";
+import {TranslateServiceMock} from "@tests/mocks/translate.service.mock";
 
 describe('PhotoModalComponent', () => {
   let component: PhotoModalComponent;
   let fixture: ComponentFixture<PhotoModalComponent>;
 
-  beforeEach(async () => {
+  beforeEach(async (): Promise<void> => {
     await TestBed.configureTestingModule({
-      imports: [PhotoModalComponent]
-    })
-    .compileComponents();
+      declarations: [PhotoModalComponent],
+      providers: [
+        {provide: TranslateService, useClass: TranslateServiceMock}
+      ]
+    }).compileComponents();
+  });
 
+  beforeEach((): void => {
     fixture = TestBed.createComponent(PhotoModalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  describe('Component', () => {
+    it('should create', () => {
+      expect(component).toBeTruthy();
+    });
   });
 });
