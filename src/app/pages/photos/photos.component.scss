@@ -1,4 +1,4 @@
-h2 {
+h1 {
   text-align: center;
 }
 
@@ -10,8 +10,8 @@ h2 {
   padding: 20px;
 
   .gallery-item {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgb(0 0 0 / 20%);
@@ -27,21 +27,21 @@ h2 {
 
 @media (width <= 1200px) {
   .gallery-item {
-    width: 180px;
-    height: 180px;
+    width: 280px;
+    height: 280px;
   }
 }
 
 @media (width <= 900px) {
   .gallery-item {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
   }
 }
 
 @media (width <= 600px) {
   .gallery-item {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
   }
 }

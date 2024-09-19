@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Component, EventEmitter, HostListener, Input, Output} from '@angular/core';
 
 /**
  * @author Romain Frezier
@@ -39,5 +39,11 @@ export class PhotoModalComponent {
    */
   public close() {
     this.closeModal.emit();
+  }
+
+  @HostListener('document:keydown.escape', ['$event'])
+  private handleKeyboardEvent(event: KeyboardEvent): void {
+    event.preventDefault();
+    this.close();
   }
 }

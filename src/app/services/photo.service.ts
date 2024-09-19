@@ -24,7 +24,7 @@ export class PhotoService {
    * Get all images from the storage
    */
   public getImages(): Observable<string[]> {
-    const storageRef = this.storage.ref('/');
+    const storageRef = this.storage.ref('/photos/');
     return storageRef.listAll().pipe(
       switchMap(result => {
         const urlPromises = result.items.map(itemRef => itemRef.getDownloadURL());
