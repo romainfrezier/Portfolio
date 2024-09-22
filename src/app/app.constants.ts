@@ -41,4 +41,11 @@ export class AppConstants {
     }
     public static readonly DELAY = 3000;
   }
+
+  public static readonly SWIPE = class {
+    public static readonly LEFT = 'left';
+    public static readonly RIGHT = 'right';
+    public static readonly UP = 'up';
+    public static readonly DOWN = 'down';
+  }
 }

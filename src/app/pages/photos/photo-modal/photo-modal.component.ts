@@ -41,6 +41,10 @@ export class PhotoModalComponent {
     this.closeModal.emit();
   }
 
+  /**
+   * Handles the escape key to close the modal
+   * @param event
+   */
   @HostListener('document:keydown.escape', ['$event'])
   private handleKeyboardEvent(event: KeyboardEvent): void {
     event.preventDefault();
