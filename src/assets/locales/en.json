@@ -100,5 +100,9 @@
     "submit": "Send",
     "success": "Your message has been sent successfully",
     "error": "Your message could not be sent. The mailbox seems full..."
+  },
+  "photos": {
+    "title": "Some photos of my adventures",
+    "see": "See my photos"
   }
 }

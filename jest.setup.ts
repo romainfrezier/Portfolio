@@ -10,6 +10,8 @@ import {DataService} from "@services/data.service";
 import {ToastService} from "@services/toast.service";
 import {MailService} from "@services/mail.service";
 import {AppRoutingModule} from "@app/app-routing.module";
+import {PhotoService} from "@services/photo.service";
+import {AngularFireStorageModule} from "@angular/fire/compat/storage";
 
 fetchMock.enableMocks();
 
@@ -28,14 +30,16 @@ beforeEach(async () => {
           deps: [HttpClient],
         },
       }),
-      SharedModule
+      SharedModule,
+      AngularFireStorageModule
     ],
     providers: [
       provideHttpClient(withInterceptorsFromDi()),
       ThemesService,
       DataService,
       ToastService,
-      MailService
+      MailService,
+      PhotoService
     ]
   }).compileComponents();
 });

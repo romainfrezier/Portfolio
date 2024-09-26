@@ -13,6 +13,9 @@ import {SharedModule} from '@shared/shared.module';
 import {AppRoutingModule} from './app-routing.module';
 import {ToastService} from "@services/toast.service";
 import {MailService} from "@services/mail.service";
+import {AngularFireModule} from "@angular/fire/compat";
+import {AngularFireStorageModule} from "@angular/fire/compat/storage";
+import {firebaseConfig} from "@app/firebase.config";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/locales/', '.json');
@@ -27,6 +30,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     CommonModule,
     BrowserAnimationsModule,
     SharedModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireStorageModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

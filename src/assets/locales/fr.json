@@ -100,5 +100,9 @@
     "submit": "Envoyer",
     "success": "Votre message a bien été envoyé !",
     "error": "Votre message n'a pas pu être envoyé. La boîte aux lettres semble pleine..."
+  },
+  "photos": {
+    "title": "Quelques photos de mes aventures",
+    "see": "Voir mes photos"
   }
 }

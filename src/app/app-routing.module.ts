@@ -31,6 +31,11 @@ const routes: Routes = [
       import('@pages/skills/skills.module').then((m) => m.SkillsModule),
   },
   {
+    path: AppConstants.ROUTES.PHOTOS,
+    loadChildren: () =>
+      import('@pages/photos/photos.module').then((m) => m.PhotosModule),
+  },
+  {
     path: AppConstants.ROUTES.ERROR,
     loadChildren: () =>
       import('@pages/error/error.module').then((m) => m.ErrorModule),

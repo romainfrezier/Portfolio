@@ -45,6 +45,8 @@ export class ThemesService {
   public changeTheme(theme: string) {
     this.theme.next(theme);
     localStorage.setItem(AppConstants.LOCALSTORAGE.THEME, theme);
+    console.log(typeof localStorage);
+    console.log(localStorage);
     this.setHTMLTagTheme(theme);
   }
 

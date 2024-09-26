@@ -1,0 +1,21 @@
+<h1>{{ "photos.title" | translate }}</h1>
+
+<div class="gallery">
+  @for (url of imageUrls; track $index)
+  {
+    <img
+      [src]="url"
+      (click)="openModal(url)"
+      class="gallery-item"
+      alt="adventure-{{$index}}"
+      (keydown.enter)="openModal(url)"
+      tabindex="0"
+    />
+  }
+</div>
+
+<app-photo-modal
+  [imageUrl]="selectedImageUrl"
+  [isVisible]="isModalVisible"
+  (closeModal)="closeModal()">
+</app-photo-modal>

@@ -1,0 +1,47 @@
+h1 {
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px; // Espace entre les images
+  padding: 20px;
+
+  .gallery-item {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 20%);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgb(0 0 0 / 30%);
+      cursor: pointer;
+    }
+  }
+}
+
+@media (width <= 1200px) {
+  .gallery-item {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+@media (width <= 900px) {
+  .gallery-item {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (width <= 600px) {
+  .gallery-item {
+    width: 200px;
+    height: 200px;
+  }
+}

@@ -1,0 +1,25 @@
+@if (isVisible && imageUrl) {
+  <div class="modal"
+       (click)="close()"
+       (keydown.escape)="close()"
+       tabindex="0"
+  >
+    <div class="modal-content">
+      <div class="image-container">
+        <img
+          [src]="imageUrl" alt="Large view"
+          (click)="$event.stopPropagation()"
+          (keydown.enter)="$event.stopPropagation()"
+          tabindex="0"
+        />
+        <span
+          (click)="close()"
+          (keydown.enter)="close()"
+          class="close"
+          tabindex="0"
+        >&times;</span>
+      </div>
+    </div>
+  </div>
+}
+

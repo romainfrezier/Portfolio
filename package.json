@@ -20,6 +20,7 @@
     "@angular/common": "^18.0.6",
     "@angular/compiler": "^18.0.6",
     "@angular/core": "^18.0.6",
+    "@angular/fire": "18.0.1",
     "@angular/forms": "^18.0.6",
     "@angular/platform-browser": "^18.0.6",
     "@angular/platform-browser-dynamic": "^18.0.6",
@@ -57,8 +58,8 @@
     "jest-junit": "16.0.0",
     "jest-preset-angular": "^14.1.1",
     "lint-staged": "^15.2.7",
-    "prettier": "^3.0.0",
     "postcss": "^8.4.29",
+    "prettier": "^3.0.0",
     "sonarqube-scanner": "^4.0.1",
     "stylelint": "^16.6.1",
     "stylelint-config-standard": "^36.0.1",
@@ -79,5 +80,6 @@
     "*.scss": [
       "stylelint --fix"
     ]
-  }
+  },
+  "packageManager": "yarn@4.3.1+sha512.af78262d7d125afbfeed740602ace8c5e4405cd7f4735c08feb327286b2fdb2390fbca01589bfd1f50b1240548b74806767f5a063c94b67e431aabd0d86f7774"
 }
