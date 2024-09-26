@@ -48,6 +48,7 @@ export class PhotosComponent implements OnInit {
   */
   public openModal(url: string): void {
     this.selectedImageUrl = url;
+    this.currentIndex = this.imageUrls.indexOf(url);
     this.isModalVisible = true;
 
     document.body.style.overflow = 'hidden';
@@ -60,6 +61,7 @@ export class PhotosComponent implements OnInit {
   public closeModal(): void {
     this.isModalVisible = false;
     this.selectedImageUrl = null;
+    this.currentIndex = -1;
 
     document.body.style.overflow = '';
   }
