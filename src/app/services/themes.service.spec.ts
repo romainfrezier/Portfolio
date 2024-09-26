@@ -46,9 +46,8 @@ describe('ThemesService', () => {
 
   it('should change theme and update localStorage', () => {
     service.changeTheme(AppConstants.THEMES.LIGHT);
-    expect(mockLocalStorage.getItem(AppConstants.LOCALSTORAGE.THEME)).toBe(AppConstants.THEMES.LIGHT);
-
     service.currentTheme.subscribe(theme => {
+      expect(mockLocalStorage.getItem(AppConstants.LOCALSTORAGE.THEME)).toBe(AppConstants.THEMES.LIGHT);
       expect(theme).toBe(AppConstants.THEMES.LIGHT);
     });
   });

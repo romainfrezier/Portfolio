@@ -68,7 +68,7 @@ export class PhotosComponent implements OnInit {
    * Shows the previous image in the gallery
    * @returns void
    */
-  private showPreviousImage(): void {
+  showPreviousImage(): void {
     if (this.currentIndex > 0) {
       this.currentIndex--;
       this.selectedImageUrl = this.imageUrls[this.currentIndex];
@@ -79,7 +79,7 @@ export class PhotosComponent implements OnInit {
    * Shows the next image in the gallery
    * @returns void
    */
-  private showNextImage(): void {
+  showNextImage(): void {
     if (this.currentIndex < this.imageUrls.length - 1) {
       this.currentIndex++;
       this.selectedImageUrl = this.imageUrls[this.currentIndex];
@@ -92,7 +92,7 @@ export class PhotosComponent implements OnInit {
    * @returns void
    */
   @HostListener('window:keydown', ['$event'])
-  private handleKeyDown(event: KeyboardEvent): void {
+  handleKeyDown(event: KeyboardEvent): void {
     if (!this.isModalVisible) return;
 
     if (event.key === 'ArrowLeft') {
@@ -108,7 +108,7 @@ export class PhotosComponent implements OnInit {
    * @returns void
   */
   @HostListener('touchstart', ['$event'])
-  private onTouchStart(event: TouchEvent): void {
+  onTouchStart(event: TouchEvent): void {
     if (!this.isModalVisible) return;
 
     this.swipeService.handleTouchStart(event);
@@ -120,7 +120,7 @@ export class PhotosComponent implements OnInit {
    * @returns void
    */
   @HostListener('touchend', ['$event'])
-  private onTouchEnd(event: TouchEvent): void {
+  onTouchEnd(event: TouchEvent): void {
     if (!this.isModalVisible) return;
 
     const swipeDirection: string = this.swipeService.handleTouchEnd(event);
