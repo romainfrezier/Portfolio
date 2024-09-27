@@ -19,7 +19,7 @@
   "home": {
     "name": "Bonjour, je m'appelle Romain Frezier.",
     "role": "J'ai {{age}} ans et je suis un ingénieur en Informatique et Gestion de Polytech Montpellier, France.",
-    "roleDescription": "Je travail actuellement chez Infomaniak en tant qu'ingénieur full-stack junior.",
+    "roleDescription": "Je travaille actuellement chez Infomaniak en tant qu'ingénieur full-stack junior.",
     "contact-me": "N'hésitez pas à me contacter ! Vous trouverez mes réseaux sociaux et un formulaire de contact ci-dessous. Je serai ravi de répondre à vos messages"
   },
   "about": {
