@@ -2,25 +2,32 @@ h1 {
   text-align: center;
 }
 
-.gallery {
+.gallery-wrapper {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 15px; // Espace entre les images
-  padding: 20px;
+  width: 100%;
 
-  .gallery-item {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgb(0 0 0 / 20%);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1700px;
 
-    &:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 16px rgb(0 0 0 / 30%);
-      cursor: pointer;
+    .gallery-item {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgb(0 0 0 / 20%);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgb(0 0 0 / 30%);
+        cursor: pointer;
+      }
     }
   }
 }
