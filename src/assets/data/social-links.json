@@ -13,5 +13,10 @@
     "name": "messenger",
     "url": "https://m.me/frezierromain",
     "icon": "assets/images/messenger-social.webp"
+  },
+  {
+    "name": "strava",
+    "url": "https://www.strava.com/athletes/75641966",
+    "icon": "assets/images/strava-social.webp"
   }
 ]

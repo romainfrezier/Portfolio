@@ -69,7 +69,7 @@
 
       .links {
         display: flex;
-        flex-direction: row;
+        flex-flow: row wrap;
         align-items: center;
         justify-content: center;
         gap: 20px;
