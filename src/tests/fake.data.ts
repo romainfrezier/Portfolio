@@ -5,6 +5,8 @@ import {Achievement} from "@models/achievement.model";
 import {Skills} from "@models/skills.model";
 import {Link} from "@models/link.model";
 import {Position} from "@models/position.model";
+import {Education} from "@models/education.model";
+import {Diploma} from "@models/diploma.model";
 
 export const fakeSchoolProjects: SchoolProject[] = [
   {
@@ -51,6 +53,30 @@ export const fakeWorkExperiences: WorkExperience[] = [
     "company": 'Company of work experience 1',
     "companyUrl": 'https://company.com',
     "companyLogo": 'https://logo.com'
+  }
+];
+
+const fakeDiplomas: Diploma[] = [
+  {
+    "description": 'Description of position 1',
+    "date": '2021',
+    "place": "Place",
+    "skills": 'lang'
+  },
+  {
+    "description": 'Description of position 2',
+    "date": '2021',
+    "place": "Place",
+    "skills": 'lang'
+  }
+];
+
+export const fakeEducation: Education[] = [
+  {
+    "diplomas": fakeDiplomas,
+    "school": 'School 1',
+    "schoolUrl": 'https://school.com',
+    "schoolLogo": 'https://logo.com'
   }
 ];
 

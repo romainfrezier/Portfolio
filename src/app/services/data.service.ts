@@ -7,6 +7,7 @@ import {PersonalProject} from '@models/personal-project.model';
 import {WorkExperience} from '@models/work-experience.model';
 import {Skills} from '@models/skills.model';
 import {Link} from "@models/link.model";
+import {Education} from "@models/education.model";
 
 /**
  * @author Romain Frezier
@@ -93,5 +94,13 @@ export class DataService {
    */
   public getLinks(): Observable<Link[]> {
     return this.http.get<Link[]>('./assets/data/social-links.json');
+  }
+
+  /**
+   * Fetches educations data.
+   * @returns An observable of an array of Education objects.
+   */
+  public getEducation(lang: string): Observable<Education[]> {
+    return this.http.get<Education[]>(`./assets/data/${lang}/education.json`);
   }
 }

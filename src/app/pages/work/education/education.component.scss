@@ -1,0 +1,141 @@
+.education-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+
+  h1 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 50px;
+    height: 10%;
+    width: 70%;
+    border-bottom: 2px solid;
+    padding-bottom: 25px;
+
+    @media (width <= 1000px) {
+      margin: 30px;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: min-content;
+    width: 90%;
+
+    .course-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: min(1000px, 90%);
+      height: min-content;
+      margin: 1rem;
+
+      .logo-container {
+        width: 50%;
+        height: min-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+
+        img {
+          max-width: min(300px, 100%);
+          min-height: 100px;
+          max-height: min(300px, 100%);
+          object-fit: contain;
+        }
+      }
+
+      .course-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        width: 50%;
+        height: min-content;
+
+        .italic {
+          font-style: italic;
+        }
+
+        .bold {
+          font-weight: bold;
+        }
+
+        .diploma-item.has-next {
+          border-bottom: 1px dashed;
+          margin-bottom: 1rem;
+          padding-bottom: 1rem;
+        }
+
+        .diploma-item.first {
+          border-top: 1px dashed;
+          margin-top: 2rem;
+          padding-top: 1rem;
+        }
+
+        h2 {
+          text-align: center;
+          margin: 0;
+        }
+
+        p {
+          text-align: center;
+        }
+
+        a {
+          text-decoration: none;
+          text-align: center;
+          font-style: italic;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      @media (width <= 1400px) {
+        flex-direction: column;
+
+        .img-container {
+          width: 100%;
+          min-height: 300px;
+
+        }
+
+        .course-info {
+          width: 90%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .content > *:not(:last-child) {
+    border-bottom: solid 1px;
+  }
+
+  @media (width <= 1400px) {
+    h1 {
+      font-size: 1.2rem;
+      height: 15%;
+      display: flex;
+      align-items: center;
+    }
+
+    .content {
+      height: 85%;
+    }
+  }
+}

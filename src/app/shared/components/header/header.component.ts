@@ -27,6 +27,7 @@ export class HeaderComponent {
   public readonly achievements: string;
   public schoolProjects: string;
   public workExperience: string;
+  public education: string;
   public readonly skills: string;
 
   protected readonly AppConstants = AppConstants;
@@ -48,6 +49,8 @@ export class HeaderComponent {
       AppConstants.ROUTES.WORK + '/' + AppConstants.ROUTES.SCHOOL_PROJECTS;
     this.workExperience =
       AppConstants.ROUTES.WORK + '/' + AppConstants.ROUTES.EXPERIENCES;
+    this.education =
+      AppConstants.ROUTES.WORK + '/' + AppConstants.ROUTES.EDUCATION;
     this.skills = AppConstants.ROUTES.SKILLS;
     const language: string | null = localStorage.getItem(
       AppConstants.LOCALSTORAGE.LANGUAGE,
