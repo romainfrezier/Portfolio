@@ -1,0 +1,29 @@
+[
+  {
+    "school": "Polytech Montpellier",
+    "schoolUrl": "https://www.polytech.umontpellier.fr",
+    "schoolLogo": "assets/images/education/polytech-montpellier.webp",
+    "date": "2021 - 2024",
+    "place": "Montpellier, France",
+    "description": "Diplôme d’ingénieur en informatique et gestion.",
+    "skills": "Développement web, Bases de données, Architecture, POO, Gestiond de projet, Comptabilité"
+  },
+  {
+    "school": "Polytech Grenoble",
+    "schoolUrl": "https://polytech.grenoble-inp.fr",
+    "schoolLogo": "assets/images/education/polytech-grenoble.webp",
+    "date": "2019 - 2021",
+    "place": "Grenoble, France",
+    "description": "Préparation ingénieur en physique et mécanique.",
+    "skills": "Physique, Mécanique, Maths"
+  },
+  {
+    "school": "Lycée Anna de Noailles",
+    "schoolUrl": "https://anna-de-noailles.ent.auvergnerhonealpes.fr/",
+    "schoolLogo": "assets/images/education/aura.webp",
+    "date": "2019",
+    "place": "Evian, France",
+    "description": "Baccalauréat Scientifique.",
+    "skills": "Physique, Chimie"
+  }
+]

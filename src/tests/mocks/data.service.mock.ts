@@ -9,11 +9,12 @@ import {Skills} from "@models/skills.model";
 import {Link} from "@models/link.model";
 import {
   fakeAchievements,
-  fakeArchivedProjects, fakeLinks,
+  fakeArchivedProjects, fakeEducation, fakeLinks,
   fakePersonalProjects,
   fakeSchoolProjects, fakeSkills,
   fakeWorkExperiences
 } from "@tests/fake.data";
+import {Education} from "@models/education.model";
 
 /**
  * @author Romain Frezier
@@ -44,6 +45,14 @@ export class DataServiceMock extends DataService {
   override getWorkExperiences(lang: string): Observable<WorkExperience[]> {
     return new Observable<WorkExperience[]>(subscriber => {
       subscriber.next(fakeWorkExperiences);
+      subscriber.complete();
+    });
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  override getEducation(lang: string): Observable<Education[]> {
+    return new Observable<Education[]>(subscriber => {
+      subscriber.next(fakeEducation);
       subscriber.complete();
     });
   }

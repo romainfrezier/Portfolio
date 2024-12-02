@@ -6,6 +6,7 @@ import {SharedModule} from '@shared/shared.module';
 import {RouterModule, Routes} from '@angular/router';
 import {AppConstants} from '@app/app.constants';
 import {WorkExperiencesComponent} from './experience/work-experiences.component';
+import {EducationComponent} from "@pages/work/education/education.component";
 
 const routes: Routes = [
   { path: '', redirectTo: AppConstants.ROUTES.EXPERIENCES, pathMatch: 'full' },
@@ -17,11 +18,15 @@ const routes: Routes = [
     path: AppConstants.ROUTES.EXPERIENCES,
     component: WorkExperiencesComponent,
   },
+  {
+    path: AppConstants.ROUTES.EDUCATION,
+    component: EducationComponent,
+  },
   { path: '**', redirectTo: AppConstants.ROUTES.ERROR_404 },
 ];
 
 @NgModule({
-  declarations: [SchoolProjectsComponent, WorkExperiencesComponent],
+  declarations: [SchoolProjectsComponent, WorkExperiencesComponent, EducationComponent],
   imports: [
     CommonModule,
     TranslateModule,

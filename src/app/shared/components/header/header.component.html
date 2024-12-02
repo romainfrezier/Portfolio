@@ -48,12 +48,19 @@
             tabindex="0"
           >💼 {{ "work.work_experience" | translate }}</span>
           <span
+            routerLink="{{ education }}"
+            routerLinkActive="active"
+            (click)="hideWorkMenu($event)"
+            (keyup.enter)="hideWorkMenu($event)"
+            tabindex="0"
+          >🎓 {{ "work.education" | translate }}</span>
+          <span
             routerLink="{{ schoolProjects }}"
             routerLinkActive="active"
             (click)="hideWorkMenu($event)"
             (keyup.enter)="hideWorkMenu($event)"
             tabindex="0"
-          >🎓 {{ "work.school_projects" | translate }}</span>
+          >👨‍💻 {{ "work.school_projects" | translate }}</span>
         </div>
       }
     </div>

@@ -1,0 +1,29 @@
+[
+  {
+    "school": "Polytech Montpellier",
+    "schoolUrl": "https://www.polytech.umontpellier.fr",
+    "schoolLogo": "assets/images/education/polytech-montpellier.webp",
+    "date": "2021 - 2024",
+    "place": "Montpellier, France",
+    "description": "5-year engineering qualification in Computer Science and Management. Equivalent to a MSC. Eng.",
+    "skills": "Web development, Databases, Architecture, OOP, Project management, Accounting"
+  },
+  {
+    "school": "Polytech Grenoble",
+    "schoolUrl": "https://polytech.grenoble-inp.fr",
+    "schoolLogo": "assets/images/education/polytech-grenoble.webp",
+    "date": "2019 - 2021",
+    "place": "Grenoble, France",
+    "description": "Equivalent to 2 years of Preparatory Classes leading to a place in one of Polytech’s highly selective Engineering Schools (a place on the 2-year course is obtained after selection and competitive exam).",
+    "skills": "Physics, Mechanics, Maths"
+  },
+  {
+    "school": "Lycée Anna de Noailles",
+    "schoolUrl": "https://anna-de-noailles.ent.auvergnerhonealpes.fr/",
+    "schoolLogo": "assets/images/education/aura.webp",
+    "date": "2019",
+    "place": "Evian, France",
+    "description": "Baccalauréat.",
+    "skills": "Physics, Chemistry"
+  }
+]

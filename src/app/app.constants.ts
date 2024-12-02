@@ -16,6 +16,7 @@ export class AppConstants {
 
     public static readonly SCHOOL_PROJECTS = 'school-projects';
     public static readonly EXPERIENCES = 'experiences';
+    public static readonly EDUCATION = 'education';
     public static readonly _404 = '404';
 
     public static readonly ERROR_404 = this.ERROR + '/' + this._404;

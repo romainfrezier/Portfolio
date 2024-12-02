@@ -41,7 +41,8 @@
     "title": "Choisissez une catégorie",
     "school_projects": "Projets scolaires",
     "personal_projects": "Projets personnels",
-    "work_experience": "Expérience professionnelle"
+    "work_experience": "Expérience professionnelle",
+    "education": "Formation"
   },
   "school_projects": {
     "title": "Quelques-uns de mes projets",
@@ -71,6 +72,16 @@
     "skills": "Compétences",
     "skill": "Compétence",
     "company_url": "Site de l'entreprise"
+  },
+  "education": {
+    "title": "Ma formation",
+    "date": "Date",
+    "school_url": "Site de l'école"
+  },
+  "course": {
+    "skills": "Compétences",
+    "skill": "Compétence",
+    "date": "Date"
   },
   "skills": {
     "title": "Mes Compétences",

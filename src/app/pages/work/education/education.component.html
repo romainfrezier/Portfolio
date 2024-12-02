@@ -1,0 +1,40 @@
+<div class="education-container">
+  <h1>{{ "education.title" | translate }}</h1>
+  <div class="content">
+    @for (course of education; track $index) {
+      <div
+        class="course-item"
+      >
+        <div class="logo-container">
+          <img
+            [src]="course.schoolLogo"
+            alt="Logo {{ course.school }}"
+          />
+        </div>
+
+        <div class="course-info">
+          <h2>{{ course.school }}</h2>
+          <a href="{{ course.schoolUrl }}" rel="noopener" target="_blank">{{
+              "education.school_url" | translate
+            }}</a>
+          <div class="description">
+            <p>{{ course.description }}</p>
+            <p class="bold">{{ course.place }}</p>
+            <p class="italic">
+              {{ "course.date" | translate }} : {{ course.date }}
+            </p>
+            <p>
+              {{
+                (course.skills.split(",").length === 1
+                    ? "course.skill"
+                    : "course.skills"
+                ) | translate
+              }}
+              : {{ course.skills }}
+            </p>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>
