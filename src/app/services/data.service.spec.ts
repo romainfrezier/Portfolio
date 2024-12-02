@@ -74,7 +74,7 @@ describe('DataService', () => {
       expect(education).toEqual(fakeEducation);
     });
 
-    const req = httpMock.expectOne('./assets/data/en/work-experiences.json');
+    const req = httpMock.expectOne('./assets/data/en/education.json');
     expect(req.request.method).toBe('GET');
     req.flush(fakeWorkExperiences);
   });

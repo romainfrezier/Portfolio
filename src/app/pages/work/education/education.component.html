@@ -17,24 +17,22 @@
           <a href="{{ course.schoolUrl }}" rel="noopener" target="_blank">{{
               "education.school_url" | translate
             }}</a>
-          @for (diploma of course.diplomas; track $index) {
-            <div class="diploma-item {{ $index < course.diplomas.length - 1 ? 'has-next' : '' }} {{ $index === 0 ? 'first' : ''}}">
-              <p>{{ diploma.description }}</p>
-              <p class="bold">{{ diploma.place }}</p>
-              <p class="italic">
-                {{ "course.date" | translate }} : {{ diploma.date }}
-              </p>
-              <p>
-                {{
-                  (diploma.skills.split(",").length === 1
-                      ? "course.skill"
-                      : "course.skills"
-                  ) | translate
-                }}
-                : {{ diploma.skills }}
-              </p>
-            </div>
-          }
+          <div class="description">
+            <p>{{ course.description }}</p>
+            <p class="bold">{{ course.place }}</p>
+            <p class="italic">
+              {{ "course.date" | translate }} : {{ course.date }}
+            </p>
+            <p>
+              {{
+                (course.skills.split(",").length === 1
+                    ? "course.skill"
+                    : "course.skills"
+                ) | translate
+              }}
+              : {{ course.skills }}
+            </p>
+          </div>
         </div>
       </div>
     }
