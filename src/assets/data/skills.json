@@ -107,27 +107,33 @@
   "services": [
     {
       "id": 1,
+      "name": "Infomaniak",
+      "src": "/assets/images/work-experiences/infomaniak.webp",
+      "link": "https://infomaniak.com/"
+    },
+    {
+      "id": 2,
       "name": "AWS",
       "src": "/assets/images/skills/aws-logo.webp",
       "link": "https://aws.amazon.com/"
     },
     {
-      "id": 2,
+      "id": 3,
       "name": "Firebase",
       "src": "/assets/images/skills/firebase-logo.webp",
       "link": "https://firebase.google.com/"
     },
     {
-      "id": 3,
+      "id": 4,
       "name": "Docker",
       "src": "/assets/images/skills/docker-logo.webp",
       "link": "https://www.docker.com/"
     },
     {
-      "id": 4,
-      "name": "Apache Kafka",
-      "src": "/assets/images/skills/kafka-logo.webp",
-      "link": "https://kafka.apache.org/"
+      "id": 5,
+      "name": "SonarQube",
+      "src": "/assets/images/skills/sonarqube-logo.webp",
+      "link": "https://www.sonarqube.org/"
     }
   ],
   "soft": [

@@ -32,20 +32,20 @@
       }
     </section>
     <section class="category-container">
-      @if (softwares !== []) {
+      @if (services !== []) {
         <app-skills-section
-          [skills]="softwares"
-          [name]="'softwares'"
+          [skills]="services"
+          [name]="'services'"
         />
       } @else {
         <app-loader></app-loader>
       }
     </section>
     <section class="category-container">
-      @if (services !== []) {
+      @if (softwares !== []) {
         <app-skills-section
-          [skills]="services"
-          [name]="'services'"
+          [skills]="softwares"
+          [name]="'softwares'"
         />
       } @else {
         <app-loader></app-loader>
