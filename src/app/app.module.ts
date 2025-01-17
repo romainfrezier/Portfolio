@@ -16,6 +16,8 @@ import {MailService} from "@services/mail.service";
 import {AngularFireModule} from "@angular/fire/compat";
 import {AngularFireStorageModule} from "@angular/fire/compat/storage";
 import {firebaseConfig} from "@app/firebase.config";
+import {environment} from "@env/environment";
+import {MINIO_ENDPOINT_TOKEN} from "@app/tokens";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/locales/', '.json');
@@ -41,7 +43,17 @@ export function HttpLoaderFactory(http: HttpClient) {
     }),
     AppRoutingModule
   ],
-  providers: [ThemesService, DataService, ToastService, MailService, provideHttpClient(withInterceptorsFromDi())]
+  providers: [
+    ThemesService,
+    DataService,
+    ToastService,
+    MailService,
+    provideHttpClient(withInterceptorsFromDi()),
+    {
+      provide: MINIO_ENDPOINT_TOKEN,
+      useValue: environment.MINIO_ENDPOINT
+    }
+  ]
 })
 export class AppModule {
 }

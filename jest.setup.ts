@@ -10,7 +10,7 @@ import {DataService} from "@services/data.service";
 import {ToastService} from "@services/toast.service";
 import {MailService} from "@services/mail.service";
 import {AppRoutingModule} from "@app/app-routing.module";
-import {PhotoService} from "@services/photo.service";
+import {MinioService} from "@services/minio.service";
 import {AngularFireStorageModule} from "@angular/fire/compat/storage";
 
 fetchMock.enableMocks();
@@ -39,7 +39,7 @@ beforeEach(async () => {
       DataService,
       ToastService,
       MailService,
-      PhotoService
+      MinioService
     ]
   }).compileComponents();
 });
