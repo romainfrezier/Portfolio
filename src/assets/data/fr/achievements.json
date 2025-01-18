@@ -10,7 +10,7 @@
     "name": "TOEIC",
     "badge": "/assets/images/TOEIC_logo.webp",
     "description": "Les tests Test of English for International Communication (TOEIC) sont des certifications standardisées permettant d'évaluer le niveau d'anglais des locuteurs non anglophones à l'écrit et à l'oral. Ces tests, créés et gérés par un organisme sis aux États-Unis (l'ETS), visent en particulier à évaluer les connaissances linguistiques dans un contexte professionnel. J'ai obtenu le score de 920/990.",
-    "link": "assets/files/TOEIC.pdf",
+    "link": "https://api.minio.romainfrezier.com/files/TOEIC.pdf",
     "linkName": "TOEIC"
   },
   {
@@ -38,7 +38,7 @@
     "name": "Apple Teacher",
     "badge": "/assets/images/apple-teacher.webp",
     "description": "Apple Teacher est un programme de formation professionnelle gratuit conçu pour soutenir et récompenser les éducateurs qui utilisent les produits Apple pour l'enseignement et l'apprentissage. En tant qu'Apple Teacher, j'ai appris à utiliser les produits Apple pour l'enseignement et l'apprentissage.",
-    "link": "/assets/files/apple-teacher-badge.pdf",
+    "link": "https://api.minio.romainfrezier.com/files/apple-teacher-badge.pdf",
     "linkName": "Badge Apple Teacher"
   }
 ]
