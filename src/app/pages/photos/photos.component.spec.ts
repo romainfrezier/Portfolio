@@ -4,35 +4,35 @@ import {PhotosComponent} from './photos.component';
 import {TranslateService} from "@ngx-translate/core";
 import {TranslateServiceMock} from "@tests/mocks/translate.service.mock";
 import {PhotoModalComponent} from "@pages/photos/photo-modal/photo-modal.component";
-import {PhotoService} from "@services/photo.service";
-import {fakeUrls, PhotoServiceMock} from "@tests/mocks/photo.service.mock";
+import {MinioService} from "@services/minio.service";
+import {fakeUrls, MinioServiceMock} from "@tests/mocks/minio.service.mock";
 import {SwipeService} from "@services/swipe.service";
-import {AngularFireStorage} from "@angular/fire/compat/storage";
-import {mockAngularFireStorage} from "@tests/mocks/firebase.storage.mock";
 import {AppConstants} from "@app/app.constants";
+import {MINIO_ENDPOINT_TOKEN} from "@app/tokens";
 
 describe('PhotoComponent', (): void => {
   let component: PhotosComponent;
   let fixture: ComponentFixture<PhotosComponent>;
-  let photoService: PhotoService;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  let minioService: MinioService;
   let swipeService: SwipeService;
+  const minioUrl = 'http://fake-minio:9000';
 
   beforeEach(async (): Promise<void> => {
     await TestBed.configureTestingModule({
       declarations: [PhotosComponent, PhotoModalComponent],
       providers: [
         {provide: TranslateService, useClass: TranslateServiceMock},
-        {provide: PhotoService, useClass: PhotoServiceMock},
+        {provide: MinioService, useClass: MinioServiceMock},
+        {provide: MINIO_ENDPOINT_TOKEN, useValue: minioUrl},
         {provide: SwipeService},
-        {provide: AngularFireStorage, useValue: mockAngularFireStorage},
-        {provide: 'angularfire2.app.options', useValue: {}}
       ]
     }).compileComponents();
   });
 
   beforeEach((): void => {
     fixture = TestBed.createComponent(PhotosComponent);
-    photoService = TestBed.inject(PhotoService);
+    minioService = TestBed.inject(MinioService);
     swipeService = TestBed.inject(SwipeService);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -41,13 +41,6 @@ describe('PhotoComponent', (): void => {
   describe('Component', (): void => {
     it('should create', (): void => {
       expect(component).toBeTruthy();
-    });
-
-    it('should fetch images on init', (): void => {
-      jest.spyOn(photoService, 'getImages');
-      component.ngOnInit();
-      expect(photoService.getImages).toHaveBeenCalled();
-      expect(component.imageUrls).toEqual(fakeUrls);
     });
 
     it('should open the modal with the selected image', (): void => {

@@ -47,6 +47,6 @@
     "description": "Création d'une infographie pour répondre à une question posée par l'Open Data University : La répartition des infrastructures de recharge pour véhicules électriques est-elle pertinente en France ?",
     "demoLink": "",
     "githubLink": "",
-    "documentUrl": "assets/files/Rapport_Frezier_Italiano_Sartori.pdf"
+    "documentUrl": "https://api.minio.romainfrezier.com/files/Rapport_Frezier_Italiano_Sartori.pdf"
   }
 ]

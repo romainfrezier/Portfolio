@@ -3,7 +3,7 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {PhotoModalComponent} from './photo-modal.component';
 import {By} from "@angular/platform-browser";
 import {DebugElement} from "@angular/core";
-import {fakeUrls} from "@tests/mocks/photo.service.mock";
+import {fakeUrls} from "@tests/mocks/minio.service.mock";
 
 describe('PhotoModalComponent', (): void => {
   let component: PhotoModalComponent;
