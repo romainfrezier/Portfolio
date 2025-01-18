@@ -27,8 +27,8 @@
       color: map.get($light-theme, 'text');
     }
 
-    background-color: transparent;
-    border: 1px solid map.get($light-theme, 'text');
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 0;
   }
 
   .secret {
