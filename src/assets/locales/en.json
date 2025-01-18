@@ -30,7 +30,7 @@
   "resume": {
     "title": "Curriculum Vitae",
     "subtitle": "You can download my resume here",
-    "file": "/assets/files/CV_en.pdf",
+    "file": "https://api.minio.romainfrezier.com/files/CV_en.pdf",
     "preview": "/assets/images/CV_en.webp",
     "download": "Download"
   },

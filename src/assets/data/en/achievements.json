@@ -10,7 +10,7 @@
     "name": "TOEIC",
     "badge": "/assets/images/TOEIC_logo.webp",
     "description": "The Test of English for International Communication (TOEIC) is an international standardized test of English language proficiency for non-native speakers. It is intentionally designed to measure the everyday English skills of people working in an international environment. I scored 920/990.",
-    "link": "assets/files/TOEIC.pdf",
+    "link": "https://api.minio.romainfrezier.com/files/TOEIC.pdf",
     "linkName": "TOEIC"
   },
   {
@@ -38,7 +38,7 @@
     "name": "Apple Teacher",
     "badge": "/assets/images/apple-teacher.webp",
     "description": "Apple Teacher is a free professional learning program designed to support and celebrate educators using Apple products for teaching and learning. As an Apple Teacher, I have learned how to use Apple products for teaching and learning.",
-    "link": "/assets/files/apple-teacher-badge.pdf",
+    "link": "https://api.minio.romainfrezier.com/files/apple-teacher-badge.pdf",
     "linkName": "Apple Teacher Badge"
   }
 ]

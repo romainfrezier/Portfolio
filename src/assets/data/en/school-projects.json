@@ -47,6 +47,6 @@
     "description": "Creation of an infographic to answer a question posed by Open Data University: Is the distribution of recharging infrastructures for electric vehicles appropriate in France?",
     "demoLink": "",
     "githubLink": "",
-    "documentUrl": "assets/files/Rapport_Frezier_Italiano_Sartori.pdf"
+    "documentUrl": "https://api.minio.romainfrezier.com/files/Rapport_Frezier_Italiano_Sartori.pdf"
   }
 ]

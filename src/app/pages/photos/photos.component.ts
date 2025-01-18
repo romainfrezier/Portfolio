@@ -1,5 +1,5 @@
 import {Component, HostListener, OnInit} from '@angular/core';
-import {PhotoService} from "@services/photo.service";
+import {MinioService} from "@services/minio.service";
 import {SwipeService} from "@services/swipe.service";
 import {AppConstants} from "@app/app.constants";
 
@@ -22,10 +22,10 @@ export class PhotosComponent implements OnInit {
 
   /**
    * @constructor
-   * @param photoService The service to fetch images from
+   * @param minioService The service to fetch images from
    * @param swipeService
    */
-  constructor(private photoService: PhotoService, private swipeService: SwipeService) {
+  constructor(private minioService: MinioService, private swipeService: SwipeService) {
     this.imageUrls = [];
     this.selectedImageUrl = null;
     this.isModalVisible = false;
@@ -36,8 +36,13 @@ export class PhotosComponent implements OnInit {
    * Fetches images from the service on component initialization
    */
   ngOnInit(): void {
-    this.photoService.getImages().subscribe((urls: string[]) => {
-      this.imageUrls = urls;
+    this.minioService.listAllObjects(AppConstants.MINIO.BUCKET.PICTURES).subscribe(keys => {
+      keys.forEach((key: string): void => {
+        this.minioService.getObject(AppConstants.MINIO.BUCKET.PICTURES, key).subscribe(blob => {
+          const objectUrl: string = URL.createObjectURL(blob);
+          this.imageUrls.push(objectUrl);
+        });
+      });
     });
   }
 

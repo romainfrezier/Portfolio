@@ -4,6 +4,12 @@ export class AppConstants {
     public static readonly LAST_PAGE = 'last-page';
     public static readonly LANGUAGE = 'language';
   };
+  public static readonly MINIO = class {
+    public static readonly BUCKET = class {
+      public static readonly PICTURES = 'pictures';
+      public static readonly FILES = 'files';
+    };
+  }
   public static readonly ROUTES = class {
     public static readonly HOME = 'home';
     public static readonly ABOUT = 'about';

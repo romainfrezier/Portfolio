@@ -6,11 +6,17 @@
 </div>
 <h3 align="center" style="text-align: center;">Technologies</h3>
 <div align="center" style="text-align: center;">
-  <img src="https://img.shields.io/badge/Angular-v18-red?logo=angular&labelColor=red" alt="Angular"/>
-  <img src="https://img.shields.io/badge/Jest-v29-green?logo=jest&labelColor=green" alt="Jest"/>
-  <img src="https://img.shields.io/badge/SonarQube-v10-blue?logo=sonarqube&labelColor=blue" alt="SonarQube"/>
-  <img src="https://img.shields.io/badge/Firebase%20Hosting-v10-yellow?logo=firebase&labelColor=yellow" alt="Firebase"/>
-  <img src="https://img.shields.io/badge/GitHub%20Actions-v4-black?logo=github&labelColor=black" alt="GitHub Actions"/>
+  <img src="https://img.shields.io/badge/Angular-v18-darkred?logo=angular&labelColor=darkred" alt="Angular"/>
+  <img src="https://img.shields.io/badge/Jest-v29-darkred?logo=jest&labelColor=darkred" alt="Jest"/>
+  <img src="https://img.shields.io/badge/SonarQube-v10-darkred?logo=sonarqube&labelColor=darkred" alt="SonarQube"/>
+  <img src="https://img.shields.io/badge/GitHub%20Actions-v4-darkred?logo=github&labelColor=darkred" alt="GitHub Actions"/>
+</div>
+<h3 align="center" style="text-align: center;">Hosting</h3>
+<div align="center" style="text-align: center;">
+  <img src="https://img.shields.io/badge/Infomaniak%20VPS-darkgreen?logo=infomaniak&labelColor=darkgreen" alt="Infomaniak"/>
+  <img src="https://img.shields.io/badge/Traefik-darkgreen?logo=traefik-proxy&labelColor=darkgreen" alt="Jest"/>
+  <img src="https://img.shields.io/badge/Nginx-darkgreen?logo=nginx&labelColor=darkgreen" alt="SonarQube"/>
+  <img src="https://img.shields.io/badge/MinIO-darkgreen?logo=minio&labelColor=darkgreen" alt="GitHub Actions"/>
 </div>
 
 ---
@@ -62,7 +68,7 @@ Built with modern web technologies for performance and maintainability:
 - **Frontend**: Developed with Angular for a dynamic user interface.
 - **Testing**: Uses Jest for reliable and high-quality code.
 - **Code Quality**: SonarQube integration to maintain code standards.
-- **Hosting**: Deployed on Firebase Hosting.
+- **Hosting**: Deployed on Infomaniak VPS.
 - **CI/CD**: Utilizes GitHub Actions for continuous integration and deployment.
 
 ## Installation
@@ -117,7 +123,7 @@ yarn run test:coverage
 - `docker`
 - `docker-compose`
 
-To launch sonarqube, use the following command:
+To launch sonarqube locally, use the following command:
 
 ```bash
 docker-compose -f docker-compose.sonar.yml up -d
