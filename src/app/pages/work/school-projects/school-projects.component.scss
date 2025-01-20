@@ -85,6 +85,20 @@
             text-decoration: underline;
           }
         }
+
+        .school-project-technologies {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 8px;
+          margin-bottom: 10px;
+          .technology {
+            border-radius: 3rem;
+            padding: 5px 15px;
+            margin: 0;
+            cursor: default;
+          }
+        }
       }
 
       @media (width <= 1400px) {

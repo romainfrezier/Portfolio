@@ -19,15 +19,13 @@
         <div class="project-info">
           <h2>{{ project.name | translate }}</h2>
           <p>{{ "school_projects.date" | translate }} : {{ project.date }}</p>
-          <p>
-            {{
-              (project.languages.split(",").length === 1
-                  ? "school_projects.language"
-                  : "school_projects.languages"
-              ) | translate
-            }}
-            : {{ project.languages }}
-          </p>
+          <div class="school-project-technologies">
+            @for (technology of this.project.languages.split(','); track $index) {
+              <p class="technology">
+                {{ technology }}
+              </p>
+            }
+          </div>
           <p>
             {{ "school_projects.group" | translate }} : {{ project.number }}
             {{

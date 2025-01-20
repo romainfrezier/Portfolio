@@ -23,15 +23,13 @@
             <p class="italic">
               {{ "course.date" | translate }} : {{ course.date }}
             </p>
-            <p>
-              {{
-                (course.skills.split(",").length === 1
-                    ? "course.skill"
-                    : "course.skills"
-                ) | translate
-              }}
-              : {{ course.skills }}
-            </p>
+            <div class="education-technologies">
+              @for (skill of this.course.skills.split(','); track $index) {
+                <p class="technology">
+                  {{ skill }}
+                </p>
+              }
+            </div>
           </div>
         </div>
       </div>

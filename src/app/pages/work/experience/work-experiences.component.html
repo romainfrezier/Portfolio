@@ -15,15 +15,13 @@
         <div class="experience-info">
           <h2>{{ experience.company }}</h2>
           <p>{{ experience.place }}</p>
-          <p>
-            {{
-              (experience.skills.split(",").length === 1
-                  ? "work_experiences.skills"
-                  : "work_experiences.skills"
-              ) | translate
-            }}
-            : {{ experience.skills }}
-          </p>
+          <div class="work-experience-technologies">
+            @for (skill of this.experience.skills.split(','); track $index) {
+              <p class="technology">
+                {{ skill }}
+              </p>
+            }
+          </div>
           <a href="{{ experience.companyUrl }}" rel="noopener" target="_blank">{{
               "work_experiences.company_url" | translate
             }}</a>

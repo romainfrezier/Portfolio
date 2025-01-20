@@ -134,4 +134,11 @@
       color: map.get($dark-theme, 'text');
     }
   }
+
+  .school-project-technologies, .work-experience-technologies, .education-technologies {
+    .technology {
+      background-color: map.get($dark-theme, 'contrast');
+      color: map.get($dark-theme, 'clear');
+    }
+  }
 }
