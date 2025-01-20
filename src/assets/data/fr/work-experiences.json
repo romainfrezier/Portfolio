@@ -16,7 +16,7 @@
         "description": "Pendant mon stage chez Infomaniak, j’ai participé au développement de nouvelles fonctionnalités pour une application de gestion de billetterie. Cette application propose un service complet de billetterie pour les entreprises, les associations et diverses organisations qui organisent des événements."
       }
     ],
-    "skills": "Angular, Laravel, MariaDB, Git, Docker, Jira, SCRUM, Communication"
+    "skills": "Laravel, MariaDB, Angular, Git, Docker, Jira, SCRUM, Communication"
   },
   {
     "company": "Reactional Music",
@@ -30,7 +30,7 @@
         "description": "En tant que stagiaire chez Reactional Music, j'ai travaillé sur une application destinée aux compositeurs de musique, et j'ai développé certaines fonctionnalités comme la page de configuration, la connexion à un compte reactional ou la gestion des thèmes. Cette application permet aux compositeurs de créer et de partager leurs thèmes musicaux pour les jeux vidéo."
       }
     ],
-    "skills": "React, TypeScript, GitLab, Firebase, Figma, Notion, Agilité, Communication"
+    "skills": "Express, React, TypeScript, GitLab, Firebase, Figma, Notion, Agilité, Communication"
   },
   {
     "company": "JTech SA",

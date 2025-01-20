@@ -17,7 +17,7 @@
         "description": "During my work internship at Infomaniak, I was involved in developing new features for a ticketing management application. This application offers a complete ticketing service for companies, associations and various organisations that organise events."
       }
     ],
-    "skills": "Angular, Laravel, MariaDB, Git, Docker, Jira, SCRUM, Communication"
+    "skills": "Laravel, MariaDB, Angular, Git, Docker, Jira, SCRUM, Communication"
   },
   {
     "company": "Reactional Music",
@@ -31,7 +31,7 @@
         "description": "As an intern at Reactional Music, I worked on an application for music composers, and I developed some features like settings page, login to a reactional account or management of themes. This application allows composers to create and share their music themes for video games."
       }
     ],
-    "skills": "React, TypeScript, GitLab, Firebase, Figma, Notion, Agility"
+    "skills": "Express, React, TypeScript, GitLab, Firebase, Figma, Notion, Agility"
   },
   {
     "company": "JTech SA",
