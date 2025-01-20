@@ -70,10 +70,10 @@
 
   .button-container {
     p {
-      color: map.get($dynamic-theme, 'text');
+      color: map.get($dynamic-theme, 'clear');
     }
 
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: map.get($dynamic-theme, 'contrast');
     border: 0;
   }
 

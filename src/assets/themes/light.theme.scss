@@ -24,10 +24,10 @@
     }
 
     p {
-      color: map.get($light-theme, 'text');
+      color: map.get($light-theme, 'clear');
     }
 
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: map.get($light-theme, 'contrast');
     border: 0;
   }
 
