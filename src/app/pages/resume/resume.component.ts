@@ -24,7 +24,7 @@ export class ResumeComponent {
    */
   public download_resume() {
     const document_name = 'CV_Romain_Frezier.pdf';
-    const document_url: string = 'assets/files/CV_' + this.translate.currentLang + '.pdf';
+    const document_url: string = 'https://api.minio.romainfrezier.com/files/CV_' + this.translate.currentLang + '.pdf';
     const link: HTMLAnchorElement = document.createElement('a');
     link.download = document_name;
     link.href = document_url;

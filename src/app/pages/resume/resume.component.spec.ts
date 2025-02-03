@@ -53,7 +53,7 @@ describe('ResumeComponent', () => {
 
       expect(createElementSpy).toHaveBeenCalledWith('a');
       expect(linkElement.download).toBe('CV_Romain_Frezier.pdf');
-      expect(linkElement.href).toBe('http://localhost/assets/files/CV_' + AppConstants.LANGUAGES.EN + '.pdf');
+      expect(linkElement.href).toBe('https://api.minio.romainfrezier.com/files/CV_' + AppConstants.LANGUAGES.EN + '.pdf');
       expect(linkElement.click).toHaveBeenCalled();
       expect(linkElement.remove).toHaveBeenCalled();
     });
