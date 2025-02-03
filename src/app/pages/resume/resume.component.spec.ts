@@ -5,6 +5,9 @@ import {TranslateServiceMock} from "@tests/mocks/translate.service.mock";
 import {AppConstants} from "@app/app.constants";
 import {By} from "@angular/platform-browser";
 import {DebugElement} from "@angular/core";
+import {fakeMinioUrl, MinioServiceMock} from "@tests/mocks/minio.service.mock";
+import {MinioService} from "@services/minio.service";
+import {MINIO_ENDPOINT_TOKEN} from "@app/tokens";
 
 /**
  * @author Romain Frezier
@@ -14,12 +17,15 @@ describe('ResumeComponent', () => {
   let component: ResumeComponent;
   let fixture: ComponentFixture<ResumeComponent>;
   let translateService: TranslateService;
+  let minioService: MinioService;
 
   beforeEach(async (): Promise<void> => {
     await TestBed.configureTestingModule({
       declarations: [ResumeComponent],
       providers: [
-        {provide: TranslateService, useClass: TranslateServiceMock}
+        {provide: TranslateService, useClass: TranslateServiceMock},
+        {provide: MinioService, useClass: MinioServiceMock},
+        {provide: MINIO_ENDPOINT_TOKEN, useValue: fakeMinioUrl}
       ]
     }).compileComponents();
   });
@@ -27,6 +33,7 @@ describe('ResumeComponent', () => {
   beforeEach((): void => {
     fixture = TestBed.createComponent(ResumeComponent);
     translateService = TestBed.inject(TranslateService);
+    minioService = TestBed.inject(MinioService);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -39,23 +46,12 @@ describe('ResumeComponent', () => {
 
   describe('Business', () => {
     it('should download resume with correct URL and filename', () => {
-      const anchor: HTMLAnchorElement = document.createElement('a');
-      jest.spyOn(anchor, 'click').mockImplementation(() => {});
-      jest.spyOn(anchor, 'remove').mockImplementation(() => {});
-      const createElementSpy = jest.spyOn(document, 'createElement').mockReturnValue(anchor);
-
       jest.spyOn(translateService, 'use');
       jest.spyOn(translateService, 'currentLang', 'get').mockReturnValue(AppConstants.LANGUAGES.EN);
 
+      const getObjectSpy = jest.spyOn(minioService, 'getObject');
       component.download_resume();
-
-      const linkElement: HTMLAnchorElement = createElementSpy.mock.results[0].value as HTMLAnchorElement;
-
-      expect(createElementSpy).toHaveBeenCalledWith('a');
-      expect(linkElement.download).toBe('CV_Romain_Frezier.pdf');
-      expect(linkElement.href).toBe('https://api.minio.romainfrezier.com/files/CV_' + AppConstants.LANGUAGES.EN + '.pdf');
-      expect(linkElement.click).toHaveBeenCalled();
-      expect(linkElement.remove).toHaveBeenCalled();
+      expect(getObjectSpy).toHaveBeenCalledWith('files', 'CV_' + AppConstants.LANGUAGES.EN + '.pdf');
     });
   });
 

@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
+import {MinioService} from "@services/minio.service";
 
 /**
  * @author Romain Frezier
@@ -16,19 +17,21 @@ export class ResumeComponent {
   /**
    * @constructor
    * @param translate - Service to handle translations.
+   * @param minioService
    */
-  constructor(private translate: TranslateService) {}
+  constructor(private translate: TranslateService, private minioService: MinioService) {}
 
   /**
    * Initiates the download of the resume PDF file.
    */
   public download_resume() {
-    const document_name = 'CV_Romain_Frezier.pdf';
-    const document_url: string = 'https://api.minio.romainfrezier.com/files/CV_' + this.translate.currentLang + '.pdf';
-    const link: HTMLAnchorElement = document.createElement('a');
-    link.download = document_name;
-    link.href = document_url;
-    link.click();
-    link.remove();
+    this.minioService.getObject('files', 'CV_' + this.translate.currentLang + '.pdf').subscribe((blob: Blob) => {
+      const objectUrl: string = URL.createObjectURL(blob);
+      const link: HTMLAnchorElement = document.createElement('a');
+      link.download = 'CV_Romain_Frezier.pdf';
+      link.href = objectUrl;
+      link.click();
+      link.remove();
+    });
   }
 }

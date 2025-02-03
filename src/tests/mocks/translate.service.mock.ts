@@ -1,5 +1,8 @@
 import {Observable, of} from 'rxjs';
-import {TranslateService, LangChangeEvent} from '@ngx-translate/core';
+import {
+  TranslateService,
+  LangChangeEvent,
+} from '@ngx-translate/core';
 import {Injectable} from '@angular/core';
 import {AppConstants} from "@app/app.constants";
 
@@ -33,5 +36,9 @@ export class TranslateServiceMock extends TranslateService {
 
   override set currentLang(currentLang: string) {
     this.currentLanguage = currentLang;
+  }
+
+  override instant(key: string): string {
+    return key;
   }
 }

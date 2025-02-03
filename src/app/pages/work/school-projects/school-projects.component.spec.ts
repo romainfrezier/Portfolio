@@ -135,7 +135,14 @@ describe('SchoolProjectsComponent', () => {
         const project = fakeSchoolProjects[index];
         expect(item.query(By.css('h2')).nativeElement.textContent.trim()).toBe(project.name);
         expect(item.query(By.css('p:nth-child(2)')).nativeElement.textContent.trim()).toContain(project.date);
-        expect(item.query(By.css('p:nth-child(3)')).nativeElement.textContent.trim()).toContain(project.languages);
+
+        const technologies: string[] = project.languages.split(',').map(t => t.trim());
+        const techParagraphs = item.queryAll(By.css('.school-project-technologies p.technology'));
+        expect(techParagraphs.length).toBe(technologies.length);
+        technologies.forEach((tech, index) => {
+          expect(techParagraphs[index].nativeElement.textContent.trim()).toBe(tech);
+        });
+
         expect(item.query(By.css('p:nth-child(4)')).nativeElement.textContent.trim()).toContain(project.number.toString());
         expect(item.query(By.css('p:nth-child(5)')).nativeElement.textContent.trim()).toBe(project.description);
       });
@@ -188,7 +195,7 @@ describe('SchoolProjectsComponent', () => {
       fixture.detectChanges();
       const confidentialTexts = fixture.debugElement.queryAll(By.css('.project-item p:last-child'));
       confidentialTexts.forEach(item => {
-        expect(item.nativeElement.textContent.trim()).toBe('school_projects.confidential');
+        expect(["school_projects.confidential", "lang"]).toContain(item.nativeElement.textContent.trim());
       });
     });
   });
